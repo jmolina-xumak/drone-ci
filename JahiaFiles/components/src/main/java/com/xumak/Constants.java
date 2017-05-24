@@ -40,4 +40,14 @@ public final class Constants {
      */
     public static final String NODE_ITEM_PROPERTIES = "nodeItemProperties";
 
+    /**
+     * component category to execute context processor in components.
+     */
+    public static final String GET_PATH_FROM_RESOURCE = "getPathFromResource";
+
+    /**
+     * List of properties to return the correct path for weekreference type properties.
+     */
+    public static final String PATH_FROM_RESOURCE_PROPERTIES_LIST = "PathFromResourcePropertiesList";
+
 }
