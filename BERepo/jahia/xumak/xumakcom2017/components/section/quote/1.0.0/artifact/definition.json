@@ -19,6 +19,12 @@
         "config": {
             "xk_containerClasses": [
                 "quote"
+            ],
+            "xk_componentCategory": [
+                "getPathFromResource"
+            ],
+            "PathFromResourcePropertiesList": [
+                "authorTitle"
             ]
         },
         "properties": {
@@ -32,7 +38,7 @@
             },
             "authorTitle": {
                 "title": "Root Path",
-                "type": "path",
+                "type": "weakreference",
                 "selector": "picker",
                 "selector-options": [
                     "type='page'"
