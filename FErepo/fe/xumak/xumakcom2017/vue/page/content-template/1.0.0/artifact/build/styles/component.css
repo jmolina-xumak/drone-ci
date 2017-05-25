@@ -12,3 +12,12 @@
   .no-col-gutter-large {
     padding-left: 0 !important;
     padding-right: 0 !important; } }
+
+.ContentTemplate-MainNavigation {
+  position: absolute;
+  top: 0px;
+  left: 0px; }
+
+@media screen and (min-width: 1025px) {
+  .ContentTemplate-Components {
+    margin-left: 200px; } }
