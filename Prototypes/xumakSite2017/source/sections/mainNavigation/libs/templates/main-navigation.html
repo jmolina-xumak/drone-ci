@@ -27,7 +27,9 @@
     </div>
 
     <div class="MainNavigation-logoBox">
-        <img v-bind:src="dataImagePath" v-bind:alt="dataImageAltText">
+        <a v-bind:href="dataRootPath">
+            <img v-bind:src="dataImagePath" v-bind:alt="dataImageAltText">
+        </a>
     </div>
     <ul class="MainNavigation-list"
         v-on:mouseover="mouseIn"
