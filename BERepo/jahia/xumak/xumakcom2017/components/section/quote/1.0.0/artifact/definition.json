@@ -1,0 +1,43 @@
+{
+    "title": "Quote",
+    "description": "This section component will show a quote using the color scheme and fonts defined on the style guide.",
+    "name": "quote",
+    "address": "xumak:xumakcom2017:components:section:quote",
+    "version": "1.0.0",
+    "extends": "bedrock:core:components:section:base;1.0.0",
+    "tags": [
+        "xumakcom2017",
+        "Quote"
+    ],
+    "blueprint": {
+        "content.text": "∫(⊛)",
+        "content.authorName": "∫(⊛)",
+        "content.authorTitle": "∫(⊛)"
+    },
+    "jahia": {
+        "superType": "",
+        "config": {
+            "xk_containerClasses": [
+                "quote"
+            ]
+        },
+        "properties": {
+            "text": {
+                "title": "Text",
+                "type": "string"
+            },
+            "authorName": {
+                "title": "Author Name",
+                "type": "string"
+            },
+            "authorTitle": {
+                "title": "Root Path",
+                "type": "path",
+                "selector": "picker",
+                "selector-options": [
+                    "type='page'"
+                ]
+            }
+        }
+    }
+}
