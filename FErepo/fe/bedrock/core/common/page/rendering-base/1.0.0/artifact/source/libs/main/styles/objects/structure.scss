@@ -1,0 +1,23 @@
+
+// Define the component structure here
+// Use Bliss.
+// Don't specify colors properties.
+
+@font-face {
+	font-family: "HurmeGeometricSansBold";
+	src: url("/assets/main/fonts/HurmeGeometricSans3/HurmeGeometricSans3-Bold.otf?");
+	src: url("/assets/main/fonts/HurmeGeometricSans3/HurmeGeometricSans3-Bold.otf?") format("opentype"),
+		 url("/assets/main/fonts/HurmeGeometricSans3/HurmeGeometricSans3-Bold.ttf?") format("truetype");
+}
+
+@font-face {
+	font-family: "SourceSansProRegular";
+	src: url("/assets/main/fonts/SourceSansPro/SourceSansPro-Regular.otf?") format("opentype"),
+		 url("/assets/main/fonts/SourceSansPro/SourceSansPro-Regular.ttf?") format("truetype");
+}
+
+@font-face {
+	font-family: "SourceSansProSemibold";
+	src: url("/assets/main/fonts/SourceSansPro/SourceSansPro-Semibold.otf?") format("opentype"),
+		 url("/assets/main/fonts/SourceSansPro/SourceSansPro-Semibold.ttf?") format("truetype");
+}
