@@ -19,12 +19,15 @@
 		"superType": "",
 		"properties": {
 			"title": {
+				"title": "Title",
 				"type": "string"
 			},
 			"description": {
+				"title": "Description",
 				"type": "textarea"
 			},
 			"imagePath": {
+				"title": "Image",
 				"type": "path",
 				"selector": "picker",
 				"selector-options": [
@@ -32,6 +35,7 @@
 				]
 			},
 			"imageAltText": {
+				"title": "Image Alt Text",
 				"type": "string"
 			}
 		}
