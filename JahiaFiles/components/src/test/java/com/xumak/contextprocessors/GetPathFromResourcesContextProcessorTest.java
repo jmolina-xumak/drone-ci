@@ -4,8 +4,8 @@ import javax.jcr.PropertyType;
 import com.xumak.base.configuration.MockLayerXConfiguration;
 import com.xumak.base.configuration.MockLayerXConfigurationProvider;
 import com.xumak.base.templatingsupport.BaseTest;
-import org.jahia.services.content.JCRNodeWrapper;
 import org.jahia.services.content.JCRPropertyWrapper;
+import org.jahia.services.content.JCRValueWrapper;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,12 +24,13 @@ import java.util.List;
 import static com.xumak.Constants.PATH_FROM_RESOURCE_PROPERTIES_LIST;
 import static layerx.Constants.CONFIG_PROPERTIES_KEY;
 import static layerx.Constants.DOT;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 /**
  * DESCRIPTION
  * ------------------------------------------------------------------------------------------------------------------
- * Unit test to be sure to get not null list in content model.
+ * Unit test to be sure the type of property will be a WEAKREFERENCE.
  * ------------------------------------------------------------------------------------------------------------------
  * CHANGE HISTORY
  * ------------------------------------------------------------------------------------------------------------------
@@ -41,6 +42,7 @@ import static org.junit.Assert.*;
 public class GetPathFromResourcesContextProcessorTest {
 
     private JCRPropertyWrapper propertyWrapper;
+    private JCRValueWrapper jcrValueWrapper;
     private static String IMAGE1 = "image";
     private static String IMAGE2 = "imageTwo";
     private static String PAGE1 = "pageOne";
@@ -63,6 +65,7 @@ public class GetPathFromResourcesContextProcessorTest {
 
         baseTest = new BaseTest();
         propertyWrapper = Mockito.mock(JCRPropertyWrapper.class);
+        jcrValueWrapper = Mockito.mock(JCRValueWrapper.class);
 
         List<String> list = new ArrayList<String>();
         list.add(IMAGE1);
@@ -72,26 +75,28 @@ public class GetPathFromResourcesContextProcessorTest {
         baseTest.initializeConfiguration(configurationProvider, configuration);
         baseTest.config.put(PATH_FROM_RESOURCE_PROPERTIES_LIST, list);
         baseTest.jcrNodeWrapper.setProperty(IMAGE1, resourceAsUUID);
+
+        when(baseTest.jcrNodeWrapper.hasProperty(IMAGE1)).thenAnswer(new Answer<Boolean>() {
+            @Override
+            public Boolean answer(InvocationOnMock invocationOnMock) throws Throwable {
+                return Boolean.TRUE;
+            }
+        });
     }
 
     @Test
-    public void testNodePropertiesType() throws Exception {
-        Answer<JCRPropertyWrapper> answer = new Answer<JCRPropertyWrapper>() {
-            @Override
-            public JCRPropertyWrapper answer(InvocationOnMock invocationOnMock) throws Throwable {
-                return propertyWrapper;
-            }
-        };
+    public void testNodePropertiesTypeAsWeakReference() throws Exception {
+        int type = 10;
+        when(baseTest.jcrNodeWrapper.getProperty(IMAGE1)).thenReturn(propertyWrapper);
+        when(propertyWrapper.getType()).thenReturn(type);
+        when(propertyWrapper.getValue()).thenReturn(jcrValueWrapper);
+        when(propertyWrapper.toString()).thenReturn(resourceAsUUID);
         getPathFromResourcesCP.process(baseTest.executionContext, baseTest.contentModel);
 
         final List<String> nodeItemPropertiesObject = (List<String>) baseTest.contentModel.get(CONFIG_PROPERTIES_KEY
                 + DOT + PATH_FROM_RESOURCE_PROPERTIES_LIST);
         assertNotNull(nodeItemPropertiesObject);
-
-        boolean hasProperty = true;
-        when(baseTest.jcrNodeWrapper.setProperty(IMAGE1, resourceAsUUID)).thenAnswer(answer);
-        when(baseTest.jcrNodeWrapper.hasProperty(IMAGE1)).thenReturn(hasProperty);
-
+        assertTrue(propertyWrapper.getType() == PropertyType.WEAKREFERENCE);
     }
 
 }
