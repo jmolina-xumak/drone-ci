@@ -1,0 +1,243 @@
+{
+    "title": "<artifact-title>",
+    "description": "<artifact-description>",
+    "name": "<artifact-name>",
+    "address": "<artifact-address>",
+    "version": "<artifact-version>",
+    "extends": "<parent-artifact>",
+    "abstract": "<is-abstract>",
+    "tags": [
+        "<tag>",
+        "<tag>"
+    ],
+    "blueprint": {
+        "<context>.<property>": "<property-type>",
+        "<context>.<multiple-property>[].<child-property>": "<property-type>"
+    },
+    "implementation": {
+        "servlets": [
+            "<servlet-class>"
+        ],
+        "categories": ["<component-category>", "<component-category>"]
+    },
+    "definitionType": "<definition-type>",
+    "schema": {
+
+    },
+    "functionality": {
+		"author": {
+			"localContent": {
+				"title": "<local-content-title>",
+				"paths": ["<story-path>"],
+                "texts": {
+                    "0": {
+                        "text": "<text>",
+                        "source": "<source-artifact-coordinates>"
+                    }
+                }
+			},
+			"designContent": {
+				"title": "<design-content-title>",
+				"paths": ["<story-path>"],
+                "texts": {
+                    "0": {
+                        "text": "<text>",
+                        "source": "<source-artifact-coordinates>"
+                    }
+                }
+			},
+			"globalContent": {
+				"title": "<global-content-title>",
+				"paths": ["<story-path>"],
+                "texts": {
+                    "0": {
+                        "text": "<text>",
+                        "source": "<source-artifact-coordinates>"
+                    }
+                }
+			}
+		},
+		"anonUser": {
+			"view": {
+				"title": "<view-content-title>",
+				"paths": ["<story-path>"],
+                "texts": {
+                    "0": {
+                        "text": "<text>",
+                        "source": "<source-artifact-coordinates>"
+                    }
+                }
+			}
+		},
+		"knownUser": {
+			"view": {
+				"title": "<view-content-title>",
+				"paths": ["<story-path>"],
+                "texts": {
+                    "0": {
+                        "text": "<text>",
+                        "source": "<source-artifact-coordinates>"
+                    }
+                }
+			}
+		}
+	},
+    "assets": {
+		"paths": [
+			"<asset-path>"
+		]
+	},
+    "aem": {
+        "componentGroup": "<component-group>",
+        "superType": "<aem-supertype>",
+        "type": "<aem-resourcetype>",
+        "nodes": {
+            "xkConfig": {
+                "<xk-config-property-name>": ["<xk-config-property-valu1>", "<xk-config-property-value2>"]
+            },
+            "<node-name>": {
+                "<property-name>": "<property-value>"
+            },
+            "<node-name>/<child-node-name>": {
+                "<child-property-name>": "<child-property-value>"
+            }
+        },
+        "implementation": {
+            "servlets": [
+                "<servlet-class>"
+            ],
+            "categories": ["<aem-specific-component-category>", "<aem-specific-component-category>"]
+        },
+        "dialogs": {
+            "content": {
+                "title": "<dialog-title>",
+                "sections": {
+                    "<section-name>": {
+                        "title": "<section-title>",
+                        "fields": {
+                            "<field-name>": {
+                                "fieldLabel": "<field-label>",
+                                "name": "<field-name-property>",
+                                "xtype": "<field-xtype>",
+                                "<additional-property-name>": "<additional-property-value>"
+                            }
+                        }
+                    }
+                }
+            },
+            "design": {
+                "title": "<dialog-title>",
+                "sections": {
+                    "<section-name>": {
+                        "title": "<section-title>",
+                        "fields": {
+                            "<field-name>": {
+                                "fieldLabel": "<field-label>",
+                                "name": "<field-name-property>",
+                                "xtype": "<field-xtype>",
+                                "<additional-property-name>": "<additional-property-value>"
+                            }
+                        }
+                    }
+                }
+            }, 
+            "global": {
+                "title": "<dialog-title>",
+                "sections": {
+                    "<section-name>": {
+                        "title": "<section-title>",
+                        "fields": {
+                            "<field-name>": {
+                                "fieldLabel": "<field-label>",
+                                "name": "<field-name-property>",
+                                "xtype": "<field-xtype>",
+                                "<additional-property-name>": "<additional-property-value>"
+                            }
+                        }
+                    }
+                }
+            },
+            "page": {
+                "title": "<dialog-title>",
+                "sections": {
+                    "<section-name>": {
+                        "title": "<section-title>",
+                        "fields": {
+                            "<field-name>": {
+                                "fieldLabel": "<field-label>",
+                                "name": "<field-name-property>",
+                                "xtype": "<field-xtype>",
+                                "<additional-property-name>": "<additional-property-value>"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "assets": {
+            "paths": [
+                "<asset-path>"
+            ]
+        },
+        "functionality": {
+
+        }
+    },
+    "jahia": {
+        "namespace": "<namespace>",
+        "componentGroup": "<component-group>",
+        "config": {
+            "<config-property>": "<config-property-value>"
+        },
+        "properties": {
+            "<property-name>": {
+                "title": "<property-title>",
+                "type": "<property-type>",
+                "selector": "<property-selector>",
+                "multiple": "<is-multiple>",
+                "mandatory": "<is-mandatory>",
+                "protected": "<is-protected>",
+                "selector-options": [
+                    "<first-selector-option>",
+                    "<second-selector-option>"
+                ],
+                "default-values": [
+                    "<default-value-1>",
+                    "<default-value-2>"
+                ],
+                "constraints": [
+                    "<constraint-1>",
+                    "<constraint-2>"
+                ],
+                "<additional-config-name>": "<additional-config-value>"
+            }
+        },
+        "childNodes": {
+            "<child-node-name>": {
+                "title": "<child-node-title>",
+                "required-primary-types": [
+                    "<required-primary-type-1",
+                    "<required-primary-type-2"
+                ],
+                "default-primary-type": "",
+                "<additional-config-name>": "<additional-config-value>"
+            }
+        },
+        "implementation": {
+            "servlets": [
+                "<servlet-class>"
+            ],
+            "categories": ["<jahia-specific-component-category>", "<jahia-specific-component-category>"]
+        },
+        "mixins": ["<mixin>", "<mixin>"],
+        "superType": "<jahia-supertype-or-coordinates>",
+        "assets": {
+            "paths": [
+                "<asset-path>"
+            ]
+        },
+        "functionality": {
+            
+        }
+    }
+}

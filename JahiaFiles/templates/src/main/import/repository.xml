@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content xmlns:j="http://www.jahia.org/jahia/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0">
+  <modules jcr:primaryType="jnt:modules">
+    <templates j:dependencies="default components" j:installedModules="templates" j:modulePriority="0" j:moduleType="templatesSet" j:title="XumaK.com 2107 Vue PoC " jcr:mixinTypes="jmix:hasExternalProviderExtension" jcr:primaryType="jnt:module">
+      <portlets jcr:primaryType="jnt:portletFolder"/>
+      <files jcr:primaryType="jnt:folder"/>
+      <folders jcr:primaryType="jnt:contentFolder"/>
+      <templates jcr:primaryType="jnt:templatesFolder">
+        <files jcr:primaryType="jnt:folder">
+          <themes jcr:primaryType="jnt:folder">
+            <default jcr:primaryType="jnt:folder"/>
+          </themes>
+        </files>
+        <base j:view="base" jcr:mixinTypes="jmix:theme" jcr:primaryType="jnt:template">
+          <base jcr:primaryType="jnt:pageTemplate"/>
+        </base>
+      </templates>
+      <home jcr:primaryType="jnt:template" j:hiddenTemplate="false" j:view="base">
+        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="BedrocK Base Page Component"/>
+      </home>
+    </templates>
+  </modules>
+</content>
