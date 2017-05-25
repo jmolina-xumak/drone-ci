@@ -2,3 +2,100 @@
 // Define the component structure here
 // Use Bliss.
 // Don't specify colors properties.
+
+// Define the component colors and themes here
+// Use Bliss.
+.Mainfooter {
+    padding-bottom: 35px;
+
+    &-mainList,
+    &-secondaryList {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &-mainItem {
+        display: block;
+    }
+
+    &-mainLink {
+        text-decoration: none;
+        font-weight: bold;
+        font-family: $font-hurme-geometric-sans-bold;
+        @include rem(font-size, 16px);
+        line-height: 44px;
+    }
+
+    &-copyText,
+    &-secondaryLink {
+        font-family: $font-source-sans-pro-regular;
+        @include rem(font-size, 14px);
+        line-height: 24px;
+    }
+
+    &-copyText {
+        margin-top: 23px;
+        display: block;
+    }
+
+    &-secondaryList {
+        display: table;
+        width: 100%;
+        margin-top: 5px;
+    }
+    &-secondaryItem {
+        display: table-cell;
+        margin-right: 30px;
+    }
+    &-secondaryLink {
+        text-decoration: underline;
+    }
+
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        padding-bottom: 55px;
+        
+        &-mainList {
+            margin-bottom: 26px;
+        }
+        &-mainItem {
+            display: inline-block;
+            margin-right: 43px;
+        }
+        &-copyText,
+        &-secondaryLink {
+            @include rem(font-size, 13px); 
+        }
+        &-copyText {
+            margin-top: 0;
+        }
+        &-secondaryList {
+            display: block;
+            width: 100%;
+            margin-top: 0;
+        }
+        &-secondaryItem {
+            margin-right: 11px;
+            display: inline-block;
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-desktop){
+        &-mainItem {
+            margin-right: 28px;
+        }
+        &-copyText {
+           text-align: center;
+           margin-top: 10px;
+           margin-right: -21px;
+        }
+        &-secondaryList {
+            text-align: right;
+            margin-top: 8px;
+        }
+        &-secondaryItem {
+            margin-right: 10px;
+        }
+    } 
+}

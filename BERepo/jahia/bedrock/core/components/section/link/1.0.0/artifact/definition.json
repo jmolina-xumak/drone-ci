@@ -1,0 +1,29 @@
+{
+    "title": "Link",
+    "description": "To be extended by link artifacts.",
+    "name": "link",
+    "address": "bedrock:core:components:section:link",
+    "version": "1.0.0",
+    "extends": "bedrock:core:components:section:base;1.0.0",
+    "tags": [
+        "text",
+        "core",
+        "bedrock"
+    ],
+    "blueprint": {
+        "content.text": "∫(⊛)",
+        "content.link": "∫(⊛)"
+    },
+    "jahia": {
+        "superType": "",
+        "properties": {
+            "text": {
+                "type": "string"
+            },
+            "link": {
+                "type": "path",
+                "selector": "picker"
+            }
+        }
+    }
+}

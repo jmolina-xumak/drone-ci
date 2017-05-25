@@ -1,0 +1,38 @@
+{
+    "title": "Call to Action",
+    "description": "Call to Action Artifact.",
+    "name": "callToAction",
+    "address": "bedrock:core:components:section:callToAction",
+    "version": "1.0.0",
+    "extends": "bedrock:core:components:section:base;1.0.0",
+    "tags": [
+        "callToAction",
+        "core",
+        "bedrock"
+    ],
+    "blueprint": {
+        "content.text": "∫(⊛)",
+        "content.link": "∫(⊛)",
+        "content.linkText": "∫(⊛)",
+        "content.description": "∫(⊛)"
+    },
+    "jahia": {
+        "superType": "",
+        "properties": {
+            "title": {
+                "title": "Title",
+                "type": "string"
+            },
+            "link": {
+                "type": "path",
+                "selector": "picker"
+            },
+            "linkText": {
+                "type": "string"
+            },
+            "description": {
+                "type": "string"
+            }
+        }
+    }
+}

@@ -1,0 +1,65 @@
+{
+	"title": "Layer X Base Section Component",
+	"description": "Is the resource super type of all Layer X section components.",
+	"name": "base",
+	"address": "bedrock:layerx:components:section:base",
+	"version": "1.0.0",
+	"abstract": false,
+	"tags": ["bedrock", "layer x", "base", "foundation", "section"],
+	"blueprint": {},
+	"schema": {},
+	"aem": {
+		"superType": "foundation/components/parbase",
+		"type": "layerx/components/section/base",
+		"componentGroup": ".hidden",
+		"nodes": {
+			"cq:htmlTag": {
+				"xk-section": "v1"
+			},
+			"xkConfig": {
+				"xk_componentCategory": ["design", "global", "content", "styling", "component", "page"],
+				"xk_clientAccessible": false,
+				"xk_clientModelProperties": ["content", "styling"],
+				"xk_containerClasses": ["xk-section-base", "xk-component"]
+			},
+			"cq:editConfig": {
+				"jcr:primaryType": "cq:EditConfig",
+				"cq:dialogMode": "floating"
+			},
+			"cq:editConfig/cq:listeners": {
+				"jcr:primaryType": "cq:EditListenersConfig",
+				"afterdelete": "REFRESH_PAGE",
+				"afterinsert": "REFRESH_PAGE",
+				"afteredit": "REFRESH_PAGE"
+			}
+		},
+		"assets": {
+			"paths": [
+				"files/aem/*"
+			]
+		}
+	},
+	"jahia": {
+		"namespace": "lx",
+		"mixins": ["jnt:content"],
+		"abstract": true,
+		"assets": {
+			"paths": [
+				"files/jahia/*"
+			]
+		}
+	},
+	"implementation": {
+		"categories": [
+			"design",
+			"global",
+			"content",
+			"styling",
+			"component",
+			"page"
+		],
+		"servlets": [
+			"bedrock.base.servlets.LayerXComponentContentModelToJSONServlet"
+		]
+	}
+}

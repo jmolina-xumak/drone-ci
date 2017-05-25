@@ -1,0 +1,31 @@
+{
+  "parent": "",
+  "title": "Simple Banner",
+  "description": "content banner with image and call to action",
+  "tags": [
+    "xumakcom2017",
+    "banner",
+    "simplebanner"
+  ],
+  "address": "xumak:Xumak2017:vue:section:simpleBanner",
+  "excludes": [
+    "data/config.json",
+    "data/content.json",
+    "libs/authoring/libs.json",
+    "libs/authoring/styles/placeholder.scss",
+    "libs/libs.json",
+    "libs/scripts/component.js",
+    "libs/styles/component.scss",
+    "libs/styles/components/component.scss",
+    "libs/styles/objects/structure.scss",
+    "libs/styles/settings/colors.scss",
+    "libs/styles/trumps.scss",
+    "markup/component.html"
+  ],
+  "containerClasses": "SimpleBanner",
+  "extends": "xumak:xumakcom2017:vue:section:textAndImageWithLink;1.0.0",
+  "dependencies": {
+    "build": [],
+    "runtime": []
+  }
+}

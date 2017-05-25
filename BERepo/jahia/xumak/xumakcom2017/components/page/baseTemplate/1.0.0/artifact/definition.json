@@ -1,0 +1,18 @@
+{
+  "title": "Base Template",
+  "description": "The base template from where the content templates should inherit",
+  "name": "baseTemplate",
+  "address": "xumak:xumakcom2017:components:page:baseTemplate",
+  "version": "1.0.0",
+  "extends": "bedrock:core:components:page:base;1.0.0",
+  "tags": ["xumakcom2017", "base"],
+  "blueprint": {},
+  "nodes": {},
+  "implementation": {
+    "contextProcessors": []
+  },
+  "dialogs": {
+  },
+  "jahia": {
+  }
+}

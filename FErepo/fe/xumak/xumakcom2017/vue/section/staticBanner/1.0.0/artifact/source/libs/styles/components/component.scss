@@ -1,0 +1,15 @@
+
+// Define the component colors and themes here
+// Use Bliss.
+
+
+.StaticBanner {
+    &-heading {
+        font-family: $font-hurme-geometric-sans-bold;
+        color: $color-heading;
+    }
+    &-description {
+        font-family: $font-source-sans-pro-regular;
+        color: $color-description;
+    }
+}

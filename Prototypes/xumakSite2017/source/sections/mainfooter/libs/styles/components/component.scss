@@ -2,96 +2,11 @@
 // Define the component colors and themes here
 // Use Bliss.
 .Mainfooter {
-    padding-bottom: 37px;
-
-    &-mainList,
-    &-secondaryList {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    &-mainItem {
-        display: block;
-    }
-
     &-mainLink {
-        text-decoration: none;
         color: $main-link-text-color; 
-        font-weight: bold;
-        font-family: $font-hurme-geometric-sans-bold;
-        @include rem(font-size, 16px);
-        line-height: 44px;
     }
-    
     &-copyText,
     &-secondaryLink {
-        font-family: $font-source-sans-pro-regular;
-        @include rem(font-size, 14px);
-        line-height: 24px;
         color: $secondary-text-color;
     }
-
-    &-copyText {
-        margin-top: 14px;
-        display: block;
-    }
-
-    &-secondaryList {
-        display: table;
-        width: 100%;
-    }
-    &-secondaryItem {
-        display: table-cell;
-        margin-right: 30px;
-    }
-    &-secondaryLink {
-        text-decoration: underline;
-    }
-
-    @media screen and (min-width: 40em) {
-        padding-bottom: 55px;
-        
-        &-mainList {
-            margin-bottom: 26px;
-        }
-        &-mainItem {
-            display: inline-block;
-            margin-right: 43px;
-        }
-        &-copyText {
-            margin-top: 0;
-        }
-        &-secondaryList {
-            display: block;
-            width: 100%;
-        }
-        &-secondaryItem {
-            margin-right: 11px;
-            display: inline-block;
-        }
-    }
-
-    @media screen and (min-width: 64em){
-        &-mainItem {
-            margin-right: 28px;
-        }
-        &-copyText {
-           text-align: center;
-           margin-top: 10px;
-           margin-right: -7px;
-        }
-        &-copyText,
-        &-secondaryLink {
-            @include rem(font-size, 13px); 
-        }
-
-        &-secondaryList {
-            text-align: right;
-            margin-top: 8px;
-        }
-        &-secondaryItem {
-            margin-right: 10px;
-        }
-    } 
 }

@@ -1,0 +1,13 @@
+{
+  "title": "BedrocK Base Content List Component",
+  "description": "Is the resource super type of all the content list components.",
+  "name": "contentListBase",
+  "extends": "bedrock:core:components:section:base;1.0.0",
+  "address": "bedrock:core:components:section:contentListBase",
+  "version": "1.0.0",
+  "abstract": false,
+  "tags": ["bedrock", "base", "foundation", "section", "list", "content"],
+  "jahia": {
+    "superType": "bedrock:layerx:components:section:contentListBase;1.0.0"
+  }
+}

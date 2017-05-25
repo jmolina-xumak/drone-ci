@@ -1,4 +1,4 @@
-<a href="{%# if href %}{% href %}{% else %}#{%/ if %}" {%# if isButton %}role="button"{%/ if %} class="Button {%# if disabled %}Button--disabled {%/ if %} {%# if request %}Button--request {%/ if %}">
+<a href="{%# if href %}{% href %}{% else %}#{%/ if %}" <%#if target%>{%#if <%target%> %}target="{% <% target %> %}"{%/if%}<%/if%> {%# if isButton %}role="button"{%/ if %} class="Button {%# if disabled %}Button--disabled {%/ if %} {%# if request %}Button--request {%/ if %}">
     <span class="Button-text">
        {% <% text %> %}
     </span>

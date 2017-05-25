@@ -5,6 +5,5 @@ target/
 .vagrant/
 .trash/
 target/
-JahiaFiles/
 dockerHost/.vagrant/
 *.iml
