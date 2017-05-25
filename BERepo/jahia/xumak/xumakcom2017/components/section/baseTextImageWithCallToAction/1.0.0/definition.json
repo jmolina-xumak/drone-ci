@@ -24,12 +24,15 @@
 		"superType": "",
 		"properties": {
 			"title": {
+				"title": "Title",
 				"type": "string"
 			},
 			"description": {
+				"title": "Description",
 				"type": "textarea"
 			},
 			"imagePath": {
+				"title": "Image",
 				"type": "path",
 				"selector": "picker",
 				"selector-options": [
@@ -37,9 +40,11 @@
 				]
 			},
 			"imageAltText": {
+				"title": "Image Alt Text",
 				"type": "string"
 			},
 			"link": {
+				"title": "Link",
 				"type": "path",
 				"selector": "picker",
 				"selector-options": [
@@ -47,14 +52,16 @@
 				]
 			},
 			"linkText": {
+				"title": "Link Label",
 				"type": "string"
 			},
 			"linkTarget": {
-              "type": "string",
-              "selector": "choicelist",
-              "selector-options": ["resourceBundle"],
-              "default-values": ["SameTab"],
-              "constraints": ["NewTab", "SameTab"]
+				"title": "Link Target",
+				"type": "string",
+				"selector": "choicelist",
+				"selector-options": ["resourceBundle"],
+				"default-values": ["SameTab"],
+				"constraints": ["NewTab", "SameTab"]
             }
 		}
 	}
