@@ -1,0 +1,74 @@
+{
+  "title": "BedrocK Base Page Component",
+  "description": "Is the base of all page components",
+  "name": "base",
+  "address": "bedrock:core:components:page:base",
+  "version": "1.0.0",
+  "definitionType": "page",
+  "abstract": true,
+  "tags": ["bedrock", "core", "page"],
+  "blueprint": {},
+  "schema": {
+    "content": {
+      "name": "∫",
+      "path": "∫"
+    },
+    "component": {
+      "title": "∫"
+    },
+    "page": {
+      "title": "∫",
+      "pageName": "∫",
+      "name": "∫",
+      "path": "∫",
+      "imagePath": "∫",
+      "cq:tags": "[⦻..?]:◌"
+    },
+    "global": {},
+    "design": {},
+    "styling": {
+      "containerClasses": "[⦻..?]:◌"
+    },
+    "config": {}
+  },
+  "functionality": {
+    "author": {
+      "localContent": {
+        "title": "Manage Local Content",
+        "paths": ["stories/author/localcontent/*.feature"]
+      },
+      "designContent": {
+        "title": "Manage Design Content",
+        "paths": ["stories/author/designcontent/*.feature"]
+      },
+      "globalContent": {
+        "title": "Manage Global Content",
+        "paths": ["stories/author/globalcontent/*.feature"]
+      }
+    },
+    "anonUser": {
+      "view": {
+        "title": "View Component",
+        "paths": ["stories/anon/view/*"]
+      }
+    },
+    "knownUser": {
+      "view": {
+        "title": "View Component",
+        "paths": ["stories/anon/view/*.feature"]
+      }
+    }
+  },
+  "assets": {
+    "paths": [
+      "files/*"
+    ]
+  },
+  "aem": {
+    "superType": "bedrock:layerx:components:page:htmlbase;1.0.0",
+		"componentGroup": ".hidden"
+  },
+  "jahia": {
+		"superType": "bedrock:layerx:components:page:htmlbase;1.0.0"
+	}
+}

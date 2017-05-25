@@ -9,8 +9,6 @@
     "core"
   ],
   "excludes": [
-    "data/config.json",
-    "data/global.json",
     "markup/body.html",
     "markup/bottom.html",
     "markup/content.html",
@@ -24,12 +22,11 @@
     "markup/metas.html",
     "markup/scripts.html",
     "markup/styles.html",
-    "settings/prototype.json"
+    "settings/prototype.json",
+    "data/pages.json"
   ],
   "dependencies": {
-    "build": [
-    ],
-    "runtime": [
-    ]
+    "build": [],
+    "runtime": []
   }
 }
