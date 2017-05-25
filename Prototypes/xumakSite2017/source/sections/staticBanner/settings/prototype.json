@@ -1,0 +1,30 @@
+{
+  "parent": "",
+  "title": "Static Banner",
+  "description": "content banner with image and call to action",
+  "tags": [
+    "xumakcom2017",
+    "banner",
+    "staticbanner",
+    "vue",
+    "foundation"
+  ],
+  "address": "xumak:Xumakcom2017:vue:section:staticBanner",
+  "excludes": [
+    "libs/authoring/styles/placeholder.scss",
+    "libs/libs.json",
+    "libs/scripts/component.js",
+    "libs/styles/component.scss",
+    "libs/styles/components/component.scss",
+    "libs/styles/settings/colors.scss",
+    "libs/styles/trumps.scss",
+    "markup/component.html",
+    "data/config.json"
+  ],
+  "containerClasses": "StaticBanner",
+  "extends": "xumak:xumakcom2017:vue:section:textAndImageWithLink;1.0.0",
+  "dependencies": {
+    "build": [],
+    "runtime": []
+  }
+}

@@ -1,0 +1,90 @@
+
+// Define the component structure here
+// Use Bliss.
+// Don't specify colors properties.
+
+
+.StaticBanner {
+
+    &-img {
+        min-height: 200px;
+        width: 100%;
+        z-index: -5;
+        
+    }
+    &-columns {
+        min-height: 200px;
+    }
+    &-headingBox {
+        margin-top: 20px;
+        margin-bottom: 12px;
+
+    }
+    &-heading {
+        @include rem(font-size, 14px);
+        font-weight: bold;
+        line-height: 20px;
+    }
+    &-description {
+        @include rem(font-size, 16px);
+        line-height: 24px;
+    }
+    &-linkBox {
+        width: 100%;
+        text-align: center;
+        margin-top: 22px;
+    }
+    @media (min-width: $breakpoint-tablet) {
+        
+        width: 100%;
+        &-img {
+            min-height: 416px;
+            width: 640px;
+            position: absolute;
+            left: 0px;
+        }
+        &-columns {
+           min-height: 416px;
+           display: table;
+        }
+        &-contentBox {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        &-headingBox {
+            margin-top: 0;
+        }
+        &-linkBox {
+            text-align: left;
+        }
+        &-heading {
+            @include rem(font-size, 20px);
+            line-height: 24px;
+        }
+    }
+    @media (min-width: $breakpoint-desktop) {
+        width: 100%;
+        &-img {
+            min-height: 728px;
+            width: 1067px;
+            position: absolute;
+            left: 0px;
+        }
+        &-columns {
+            min-height: 728px;
+        }
+        &-contentBox {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        &-linkBox {
+            margin-left: 20px;
+            display: inline-block;
+            width: auto;
+        }
+         &-heading {
+            @include rem(font-size, 24px);
+            line-height: 32px;
+        }
+    }
+}

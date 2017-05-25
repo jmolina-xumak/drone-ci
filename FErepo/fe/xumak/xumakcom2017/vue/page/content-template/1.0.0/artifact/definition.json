@@ -1,0 +1,31 @@
+{
+  "title": "Content Template",
+  "description": "Template used for general one column full width content",
+  "name": "content-template",
+  "address": "xumak:xumakcom2017:vue:page:content-template",
+  "version": "1.0.0",
+  "extends": "bedrock:core:common:page:base;1.0.0",
+  "containerClasses": [
+    "ContentTemplate"
+  ],
+  "tags": [
+    "contentTemplate",
+    "xumakcom2017"
+  ],
+  "aem": {
+    "clientLibraries": [
+      {
+        "id": "main",
+        "scripts": [
+          "scripts/component.js"
+        ],
+        "styles": [
+          "styles/component.css"
+        ],
+        "assets": [],
+        "priority": 50
+      }
+    ]
+  },
+  "blueprint": {}
+}

@@ -1,0 +1,59 @@
+
+// Define the component colors and themes here
+// Use Bliss.
+
+.SimpleBanner {
+
+	&-container {}
+
+	&-image {}
+
+	&-contentColumns {}
+
+  &-content {}
+
+  &-secondaryButton {}
+
+  &-title {
+    @include rem(font-size, 16px);
+    color: $color-title;
+    font-family: $font-hurme-geometric-sans-bold;
+  }
+
+  &-heading {}
+
+	@media (min-width: $breakpoint-tablet) {
+    &-image {}
+
+    &-container {}
+
+    &-wrapper {}
+
+    &-content {}
+
+    &-title {
+      @include rem(font-size, 20px);
+    }
+
+    &-secondaryButton {}
+
+	}
+
+  @media (min-width: $breakpoint-desktop) {
+    &-image {
+      img {}
+    }
+
+    &-container {}
+
+    &-wrapper {}
+
+    &-secondaryButton {}
+
+    &-title {
+      @include rem(font-size, 24px);
+    }
+
+  }
+
+}

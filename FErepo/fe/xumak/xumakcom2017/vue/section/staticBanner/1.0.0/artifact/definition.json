@@ -1,0 +1,47 @@
+{
+  "title": "Static Banner",
+  "description": "content banner with image and call to action",
+  "name": "staticBanner",
+  "address": "xumak:Xumakcom2017:vue:section:staticBanner",
+  "version": "1.0.0",
+  "extends": "xumak:xumakcom2017:vue:section:textAndImageWithLink;1.0.0",
+  "containerClasses": [
+    "StaticBanner"
+  ],
+  "tags": [
+    "xumakcom2017",
+    "banner",
+    "staticbanner",
+    "vue",
+    "foundation"
+  ],
+  "aem": {
+    "clientLibraries": [
+      {
+        "id": "cq.wcm.edit",
+        "styles": [
+          "authoring/styles/placeholder.css"
+        ],
+        "priority": 50
+      },
+      {
+        "id": "main",
+        "scripts": [
+          "scripts/component.js"
+        ],
+        "styles": [
+          "styles/component.css"
+        ],
+        "assets": [],
+        "priority": 50
+      }
+    ]
+  },
+  "blueprint": {
+    "content.imageURL": "◌",
+    "content.imageAlt": "◌",
+    "content.heading": "◌",
+    "embed": "◌",
+    "content.description": "◌"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "parent": "_base",
+  "title": "Content Template",
+  "description": "Template used for general one column full width content",
+  "tags": [
+    "contentTemplate",
+    "xumakcom2017"
+  ],
+  "address": "xumak:xumakcom2017:vue:page:content-template",
+  "excludes": [
+    "libs/libs.json",
+    "libs/scripts/component.js",
+    "libs/styles/page/elements.scss",
+    "libs/styles/page/generic.scss",
+    "libs/styles/page/settings.scss",
+    "libs/styles/page/tools.scss",
+    "libs/styles/trumps.scss",
+    "data/config.json",
+    "data/pages.json"
+  ],
+  "containerClasses": "ContentTemplate",
+  "extends": "bedrock:core:common:page:base;1.0.0",
+  "dependencies": {
+    "build": [],
+    "runtime": []
+  }
+}

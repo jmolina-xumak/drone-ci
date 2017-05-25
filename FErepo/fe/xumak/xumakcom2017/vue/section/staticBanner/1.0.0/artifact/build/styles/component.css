@@ -1,0 +1,95 @@
+/* color palette for xumak.co 2017  */
+.extraRow {
+  position: relative;
+  max-width: 1700px;
+  margin: 0 auto; }
+
+.no-col-gutter {
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
+
+@media screen and (min-width: 64em) {
+  .no-col-gutter-large {
+    padding-left: 0 !important;
+    padding-right: 0 !important; } }
+
+.StaticBanner-img {
+  min-height: 200px;
+  width: 100%;
+  z-index: -5; }
+
+.StaticBanner-columns {
+  min-height: 200px; }
+
+.StaticBanner-headingBox {
+  margin-top: 20px;
+  margin-bottom: 12px; }
+
+.StaticBanner-heading {
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 20px; }
+
+.StaticBanner-description {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 24px; }
+
+.StaticBanner-linkBox {
+  width: 100%;
+  text-align: center;
+  margin-top: 22px; }
+
+@media (min-width: 768px) {
+  .StaticBanner {
+    width: 100%; }
+    .StaticBanner-img {
+      min-height: 416px;
+      width: 640px;
+      position: absolute;
+      left: 0px; }
+    .StaticBanner-columns {
+      min-height: 416px;
+      display: table; }
+    .StaticBanner-contentBox {
+      display: table-cell;
+      vertical-align: middle; }
+    .StaticBanner-headingBox {
+      margin-top: 0; }
+    .StaticBanner-linkBox {
+      text-align: left; }
+    .StaticBanner-heading {
+      font-size: 20px;
+      font-size: 1.25rem;
+      line-height: 24px; } }
+
+@media (min-width: 1224px) {
+  .StaticBanner {
+    width: 100%; }
+    .StaticBanner-img {
+      min-height: 728px;
+      width: 1067px;
+      position: absolute;
+      left: 0px; }
+    .StaticBanner-columns {
+      min-height: 728px; }
+    .StaticBanner-contentBox {
+      display: table-cell;
+      vertical-align: middle; }
+    .StaticBanner-linkBox {
+      margin-left: 20px;
+      display: inline-block;
+      width: auto; }
+    .StaticBanner-heading {
+      font-size: 24px;
+      font-size: 1.5rem;
+      line-height: 32px; } }
+
+.StaticBanner-heading {
+  font-family: "HurmeGeometricSansBold", Arial;
+  color: #023047; }
+
+.StaticBanner-description {
+  font-family: "SourceSansProRegular", Arial;
+  color: #353535; }

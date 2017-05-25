@@ -1,0 +1,12 @@
+
+// Define the component colors and themes here
+// Use Bliss.
+.Mainfooter {
+    &-mainLink {
+        color: $main-link-text-color; 
+    }
+    &-copyText,
+    &-secondaryLink {
+        color: $secondary-text-color;
+    }
+}

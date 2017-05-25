@@ -1,0 +1,12 @@
+{
+  "content": {
+    "imageURL":"http://xumak.com/assets/images/logo.png",
+		"imageAlt":"image text",
+		"heading":"Lorem ipsum dolor sit amet",
+		"title":"Lorem ipsum dolor sit amet",
+		"description":"Ut enim ad minim veniam, quis nostrud...",
+		"mainCallToActionText":"Call to Action",
+		"mainCallToActionURL":"http://xumak.com",
+		"mainCallToActionTarget":"_blank"
+    }
+}

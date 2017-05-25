@@ -1,0 +1,23 @@
+/* color palette for xumak.co 2017  */
+.extraRow {
+  position: relative;
+  max-width: 1700px;
+  margin: 0 auto; }
+
+.no-col-gutter {
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
+
+@media screen and (min-width: 64em) {
+  .no-col-gutter-large {
+    padding-left: 0 !important;
+    padding-right: 0 !important; } }
+
+.ContentTemplate-MainNavigation {
+  position: absolute;
+  top: 0px;
+  left: 0px; }
+
+@media screen and (min-width: 1025px) {
+  .ContentTemplate-Components {
+    margin-left: 200px; } }

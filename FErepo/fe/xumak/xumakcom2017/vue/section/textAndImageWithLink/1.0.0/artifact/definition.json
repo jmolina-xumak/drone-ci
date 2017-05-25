@@ -1,0 +1,51 @@
+{
+  "title": "Text & Image with link",
+  "description": "abstract artifact for images with text and link",
+  "name": "textAndImageWithLink",
+  "address": "xumak:xumakcom2017:vue:section:textAndImageWithLink",
+  "version": "1.0.0",
+  "extends": "bedrock:core:common:section:base;1.0.0",
+  "containerClasses": [
+    "TextAndImageWithLink"
+  ],
+  "tags": [
+    "xumakcom2017",
+    "text",
+    "image",
+    "textAndImageWithLink",
+    "vue",
+    "foundation"
+  ],
+  "aem": {
+    "clientLibraries": [
+      {
+        "id": "cq.wcm.edit",
+        "styles": [
+          "authoring/styles/placeholder.css"
+        ],
+        "priority": 50
+      },
+      {
+        "id": "main",
+        "scripts": [
+          "scripts/component.js"
+        ],
+        "styles": [
+          "styles/component.css"
+        ],
+        "assets": [],
+        "priority": 50
+      }
+    ]
+  },
+  "blueprint": {
+    "content.imageURL": "◌",
+    "content.imageAlt": "◌",
+    "content.heading": "◌",
+    "content.title": "◌",
+    "content.description": "◌",
+    "content.mainCallToActionURL": "◌",
+    "content.mainCallToActionTarget": "◌",
+    "content.mainCallToActionText": "◌"
+  }
+}

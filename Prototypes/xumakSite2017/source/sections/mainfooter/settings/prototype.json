@@ -1,0 +1,23 @@
+{
+  "parent": "",
+  "title": "Mainfooter",
+  "description": "",
+  "tags": [
+    "xumakcom2017",
+    "footer"
+  ],
+  "address": "xumak:Xumak2017:vue:section:mainfooter",
+  "excludes": [
+    "libs/libs.json",
+    "libs/scripts/component.js",
+    "libs/styles/trumps.scss",
+    "data/config.json",
+    "libs/authoring/libs.json"
+  ],
+  "containerClasses": "Mainfooter",
+  "extends": "bedrock:core:common:section:base;1.0.0",
+  "dependencies": {
+    "build": [],
+    "runtime": []
+  }
+}
