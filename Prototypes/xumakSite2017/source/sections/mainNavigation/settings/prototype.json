@@ -5,7 +5,7 @@
   "tags": [
     "xumakcom2017 (new tag)"
   ],
-  "address": "xumak:xumakcom2017:vue:section:mainNavigation",
+  "address": "xk:xumakcom2017:vue:section:mainNavigation",
   "excludes": [
     "data/content.json",
     "libs/authoring/libs.json",

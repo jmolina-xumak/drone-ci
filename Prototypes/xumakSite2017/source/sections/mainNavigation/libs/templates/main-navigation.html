@@ -1,4 +1,5 @@
-<div class="MainNavigation-component isSlidedOut" v-bind:class="{isVisible: menu.isVisible}">
+<div class="MainNavigation-component " 
+    v-bind:class="{isVisible: menu.isVisible ,isActive : menu.isVisible, isSlidedIn: menu.isSlided, isSlidedOut: !menu.isSlided}">
     <svg style="width: 15px; height: 15px; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <defs>
             <symbol id="icon-close" viewBox="0 0 24 24">
@@ -31,16 +32,11 @@
             <img v-bind:src="dataImagePath" v-bind:alt="dataImageAltText">
         </a>
     </div>
-    <ul class="MainNavigation-list"
-        v-on:mouseover="mouseIn"
-        v-on:mouseleave="mouseOut">
-        <li class="MainNavigation-item" v-for="item in menu.pages"
-            v-on:mouseover="mouseEnter(item, $event)"
-            v-on:mouseleave="mouseLeave(item, $event)">
+    <ul class="MainNavigation-list">
+        <li class="MainNavigation-item" v-for="item in menu.pages">
             <a class="MainNavigation-link" 
                v-bind:href="item.hasChildren ? '#' : item.link" 
-               v-on:click="toggleSubMenu(item)" 
-               v-on:keyup.enter="toggleSubMenu(item)" 
+               v-on:click="mouseEnter(item, $event)" 
                v-bind:class="{isActive : item.isExpanded}"
                v-bind:aria-expanded="[item.isExpanded]">
                 {{item.title}}
@@ -65,8 +61,7 @@
                     </a>
                 </li>
 
-                <li class="MainNavigation-subItem"  
-                    v-on:keyup.tab="disableTab(item)"  
+                <li class="MainNavigation-subItem"
                     v-for="subitem in item.pages">
                     <a class="MainNavigation-subLink"
                     v-bind:href="subitem.link" >

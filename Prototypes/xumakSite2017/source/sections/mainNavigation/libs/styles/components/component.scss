@@ -21,7 +21,13 @@
     &-subList {
         background-color: $secondary-background; 
     }
-
+    &-overlay {
+        background-color: $overlay-color;
+    }
+    /* --- States ---*/
+    &-menuButton:focus {
+        outline-color: $outline-color;
+    }
     @media(min-width: $breakpoint-desktop){
         
         &-component {
@@ -35,9 +41,9 @@
             background-image: linear-gradient(to left, transparent, transparent 50%, $main-background 50%, $main-background);
         }
         
-        &-link:hover {
+/*        &-link:hover {
             background-color: $secondary-background;
-        }
+        }*/
         &-link.isActive {
             background-color: $secondary-background;
         }
