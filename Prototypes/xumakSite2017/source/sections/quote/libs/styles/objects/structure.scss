@@ -84,7 +84,7 @@ $external-menuWidth: 200px;
     /* For tablets: */    
 
     .Quote {
-        margin-top: 16px; 
+        //margin-top: 16px; 
 
         &-text { 
             @include rem(font-size, 32px); 
