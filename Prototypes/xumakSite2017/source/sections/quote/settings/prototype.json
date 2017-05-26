@@ -1,0 +1,29 @@
+{
+  "parent": "",
+  "title": "Quote",
+  "description": "This section component will show a quote using the color scheme and fonts defined on the style guide.",
+  "tags": [
+    "xumakcom2017 (new tag)",
+    "Quote"
+  ],
+  "address": "xumak:xumakcom2017:Javascript:section:quote",
+  "excludes": [
+    "data/content.json",
+    "libs/authoring/libs.json",
+    "libs/authoring/styles/placeholder.scss",
+    "libs/libs.json",
+    "libs/scripts/component.js",
+    "libs/styles/component.scss",
+    "libs/styles/components/component.scss",
+    "libs/styles/objects/structure.scss",
+    "libs/styles/settings/colors.scss",
+    "libs/styles/trumps.scss",
+    "markup/component.html"
+  ],
+  "containerClasses": "Quote",
+  "extends": "bedrock:core:common:section:base;1.0.0",
+  "dependencies": {
+    "build": [],
+    "runtime": []
+  }
+}
