@@ -3,7 +3,7 @@
     {%# unless content.disableFilter %}
         <div class="SimpleTopBanner-filter"></div>
     {%/ unless %}
-    <div class="SimpleTopBanner-background" style="background-color: {% content.backgroundColor %}; background-image: url({% content.mediaURL %});">
+    <div class="SimpleTopBanner-background" style="background-color: {% content.backgroundColor %}; background-image: url({% content.mediaURL %});" role="image" aria-label="{% content.mediaAlt %}">
     </div>
     <div class="row">
         <div class="SimpleTopBanner-content">

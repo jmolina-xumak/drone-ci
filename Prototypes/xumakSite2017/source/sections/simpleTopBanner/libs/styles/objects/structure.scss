@@ -13,13 +13,16 @@
         transform: translateY(-50%);
         z-index: 5;
     }
-    &-titleBox {
-        margin-bottom: 40px;
+    &-btnBox {
+        margin-top: 40px;
     }
     &-title {
         font-family: $font-hurme-geometric-sans-bold;
         @include rem(font-size, 30px);
         line-height: 32px;
+    }
+    &-textBox {
+        margin-top: 6px;
     }
     &-text {
          font-family: $font-source-sans-pro-regular;
@@ -34,6 +37,10 @@
         &-title {
             @include rem(font-size, 38px);
             line-height: 40px;
+        }
+        &-textBox {
+            margin-top: 10px;
+            margin-bottom: 51px;
         }
         &-text {
             @include rem(font-size, 18px);
@@ -52,6 +59,9 @@
         }
          &-text {
             @include rem(font-size, 20px);
+        }
+        &-btnBox {
+            margin-top: 35px;
         }
     }
 }
