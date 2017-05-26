@@ -2,7 +2,7 @@
 	"title": "Base Text and Image With Call To Action",
 	"description": "Base Item with image, title, description and link inside a container component",
 	"name": "baseTextImageWithCallToAction",
-	"address": "xumak:xumakcom2017:components:section:baseTextImageWithCallToAction",
+	"address": "xk:xumakcom2017:components:section:baseTextImageWithCallToAction",
 	"version": "1.0.0",
 	"extends": "bedrock:core:components:section:base;1.0.0",
 	"tags": [
