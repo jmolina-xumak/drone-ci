@@ -30,13 +30,14 @@
         "properties": {
             "text": {
                 "title": "Text",
-                "type": "string"
+                "type": "string",
+                "selector": "richtext",
             },
             "authorName": {
                 "title": "Author Name",
                 "type": "string"
             },
-            "authorTitle": {
+            "rootPath": {
                 "title": "Root Path",
                 "type": "weakreference",
                 "selector": "picker",
