@@ -1,0 +1,197 @@
+
+// Define the component structure here
+// Use Bliss.
+// Don't specify colors properties.
+
+
+// $debug: false;
+$external-menuWidth: 200px;
+
+.Quote{ 
+    margin-top: 16px; 
+
+    // Holds the text, authorName, authorTitle fields within a fluid container.
+    // The text values are customized with the project´s color settings
+    &-Content {
+        min-height: 352px;
+        display: table;
+        width: 100%;
+    }
+
+    &-container {
+        display: table-cell;
+        vertical-align: middle;
+
+
+        // align horizontal right
+        &--right {
+            float: right;
+        }
+
+        // align vertical middle
+        &--middle {
+            display: table-cell;
+            vertical-align: middle;
+            float: none;
+        }
+    }
+      
+    // Field for "text" value
+    &-text {         
+        font-family: $font-hurme-geometric-sans-bold;
+        font-weight: 800;
+        @include rem(font-size, 26px); 
+        line-height: 32px;
+        margin: 0;
+        margin-bottom: calc(56px - 25px);
+    }
+
+    // Field for "authorName" value
+    &-authorName { 
+        font-family: $font-hurme-geometric-sans-bold;
+        font-weight: 800;
+        @include rem(font-size, 16px); 
+        line-height: 22px;
+        margin: 0;
+    }
+
+    // Field for "authorTitle" value
+    &-authorTitle { 
+        font-family: $font-source-sans-pro-semibold;
+        font-weight: 400;
+        @include rem(font-size, 16px); 
+        line-height: 22px;
+        margin: 0;
+    }
+
+    // Transforms a normal row into the needs of quotes icons, has doubleQuote icons,
+    // and allows to modify those icons
+    &-IconsRow {
+        line-height: 0;
+        font-size: 0;
+        padding-left: 5px;
+    }  
+
+    // Class to specify which icon to display and how to modify it
+    &-Icon {
+        display: inline-block;
+        font-size: 0;
+        line-height: 0;
+        padding: 40px 0 0 55px;
+
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGIAAABACAYAAADhwaIzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OThGOTE5MUUzNTA1MTFFN0JFM0NBNkYwQjk1ODMwMjciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OThGOTE5MUYzNTA1MTFFN0JFM0NBNkYwQjk1ODMwMjciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5OEY5MTkxQzM1MDUxMUU3QkUzQ0E2RjBCOTU4MzAyNyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5OEY5MTkxRDM1MDUxMUU3QkUzQ0E2RjBCOTU4MzAyNyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqxlkcgAAAKzSURBVHja7JrRTcNADIZDlPdmg2YDskHLBJQJyDMv7QZkBHjgPUxAWYCGCSgbtBukE5Sc5EinqoUkZ/sS9P+SpapUF/s++8535Cq4eQiUFNeWkpnPc/o+qW168ttP6+9DVEp+p1ZcRrMzv72rbW0+HD9eLg4YCTqb0GQ2Nu0Y6JBkxzHrAW39148igclf1JbVdu0wzoTG2nmc/IVlE0eIgRYI87BVbbfM5a8NIqY4so4V7FzdIQOAsrYNM4TWmcQIICfwj4wQ7OoWAZHQurfpsWYObZ9YWAAmQs/4M6mino4Xgk4Hv3Qg3FVQCFRyr6TqWhHG8TcFCNJVYcbdKkFgBRHTUnTvoV+XWIpK5n3AubrDlhBKxeyRBJEpV3TrWNqAeHI8EwwFREqx+DwU9gbx5GE5ktiwm6qeeIwl7ds1GYJLj46b+6aKJrFyHGvtEcKe2uNdHxBxm/sRZmfXlLVb5hN1rtAKnyZQaVkrRb84L51BB2qHC5p8CSV0ZaEx+QUlU6/qjS44vxTO/pwcl5Z0Qr3TM5wTKbrgvJSeafxKAUIi2GjsqRUuuQaMlJw/WAcpLeWCVZBxJ9MpiJUQhLngPnCp2ZBIqFeCwK7wzMlz7BCaa4zRQDgF4fqfqHNaeYAgUdnf0t1XKJhFn0qd0blN+loAbKUFYj7wrGyruUBCiTcZoZVFU2bnt/8ERK7hdCjkfBH4E2cse62WuwHBfe9feoIQM1e2WhwSIJrbRh8abUJJgPAFQQLEThsE5/mh8ggiZh6v0gTBvVFvPYIYbSxhAA1CYdDidUDP63TXU/UoY5EAYV67OXY0LnG/q/TVMY7cBQQ0kKUJAggIIAACAgiAgAACICCAAAgIIAACAgiAgAACICCAAAgIIAACAgiAgAACAgiAgAACICCAAAgIIMamHwEGAGfBiKGLz5QVAAAAAElFTkSuQmCC);
+        background-position: left top;
+        background-repeat: no-repeat;
+        -ms-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+        margin-top: -16px;
+
+        // show flipped version of icon
+        &--reverse {
+            -ms-transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+            margin-bottom: -16px;
+        }
+    }
+
+}
+
+@media only screen and (min-width: $breakpoint-tablet) {
+    /* For tablets: */    
+
+    .Quote {
+        margin-top: 16px; 
+
+        &-Content {
+            min-height: 352px; 
+        }
+
+        &-container {
+            background: red;
+            margin-left: 8.33333%; //medium-offset-1 
+            width: 83.33333%;  //medium-10
+        }
+
+        &-text { 
+            @include rem(font-size, 32px); 
+            line-height: 40px;
+        }
+
+        &-authorName { 
+            @include rem(font-size, 22px); 
+            line-height: 26px;
+        }
+
+        &-authorTitle { 
+            @include rem(font-size, 16px); 
+            line-height: 22px;
+        }  
+        
+        &-IconsRow {
+            padding-left: 0;
+            padding-right: 12px;
+        }  
+
+        &-Icon {
+            padding: 48px 0 0 64px;
+            margin-top: -16px;
+
+            &--reverse {
+                margin-bottom: -16px;
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: $breakpoint-desktop) {
+    /* For desktop: */
+    
+    .Quote {
+        padding-left: $external-menuWidth; 
+        margin-top: 24px; 
+
+        &-Content {
+            min-height: 496px;
+        }
+
+        &-container {
+            background: red;
+            margin-left: 8.33333%; //large-offset-1             
+            width: 75%;  //large-9
+        }
+
+        &-text { 
+            @include rem(font-size, 48px); 
+            line-height: 56px;
+            margin-bottom: calc(64px - 37px);
+        }
+
+        &-authorName { 
+            @include rem(font-size, 24px); 
+            line-height: 32px;
+        }
+
+        &-authorTitle { 
+            @include rem(font-size, 16px); 
+            line-height: 22px;
+        }  
+
+        
+        &-IconsRow {
+            padding-left: 0;
+        }  
+
+        &-Icon {
+            padding: 64px 0 0 98px;
+            margin-top: -24px;
+
+            &--reverse {
+                margin-bottom: -24px;
+            }
+        }
+    }
+
+}
