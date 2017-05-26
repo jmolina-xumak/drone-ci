@@ -10,7 +10,7 @@ $external-menuWidth: 200px;
 .Quote{ 
     width: 100%;
     display: table;
-    margin-top: 16px; 
+    //margin-top: 16px; 
 
     // Holds the text, authorName, authorTitle fields within a fluid container.
     // The text values are customized with the project´s color settings
@@ -85,7 +85,6 @@ $external-menuWidth: 200px;
 
     .Quote {
         margin-top: 16px; 
-        min-height: 352px; 
 
         &-text { 
             @include rem(font-size, 32px); 
@@ -128,7 +127,7 @@ $external-menuWidth: 200px;
     
     .Quote {
         padding-left: $external-menuWidth; 
-        margin-top: 24px; 
+        //margin-top: 24px; 
 
         &-container {
             height: 496px;
