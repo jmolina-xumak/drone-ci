@@ -28,7 +28,8 @@
 		"properties": {
 			"title": {
 				"title": "Title",
-				"type": "string"
+				"type": "string",
+				"selector": "richtext"
 			},
 			"description": {
 				"title": "Description",
@@ -36,7 +37,7 @@
 			},
 			"imagePath": {
 				"title": "Image",
-				"type": "path",
+				"type": "weakreference",
 				"selector": "picker",
 				"selector-options": [
 					"type='image'"
