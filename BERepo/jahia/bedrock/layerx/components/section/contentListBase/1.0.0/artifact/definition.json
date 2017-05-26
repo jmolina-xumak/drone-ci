@@ -1,0 +1,44 @@
+{
+	"title": "BedrocK Content List Base Section Component",
+	"description": "Is the base of all section components",
+	"name": "contentListBase",
+	"address": "bedrock:layerx:components:section:contentListBase",
+	"version": "1.0.0",
+	"abstract": false,
+	"tags": ["bedrock", "content", "list", "base", "section"],
+	"blueprint": {},
+	"schema": {},
+	"functionality": {
+		"author": {
+			"localContent": {
+				"title": "Manage Local Content",
+				"paths": ["stories/global/author/localcontent/*.feature"]
+			},
+			"designContent": {
+				"title": "Manage Design Content",
+				"paths": ["stories/global/author/designcontent/*.feature"]
+			},
+			"globalContent": {
+				"title": "Manage Global Content",
+				"paths": ["stories/global/author/globalcontent/*.feature"]
+			}
+		},
+		"anonUser": {
+			"view": {
+				"title": "View Component",
+				"paths": ["stories/global/anon/view/*.feature"]
+			}
+		},
+		"knownUser": {
+			"view": {
+				"title": "View Component",
+				"paths": ["stories/global/anon/view/*.feature"]
+			}
+		}
+	},
+	"jahia": {
+		"namespace": "lx",
+		"mixins": ["jnt:contentList", "jmix:droppableContent"],
+		"abstract": true
+	}
+}

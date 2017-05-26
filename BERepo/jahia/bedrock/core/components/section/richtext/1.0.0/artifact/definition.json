@@ -1,0 +1,25 @@
+{
+    "title": "Richtext",
+    "description": "To be extended by richtext artifacts.",
+    "name": "link",
+    "address": "bedrock:core:components:section:richtext",
+    "version": "1.0.0",
+    "extends": "bedrock:core:components:section:base;1.0.0",
+    "tags": [
+        "richtext",
+        "core",
+        "bedrock"
+    ],
+    "blueprint": {
+        "content.text": "∫(⊛)"
+    },
+    "jahia": {
+        "superType": "",
+        "properties": {
+            "text": {
+                "type": "string",
+                "selector": "richtext"
+            }
+        }
+    }
+}

@@ -5,6 +5,10 @@
     &-mainLink {
         color: $main-link-text-color; 
     }
+    &-mainLink:focus,
+    &-secondaryLink:focus {
+        outline-color: $outline-color; 
+    }
     &-copyText,
     &-secondaryLink {
         color: $secondary-text-color;

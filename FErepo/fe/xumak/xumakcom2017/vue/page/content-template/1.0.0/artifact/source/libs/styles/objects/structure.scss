@@ -4,5 +4,15 @@
 // Don't specify colors properties.
 
 .ContentTemplate {
-  
+	&-MainNavigation{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+	}
+
+ @media screen and (min-width: $breakpoint-tabletwithMenu) {
+		&-Components{
+				margin-left: 200px;
+		}   
+  }
 }

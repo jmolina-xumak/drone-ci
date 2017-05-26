@@ -1,0 +1,247 @@
+{
+  "title": "Layer X HTML Base Page Component",
+  "description": "Is the resource super type of all Layer X page components",
+  "name": "htmlbase",
+  "address": "bedrock:layerx:components:page:htmlbase",
+  "version": "1.0.0",
+  "abstract": false,
+  "tags": ["bedrock", "layer x", "foundation", "page", "base"],
+  "aem": {
+    "type": "layerx/components/page/htmlbase",
+    "superType": "foundation/components/page",
+    "componentGroup": ".hidden",
+    "dialogs": {
+      "page": {
+        "sections": {
+          "basic": {
+            "title": "Basic",
+            "fields": {
+              "vanity": {
+                "collapsed": true,
+                "collapsible": true,
+                "title": "Vanity URL",
+                "xtype": "dialogfieldset",
+                "items": {
+                  "jcr:primaryType": "cq:WidgetCollection",
+                  "vanityPathRedirect": {
+                    "fieldLabel": "Redirect Vanity URL",
+                    "jcr:primaryType": "cq:Widget",
+                    "name": "./sling:redirect",
+                    "type": "checkbox",
+                    "xtype": "selection"
+                  },
+                  "vanityPath": {
+                    "cls": "cq-propsdialog-vanityurl",
+                    "name": "./sling:vanityPath",
+                    "xtype": "multifield",
+                    "fieldLabel": "Vanity URL",
+                    "fieldConfig": {
+                      "allowBlank": false,
+                      "xtype": "textfield"
+                    }
+                  }
+                }
+              },
+              "onofftime": {
+                "hideMode": "offsets",
+                "collapsible": true,
+                "cls": "cq-propsdialog-set-onofftime",
+                "title": "On/Off Time",
+                "xtype": "dialogfieldset",
+                "collapsed": true,
+                "items": {
+                  "jcr:primaryType": "cq:WidgetCollection",
+                  "ontime": {
+                    "jcr:primaryType": "cq:Widget",
+                    "name": "./onTime",
+                    "ctCls": "cq-propsdialog-ontime",
+                    "xtype": "datetime",
+                    "fieldLabel": "On Time"
+                  },
+                  "onTimeHint": {
+                    "jcr:primaryType": "cq:Widget",
+                    "name": "./onTime@TypeHint",
+                    "value": "Date",
+                    "xtype": "hidden",
+                    "ignoreData": true
+                  },
+                  "offtime": {
+                    "jcr:primaryType": "cq:Widget",
+                    "name": "./offTime",
+                    "ctCls": "cq-propsdialog-offtime",
+                    "xtype": "datetime",
+                    "fieldLabel": "Off Time"
+                  },
+                  "offTimeHint": {
+                    "jcr:primaryType": "cq:Widget",
+                    "name": "./offTime@TypeHint",
+                    "value": "Date",
+                    "xtype": "hidden",
+                    "ignoreData": true
+                  }
+                }
+              },
+              "more_titles": {
+                "collapsible": true,
+                "title": "More Titles and Description",
+                "xtype": "dialogfieldset",
+                "collapsed": true,
+                "items": {
+                  "jcr:primaryType": "cq:WidgetCollection",
+                  "pagetitle": {
+                    "jcr:primaryType": "cq:Widget",
+                    "name": "./pageTitle",
+                    "xtype": "textfield",
+                    "fieldLabel": "Page Title"
+                  },
+                  "subtitle": {
+                    "jcr:primaryType": "cq:Widget",
+                    "name": "./subtitle",
+                    "xtype": "textfield",
+                    "fieldLabel": "Subtitle"
+                  },
+                  "navtitle": {
+                    "jcr:primaryType": "cq:Widget",
+                    "name": "./navTitle",
+                    "xtype": "textfield",
+                    "fieldLabel": "Navigation Title"
+                  },
+                  "description": {
+                    "jcr:primaryType": "cq:Widget",
+                    "name": "./jcr:description",
+                    "xtype": "textarea",
+                    "fieldLabel": "Description"
+                  }
+                }
+              },
+              "basic": {
+                "collapsible": false,
+                "xtype": "dialogfieldset",
+                "collapsed": false,
+                "items": {
+                  "jcr:primaryType": "cq:WidgetCollection",
+                  "title": {
+                    "jcr:primaryType": "cq:Widget",
+                    "name": "./jcr:title",
+                    "xtype": "textfield",
+                    "fieldLabel": "Title"
+                  },
+                  "hideinnav": {
+                    "jcr:primaryType": "cq:Widget",
+                    "name": "./hideInNav",
+                    "type": "checkbox",
+                    "xtype": "selection",
+                    "fieldLabel": "Hide in Navigation",
+                    "inputValue": "true"
+                  },
+                  "imageresourcetype": {
+                    "jcr:primaryType": "cq:Widget",
+                    "name": "./image/sling:resourceType",
+                    "value": "foundation/components/image",
+                    "xtype": "hidden",
+                    "ignoreData": "true"
+                  },
+                  "tags": {
+                    "jcr:primaryType": "cq:Widget",
+                    "cls": "cq-propsdialog-tags",
+                    "name": "./cq:tags",
+                    "xtype": "tags",
+                    "fieldLabel": "Tags/Keywords"
+                  }
+                }
+              }
+            }
+          },
+          "image": {
+            "jcr:primaryType": "cq:Widget",
+            "renditionSuffix": "/_jcr_content/renditions/original",
+            "fileReferenceParameter": "./image/fileReference",
+            "rotateParameter": "./image/imageRotate",
+            "ddGroups": "media",
+            "fileNameParameter": "./image/fileName",
+            "name": "./image/file",
+            "cropParameter": "./image/imageCrop",
+            "title": "Image",
+            "xtype": "html5smartimage",
+            "allowUpload": "false",
+            "requestSuffix": ".img.png",
+            "mapParameter": "./image/imageMap"
+          },
+          "advanced": {
+            "jcr:primaryType": "cq:Widget",
+            "path": "/libs/foundation/components/page/tab_advanced.infinity.json",
+            "xtype": "cqinclude"        
+          },
+          "blueprint": {
+            "jcr:primaryType": "cq:Widget",
+            "path": "/libs/foundation/components/page/tab_blueprint.infinity.json",
+            "xtype": "cqinclude"
+          },
+          "cloudservices": {
+            "jcr:primaryType": "cq:Widget",
+            "path": "/libs/foundation/components/page/tab_cloudservices.infinity.json",
+            "xtype": "cqinclude"
+          },
+          "livecopy": {
+            "jcr:primaryType": "cq:Widget",
+            "path": "/libs/foundation/components/page/tab_livecopy.infinity.json",
+            "xtype": "cqinclude"
+          }
+        }
+      }
+    },
+    "nodes": {
+      "xkConfig": {
+        "xk_clientAccessible": false,
+        "xk_componentCategory": [
+          "page",
+          "htmlpage",
+          "styling",
+          "component",
+          "content",
+          "global",
+          "design"
+        ],
+        "xk_clientModelProperties": ["content", "page", "design", "global", "statistics"],
+        "xk_containerClasses": ["xk-page", "xk-component"]
+      }
+    }
+  },
+  "jahia": {
+    "mixins": ["jnt:template"],
+    "config": {
+      "xk_clientModelProperties": [
+        "content",
+        "styling"
+      ],
+      "xk_containerClasses": [
+        "xk-component",
+        "xk-section-base"
+      ],
+      "xk_componentCategory": [
+        "design",
+        "global",
+        "content",
+        "styling",
+        "component",
+        "page"
+      ],
+      "xk_clientAccessible": false
+    }
+  },
+  "implementation": {
+    "contextProcessors": [
+      "bedrock.extended.contextprocessors.AddComponentPropertiesContextProcessor;1.0.0",
+      "bedrock.extended.contextprocessors.AddAllResourceContentPropertiesContextProcessor;1.0.0",
+      "bedrock.extended.contextprocessors.AddGlobalPropertiesContextProcessor;1.0.0",
+      "bedrock.extended.contextprocessors.AddPagePropertiesContextProcessor;1.0.0",
+      "bedrock.extended.contextprocessors.AddDesignPropertiesContextProcessor;1.0.0",
+      "bedrock.extended.contextprocessors.AddBasicResourcePropertiesContextProcessor;1.0.0",
+      "bedrock.extended.contextprocessors.css.AddStylingContextProcessor;1.0.0",
+      "bedrock.extended.contextprocessors.json.DeserializeJSONPropertyValuesContextProcessor;1.0.0"
+    ],
+    "servlets": [
+      "bedrock.base.servlets.XCQBPageContentModelToJSONServlet;1.0.0"
+    ]
+  }
+}
