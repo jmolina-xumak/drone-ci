@@ -3,9 +3,9 @@
   "title": "Atoms",
   "description": "Section to include different atoms",
   "tags": [
-    "atoms (new tag)"
+    "atoms"
   ],
-  "address": "XK:Xumak2017:foundation:section:atoms",
+  "address": "xk:xumakcom2017:foundation:section:atoms",
   "excludes": [
     "data/content.json",
     "libs/authoring/libs.json",
