@@ -17,8 +17,7 @@
     "libs/styles/components/component.scss",
     "libs/styles/objects/structure.scss",
     "libs/styles/settings/colors.scss",
-    "libs/styles/trumps.scss",
-    "markup/component.html"
+    "libs/styles/trumps.scss"
   ],
   "containerClasses": "PageMotionTitle",
   "extends": "bedrock:core:common:section:base;1.0.0",

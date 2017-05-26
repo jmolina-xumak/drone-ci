@@ -1,0 +1,18 @@
+{
+  "index": {
+    "data" : {
+    },
+    "includes" : {
+      "parsys1": [
+        {
+          "prototype": "simple-banner",
+          "content": "content"
+        },
+        {
+          "prototype": "simple-banner",
+          "content": "content2"
+        }
+      ]
+    }
+  }
+}

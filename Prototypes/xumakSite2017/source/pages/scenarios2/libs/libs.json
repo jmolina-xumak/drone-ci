@@ -6,6 +6,5 @@
   "styles": [
     "styles/component.scss"
   ],
-  "assets": [],
-  "priority": 1
+  "assets": []
 }

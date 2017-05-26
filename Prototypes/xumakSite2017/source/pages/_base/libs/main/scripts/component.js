@@ -1,5 +1,5 @@
 // TODO: code logic here
-( function( ) {
+
   Vue.component( 'xmk-input', {
       props: [
           'name',
@@ -87,4 +87,4 @@
             };
         },
       }).$mount( '#xmkApp' );
-})();
+

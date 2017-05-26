@@ -9,15 +9,16 @@
         @include rem(font-size, 150px);
         @include rem(line-height, 155px);
         font-weight: bolder;
-        //opacity: .6;
         left: 0px;
         top: 216px;
-        position: fixed;
+        position: absolute;
         margin: 0;
+        z-index: -5;
 
     }
 
     &-component--bigText {
+        position: fixed;
         @include rem(font-size, 400px);
         @include rem(line-height, 155px);
     }

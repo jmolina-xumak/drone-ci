@@ -3,6 +3,7 @@
 Vue.component( 'page-motion-title', {
     props: [
     'controller',
+    'data-bigtext'
     ],
     template: '<div><slot></slot></div>',
     mounted: function() {
@@ -12,7 +13,7 @@ Vue.component( 'page-motion-title', {
       mainText = $( this.$el ).find( '.pagaMotionTitle-component' ),
       distancia = mainText[ 0 ].offsetWidth * -1;
 
-      if ( mediaquery.matches ) {
+      if ( mediaquery.matches && this.dataBigtext === "true") {
         if ( document.body.scrollTop === 0 ) {
           tlXumakText.from( mainText, 1.5, { left: '100vw' }, '0' );
           tlXumakText.play( );
