@@ -1,0 +1,22 @@
+{
+  "parent": "",
+  "title": "Main Navigation",
+  "description": "This section will contain the main sections of the site, for example: solutions, services,about, and success stories",
+  "tags": [
+    "xumakcom2017 (new tag)"
+  ],
+  "address": "xk:xumakcom2017:vue:section:mainNavigation",
+  "excludes": [
+    "libs/authoring/styles/placeholder.scss",
+    "libs/libs.json",
+    "libs/styles/trumps.scss",
+    "markup/list.html",
+    "wireframes/wireframe.html"
+  ],
+  "containerClasses": "MainNavigation",
+  "extends": "bedrock:core:common:section:navigation;1.0.0",
+  "dependencies": {
+    "build": [],
+    "runtime": []
+  }
+}
