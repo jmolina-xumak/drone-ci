@@ -1,0 +1,46 @@
+{
+	"title": "BedrocK Base Section Component",
+	"description": "Is the base of all section components",
+	"name": "base",
+	"address": "bedrock:core:components:section:base",
+	"version": "1.0.0",
+	"definitionType": "section",
+	"tags": ["bedrock", "core", "section"],
+	"blueprint": {},
+	"schema": {},
+	"functionality": {
+		"author": {
+			"localContent": {
+				"title": "Manage Local Content",
+				"paths": ["stories/global/author/localcontent/*.feature"]
+			},
+			"designContent": {
+				"title": "Manage Design Content",
+				"paths": ["stories/global/author/designcontent/*.feature"]
+			},
+			"globalContent": {
+				"title": "Manage Global Content",
+				"paths": ["stories/global/author/globalcontent/*.feature"]
+			}
+		},
+		"anonUser": {
+			"view": {
+				"title": "View Component",
+				"paths": ["stories/global/anon/view/*.feature"]
+			}
+		},
+		"knownUser": {
+			"view": {
+				"title": "View Component",
+				"paths": ["stories/global/anon/view/*.feature"]
+			}
+		}
+	},
+	"aem": {
+		"superType": "bedrock:layerx:components:section:base;1.0.0",
+		"componentGroup": ".hidden"
+	},
+	"jahia": {
+		"superType": "bedrock:layerx:components:section:base;1.0.0"
+	}
+}

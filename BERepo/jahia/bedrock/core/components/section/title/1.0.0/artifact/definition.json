@@ -1,0 +1,24 @@
+{
+    "title": "Title",
+    "description": "To be extended by title artifacts.",
+    "name": "title",
+    "address": "bedrock:core:components:section:title",
+    "version": "1.0.0",
+    "extends": "bedrock:core:components:section:base;1.0.0",
+    "tags": [
+        "title",
+        "core",
+        "bedrock"
+    ],
+    "blueprint": {
+        "content.title": "∫(⊛)"
+    },
+    "jahia": {
+        "properties": {
+            "title": {
+                "title": "Title",
+                "type": "string"
+            }
+        }
+    }
+}

@@ -1,0 +1,81 @@
+{
+    "title": "Text",
+    "description": "To be extended by text artifacts. Test version.",
+    "name": "text",
+    "address": "bedrock:core:components:section:text",
+    "version": "1.0.0",
+    "extends": "bedrock:core:components:section:base;1.0.0",
+    "tags": [
+        "text",
+        "core",
+        "bedrock"
+    ],
+    "blueprint": {
+        "content.text": "∫(⊛)"
+    },
+     "assets": {
+            "paths": [
+                "tesxtAssetP"
+            ]
+        },
+    "implementation": {
+            "servlets": [
+                "textservlet"
+            ],
+            "categories": ["textcat1", "textcat2"]
+        },
+    "aem": {
+        "implementation": {
+            "servlets": [
+                "text AEM servlet"
+            ],
+            "categories": ["textAEMcat1", "textAEMcat2"]
+        },
+        "nodes": {
+            "xkConfig": {
+                "xk_placeholderTriggers": "content.text"
+            },
+            "testArray": ["text1", "text2"]
+        },
+        "dialogs": {
+            "content": {
+                "title": "content",
+                "sections": {
+                    "configuration": {
+                        "title": "Configuration",
+                        "fields": {
+                            "text": {
+                            "title": "text",
+                            "label": "Text",
+                            "name": "./text",
+                            "type": "text",
+                            "required": true
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "jahia": {
+        "componentGroup": "FEBE Test",
+        "superType": "",
+        "implementation": {
+            "servlets": [
+                "text JAHIA servlet"
+            ],
+            "categories": ["textJAHIAcat1", "textJAHIAcat2"]
+        },
+        "properties": {
+            "text": {
+                "title": "Text",
+                "type": "string"
+            }
+        },
+         "assets": {
+            "paths": [
+                "jahia"
+            ]
+        }
+    }
+}

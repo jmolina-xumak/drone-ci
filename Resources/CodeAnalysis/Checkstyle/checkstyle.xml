@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+        "-//Puppy Crawl//DTD Check Configuration 1.3//EN"
+        "http://www.puppycrawl.com/dtds/configuration_1_3.dtd">
+
+<!--
+	Note: This began with the Sun coding conventions from:
+
+    - the Java Language Specification at
+      http://java.sun.com/docs/books/jls/second_edition/html/index.html
+
+    - the Sun Code Conventions at http://java.sun.com/docs/codeconv/
+
+    - the Javadoc guidelines at
+      http://java.sun.com/j2se/javadoc/writingdoccomments/index.html
+
+    - the JDK Api documentation http://java.sun.com/j2se/docs/api/index.html
+
+    - some best practices
+
+	This has been slightly modified to fit our internal standards (and to relax
+	several of the more rigid checks).
+-->
+
+<module name="Checker">
+
+    <!-- Checks for misc -->
+    <module name="NewlineAtEndOfFile">
+        <property name="lineSeparator" value="lf"/>
+    </module>
+
+    <!-- Checks for whitespace -->
+    <module name="FileTabCharacter"/>
+
+    <!-- Checks for regular expressions -->
+    <module name="RegexpSingleline">
+        <property name="format" value="\s+$"/>
+        <property name="minimum" value="0"/>
+        <property name="maximum" value="0"/>
+        <property name="message" value="Line has trailing spaces."/>
+    </module>
+
+    <!-- Checks for sizes -->
+    <module name="FileLength" />
+
+    <!-- Checks for filters -->
+    <module name="TreeWalker">
+        <module name="UnusedImports"/>
+
+        <!-- Checks for block -->
+        <module name="EmptyBlock"/>
+        <module name="LeftCurly"/>
+        <module name="NeedBraces"/>
+        <module name="RightCurly"/>
+        <module name="AvoidNestedBlocks"/>
+        <module name="EmptyCatchBlock"/>
+
+        <!-- Checks for metrics -->
+        <module name="BooleanExpressionComplexity">
+            <property name="max" value="4"/>
+        </module>
+
+        <!-- Checks for coding -->
+        <module name="AvoidInlineConditionals"/>
+        <module name="DefaultComesLast"/>
+        <module name="EmptyStatement"/>
+        <module name="EqualsAvoidNull"/>
+        <module name="ExplicitInitialization"/>
+        <module name="FallThrough"/>
+        <module name="FinalLocalVariable"/>
+        <module name="InnerAssignment"/>
+        <module name="MissingSwitchDefault"/>
+        <module name="ModifiedControlVariable"/>
+        <module name="MultipleStringLiterals">
+            <property name="allowedDuplicates" value="3"/>
+        </module>
+        <module name="MultipleVariableDeclarations"/>
+        <module name="MagicNumber"/>
+        <module name="EqualsHashCode"/>
+        <module name="HiddenField">
+            <property name="ignoreSetter" value="true" />
+            <property name="ignoreConstructorParameter" value="true" />
+        </module>
+        <module name="IllegalInstantiation"/>
+        <module name="SimplifyBooleanExpression"/>
+
+        <!-- Checks for import -->
+        <module name="AvoidStarImport"/>
+        <module name="RedundantImport"/>
+        <module name="StringLiteralEquality"/>
+
+        <!-- Checks for design -->
+        <module name="FinalClass"/>
+        <module name="HideUtilityClassConstructor"/>
+        <module name="InterfaceIsType"/>
+        <module name="VisibilityModifier"/>
+
+        <!-- Checks for javadoc -->
+        <module name="JavadocMethod"/>
+        <module name="JavadocVariable">
+            <property name="scope" value="public"/>
+        </module>
+        <module name="JavadocStyle"/>
+
+        <!-- Checks for naming conventions -->
+        <module name="ConstantName"/>
+        <module name="LocalFinalVariableName"/>
+        <module name="LocalVariableName"/>
+        <module name="MemberName"/>
+        <module name="MethodName"/>
+        <module name="PackageName"/>
+        <module name="ParameterName"/>
+        <module name="StaticVariableName"/>
+        <module name="TypeName"/>
+
+        <!-- Checks for whitespace -->
+        <module name="EmptyForInitializerPad"/>
+        <module name="GenericWhitespace"/>
+        <module name="EmptyForIteratorPad"/>
+        <module name="GenericWhitespace"/>
+        <module name="MethodParamPad"/>
+        <module name="NoWhitespaceAfter"/>
+        <module name="NoWhitespaceBefore"/>
+        <module name="OperatorWrap"/>
+        <module name="ParenPad"/>
+        <module name="TypecastParenPad"/>
+        <module name="WhitespaceAfter"/>
+        <module name="WhitespaceAround"/>
+
+        <!-- Chaecks for modifier violations -->
+        <module name="ModifierOrder"/>
+        <module name="RedundantModifier"/>
+
+        <!-- Checks for misc -->
+        <module name="Indentation">
+            <property name="basicOffset" value="4"/>
+            <property name="braceAdjustment" value="0"/>
+            <property name="caseIndent" value="4"/>
+            <property name="throwsIndent" value="8"/>
+            <property name="lineWrappingIndentation" value="8"/>
+            <property name="arrayInitIndent" value="4"/>
+            <property name="forceStrictCondition" value="true"/>
+        </module>
+        <module name="ArrayTypeStyle"/>
+        <module name="FinalParameters"/>
+        <module name="UpperEll"/>
+
+        <!-- Checks for sizes -->
+        <module name="LineLength">
+            <property name="max" value="120"/>
+            <property name="ignorePattern" value="^import"/>
+        </module>
+        <module name="ParameterNumber"/>
+        <module name="MethodLength">
+            <property name="countEmpty" value="false"/>
+        </module>
+
+    </module>
+
+</module>
