@@ -31,7 +31,7 @@ public final class Constants {
     public static final String GET_ITEMS_PROPERTIES = "getItemsProperties";
 
     /**
-     * to get the component container name specide in xk-config.
+     * to get the component container name specified in xk-config.
      */
     public static final String COMPONENT_CONTAINER_NAME = "componentContainerName";
 
