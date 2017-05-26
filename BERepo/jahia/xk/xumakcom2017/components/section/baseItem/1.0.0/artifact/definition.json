@@ -2,7 +2,7 @@
 	"title": "Base Item",
 	"description": "Base Artifact with image, title, description and link",
 	"name": "baseItem",
-	"address": "xumak:xumakcom2017:components:section:baseItem",
+	"address": "xk:xumakcom2017:components:section:baseItem",
 	"version": "1.0.0",
 	"extends": "bedrock:core:components:section:base;1.0.0",
 	"tags": [
@@ -17,6 +17,14 @@
 	},
 	"jahia": {
 		"superType": "",
+		"config": {
+            "xk_componentCategory": [
+                "getPathFromResource"
+            ],
+            "PathFromResourcePropertiesList": [
+                "imagePath"
+            ]
+        },
 		"properties": {
 			"title": {
 				"title": "Title",
