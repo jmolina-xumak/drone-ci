@@ -22,6 +22,15 @@
 	},
 	"jahia": {
 		"superType": "",
+		"config": {
+			"xk_componentCategory": [
+				"getPathFromResource"
+			],
+			"PathFromResourcePropertiesList": [
+				"imagePath",
+				"link"
+			]
+		},
 		"properties": {
 			"title": {
 				"title": "Title",
@@ -29,11 +38,12 @@
 			},
 			"description": {
 				"title": "Description",
-				"type": "textarea"
+				"type": "string",
+				"selector": "richtext"
 			},
 			"imagePath": {
 				"title": "Image",
-				"type": "path",
+				"type": "weakreference",
 				"selector": "picker",
 				"selector-options": [
 					"type='image'"
@@ -45,7 +55,7 @@
 			},
 			"link": {
 				"title": "Link",
-				"type": "path",
+				"type": "weakreference",
 				"selector": "picker",
 				"selector-options": [
 					"type='page'"
@@ -60,8 +70,8 @@
 				"type": "string",
 				"selector": "choicelist",
 				"selector-options": ["resourceBundle"],
-				"default-values": ["SameTab"],
-				"constraints": ["NewTab", "SameTab"]
+				"default-values": ["_self"],
+				"constraints": ["_blank", "_self"]
             }
 		}
 	}
