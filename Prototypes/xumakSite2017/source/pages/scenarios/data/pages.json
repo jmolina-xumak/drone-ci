@@ -11,6 +11,22 @@
         {
           "prototype": "simple-banner",
           "content": "content2"
+        },
+        {
+          "prototype": "simple-top-banner",
+          "content": "content"
+        },
+        {
+          "prototype": "simple-top-banner",
+          "content": "content2"
+        },
+        {
+          "prototype": "simple-top-banner",
+          "content": "content3"
+        },
+        {
+          "prototype": "simple-top-banner",
+          "content": "content4"
         }
       ]
     }
