@@ -1,6 +1,6 @@
 package com.xumak.contextprocessors;
 
-import com.xumak.utils.Utils;
+import com.xumak.util.Utils;
 import com.google.common.collect.Sets;
 import layerx.Constants;
 import layerx.api.ExecutionContext;
@@ -83,13 +83,13 @@ public class GetPathFromResourcesContextProcessor extends
                 final List<String> propertiesList =
                         Utils.getConfigPropertyAsList(configMap, PATH_FROM_RESOURCE_PROPERTIES_LIST);
                 for (final String prop : propertiesList) {
-                    if (componentNode.hasProperty(prop)) {
+                    if (null != componentNode && componentNode.hasProperty(prop)) {
                         //Validate type of property in the node.
                         if (componentNode.getProperty(prop).getType() == PropertyType.WEAKREFERENCE) {
                             final String resourceNodeUUID = componentNode.getProperty(prop).getValue().getString();
                             final String resourcePath =
                                     Utils.getResourceNodePath(componentNode.getSession(), resourceNodeUUID);
-                            if (StringUtils.isNotBlank(resourcePath)) {
+                            if (StringUtils.isNotBlank(resourcePath) && null != contentMap) {
                                 contentMap.put(prop, resourcePath);
                             }
                         }

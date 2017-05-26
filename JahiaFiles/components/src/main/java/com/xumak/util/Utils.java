@@ -1,4 +1,4 @@
-package com.xumak.utils;
+package com.xumak.util;
 
 import layerx.jahia.templating.TemplateContentModel;
 import org.apache.commons.lang3.StringUtils;
