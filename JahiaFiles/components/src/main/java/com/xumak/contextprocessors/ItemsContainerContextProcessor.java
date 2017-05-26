@@ -21,7 +21,6 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.HashMap;
 import javax.jcr.PropertyType;
-import javax.jcr.Node;
 import javax.jcr.RepositoryException;
 
 import static layerx.jahia.Constants.JAHIA_RESOURCE;
@@ -106,7 +105,7 @@ public class ItemsContainerContextProcessor extends
                     //Getting all nodes of the component item edited by the author in the component container.
                     final JCRNodeIteratorWrapper contentNodes = nodeElements.getNodes();
                     while (contentNodes.hasNext()) {
-                        final Node contentItem = contentNodes.nextNode();
+                        final JCRNodeWrapper contentItem = (JCRNodeWrapper) contentNodes.nextNode();
                         final Map<String, Object> elementMap = new HashMap<String, Object>();
 
                         //Getting all properties on each node specified as a list values in "nodeItemProperties"

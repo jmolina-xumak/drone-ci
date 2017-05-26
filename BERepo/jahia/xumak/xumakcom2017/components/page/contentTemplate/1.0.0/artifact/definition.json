@@ -1,0 +1,21 @@
+{
+  "title": "Content Template",
+  "description": "Template used for general one column full width content",
+  "name": "contentTemplate",
+  "address": "xumak:xumakcom2017:components:page:contentTemplate",
+  "version": "1.0.0",
+  "extends": "xumak:xumakcom2017:components:page:baseTemplate;1.0.0",
+  "tags": [
+    "xumakcom2017",
+    "contentTemplate"
+  ],
+  "blueprint": {},
+  "nodes": {},
+  "implementation": {
+    "contextProcessors": []
+  },
+  "dialogs": {
+  },
+  "jahia": {
+  }
+}

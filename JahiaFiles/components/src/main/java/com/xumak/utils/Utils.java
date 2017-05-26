@@ -28,7 +28,7 @@ public final class Utils {
     private static final Logger LOGGER = LoggerFactory.getLogger(Utils.class);
 
     /**
-     *
+     * This constructor is used to avoid create an object from this class and to compliant with checkstyle.
      */
     private Utils() {
     }
@@ -43,17 +43,13 @@ public final class Utils {
      */
     public static Map<String, Object> getResourceAsMap(
             final TemplateContentModel contentModel, final String resourceKey) {
-
         Map<String, Object> contentMap = null;
-
-        if (contentModel.has(resourceKey)) {
-
+        if (null != contentModel && StringUtils.isNotBlank(resourceKey) && contentModel.has(resourceKey)) {
             final Object contentObject = contentModel.get(resourceKey);
             if (contentObject instanceof  Map) {
                 contentMap = (Map<String, Object>) contentObject;
             }
         }
-
         return contentMap;
     }
 
@@ -68,8 +64,11 @@ public final class Utils {
     public static List<String> getConfigPropertyAsList(final Map configMap, final String propArray) {
         List<String> listProperties = null;
         try {
-            if (configMap.containsKey(propArray)) {
-                listProperties = (List<String>) configMap.get(propArray);
+            if (null != configMap && StringUtils.isNotBlank(propArray) && configMap.containsKey(propArray)) {
+                final Object obj = configMap.get(propArray);
+                if (obj instanceof List) {
+                    listProperties = (List<String>) configMap.get(propArray);
+                }
             }
         } catch (ClassCastException e) {
             LOGGER.error("Error accessing the configuration object: " + e);
@@ -86,7 +85,7 @@ public final class Utils {
      */
     public static String getConfigPropertyAsString(final Map configMap, final String propertyName) {
         String property = "";
-        if (configMap.containsKey(propertyName)) {
+        if (null != configMap && StringUtils.isNotBlank(propertyName) && configMap.containsKey(propertyName)) {
             property = configMap.get(propertyName).toString();
         }
         return property;
@@ -101,11 +100,13 @@ public final class Utils {
      * @return string object.
      */
     public static String getResourceNodePath(final JCRSessionWrapper session, final String resourceNodeUUID) {
-        String resourcePath = "";
+        String resourcePath = StringUtils.EMPTY;
         try {
-            if (StringUtils.isNotEmpty(resourceNodeUUID)) {
+            if (null != session && StringUtils.isNotBlank(resourceNodeUUID)) {
                 final JCRNodeWrapper resourceNode = session.getNodeByIdentifier(resourceNodeUUID);
-                resourcePath = resourceNode.getUrl();
+                if (null != resourceNode) {
+                    resourcePath = resourceNode.getUrl();
+                }
             }
         } catch (RepositoryException repException) {
             LOGGER.error("An error occurred in the repository " + repException.toString());
