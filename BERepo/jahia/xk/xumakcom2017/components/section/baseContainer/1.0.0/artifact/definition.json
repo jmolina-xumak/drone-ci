@@ -1,0 +1,40 @@
+{
+    "title": "Base Container",
+    "description": "Base container artifact to extended",
+    "name": "baseContainer",
+    "address": "xk:xumakcom2017:components:section:baseContainer",
+    "version": "1.0.0",
+    "extends": "bedrock:core:components:section:contentListBase;1.0.0",
+    "tags": [
+        "xumakcom2017",
+        "base container"
+    ],
+    "blueprint": {
+        "content.title": "∫(⊛)",
+        "content.description": "∫(⊛)"
+    },
+    "jahia": {
+        "config": {
+            "xk_componentCategory": [
+                "getItemsProperties"
+            ],
+            "componentContainerName": "baseContainer",
+            "nodeItemProperties": [
+                "title",
+                "description"
+            ]
+        },
+        "superType": "",
+        "properties": {
+          "title": {
+                "title": "Title",
+                "type": "string"
+            },
+          "description": {
+                "title": "Description",
+                "type": "string",
+                "selector": "textarea"
+          }
+        }
+    }
+}
