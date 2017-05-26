@@ -25,4 +25,19 @@ public final class Constants {
      */
     public static final String EXAMPLE_TEXT_VALUE = "Welcome to xumak.com 2017!";
 
+    /**
+     * Key to get properties in component container.
+     */
+    public static final String GET_ITEMS_PROPERTIES = "getItemsProperties";
+
+    /**
+     * to get the component container name specified in xk-config.
+     */
+    public static final String COMPONENT_CONTAINER_NAME = "componentContainerName";
+
+    /**
+     * get the list of properties specified in xk-config.
+     */
+    public static final String NODE_ITEM_PROPERTIES = "nodeItemProperties";
+
 }
