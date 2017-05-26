@@ -12,7 +12,7 @@
     "blueprint": {
         "content.text": "∫(⊛)",
         "content.authorName": "∫(⊛)",
-        "content.authorTitle": "∫(⊛)"
+        "content.rootPath": "∫(⊛)"
     },
     "jahia": {
         "superType": "",
@@ -24,7 +24,7 @@
                 "getPathFromResource"
             ],
             "PathFromResourcePropertiesList": [
-                "authorTitle"
+                "rootPath"
             ]
         },
         "properties": {
