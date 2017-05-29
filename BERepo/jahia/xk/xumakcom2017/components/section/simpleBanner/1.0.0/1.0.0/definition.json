@@ -45,14 +45,14 @@
 				"selector": "richtext"
 			},
 			"imageURL": {
-				"title": "Image path",
+				"title": "Image Path",
 				"type": "weakreference",
 				"selector": "picker",
 				"selector-options": [
 					"type='image'"
 				]
 			},
-			"imageAltText": {
+			"imageAlt": {
 				"title": "Image Alt Text",
 				"type": "string"
 			},
