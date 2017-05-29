@@ -9,70 +9,70 @@ $external-menuWidth: 200px;
 
 .Quote{ 
     width: 100%;
-    display: table;
+    //display: table;
     //margin-top: 16px; 
 
     // Holds the text, authorName, authorTitle fields within a fluid container.
     // The text values are customized with the project´s color settings
     &-container {
-        width: 100%;
-        display: table-cell;
-        vertical-align: middle;
+        // width: 100%;
+        // display: table-cell;
+        // vertical-align: middle;
+        // height: 352px;
         position: relative;
-
-        height: 352px;
     }
 
     // Field for "text" value
     &-text {         
         font-family: $font-hurme-geometric-sans-bold;
-        font-weight: 800;
         @include rem(font-size, 26px); 
         line-height: 32px;
         margin: 0;
+
         margin-bottom: calc(56px - 25px);
+        padding-top: calc(26px * 2);
     }
 
     // Field for "authorName" value
     &-authorName { 
         font-family: $font-hurme-geometric-sans-bold;
-        font-weight: 800;
         @include rem(font-size, 16px); 
         line-height: 22px;
+
         margin: 0;
     }
 
     // Field for "authorTitle" value
     &-authorTitle { 
         font-family: $font-source-sans-pro-semibold;
-        font-weight: 400;
         @include rem(font-size, 16px); 
         line-height: 22px;
-        margin: 0;
+
+        margin: 0;        
+        padding-bottom: calc(26px * 2);
     }
     
     // Class to specify which icon to display and how to modify it
     &-icon {
         height: 40px;
         width: 55px;
-        margin: -16px 0 0 5px;
-        
-        position: absolute;
-        top: 0px;
-        left: 0px;        
+        margin: -16px 0 0 5px;   
+        position: absolute;     
+
+        // align horizontal left
+        &--left {
+            top: 0;
+            left: 0;    
+        }      
 
         // align horizontal right
         &--right {
-            top: auto;
-            left: auto;
-            bottom: 0px;
-            right: 0px;
+            bottom: 0;
+            right: 0;
         }
 
         // show flipped version of icon
         &--reverse {
-            -ms-transform: rotate(180deg);
-            -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
             margin: 0 5px -16px 0;
         }
@@ -84,11 +84,11 @@ $external-menuWidth: 200px;
     /* For tablets: */    
 
     .Quote {
-        //margin-top: 16px; 
-
+        
         &-text { 
             @include rem(font-size, 32px); 
             line-height: 40px;
+            padding-top: calc(40px * 2);
         }
 
         &-authorName { 
@@ -99,6 +99,7 @@ $external-menuWidth: 200px;
         &-authorTitle { 
             @include rem(font-size, 16px); 
             line-height: 22px;
+            padding-bottom: calc(40px * 2);
         }  
 
         &-text,
@@ -127,16 +128,12 @@ $external-menuWidth: 200px;
     
     .Quote {
         padding-left: $external-menuWidth; 
-        //margin-top: 24px; 
-
-        &-container {
-            height: 496px;
-        }
         
         &-text { 
             @include rem(font-size, 48px); 
             line-height: 56px;
             margin-bottom: calc(64px - 37px);
+            padding-top: calc(56px * 2);
         }
 
         &-authorName { 
@@ -147,6 +144,7 @@ $external-menuWidth: 200px;
         &-authorTitle { 
             @include rem(font-size, 16px); 
             line-height: 22px;
+            padding-bottom: calc(56px * 2);
         } 
 
         &-text, 
