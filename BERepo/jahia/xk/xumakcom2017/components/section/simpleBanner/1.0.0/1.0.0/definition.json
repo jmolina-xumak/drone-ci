@@ -1,0 +1,109 @@
+{
+	"title": "Simple Banner",
+	"description": "Image with descriptive information and optional Call to action options",
+	"name": "simpleBanner",
+	"address": "xk:xumakcom2017:components:section:simpleBanner",
+	"version": "1.0.0",
+	"extends": "bedrock:core:components:section:base;1.0.0",
+	"tags": [
+		"xumakcom2017"
+	],
+	"blueprint": {
+		"content.imageURL": "∫(⊛)",
+		"content.imageAlt": "∫(⊛)",
+		"content.heading": "∫(⊛)",
+		"content.title": "∫(⊛)",
+		"content.description": "∫(⊛)",
+		"content.mainCallToActionText": "∫(⊛)",
+		"content.mainCallToActionURL": "∫(⊛)",
+		"content.mainCallToActionTarget": "∫(⊛)",
+		"content.secondaryCallToActionText": "∫(⊛)",
+		"content.secondaryCallToActionURL": "∫(⊛)",
+		"content.secondaryCallToActionTarget": "∫(⊛)",
+		"content.mainCallToActionHasIcon": "∫(⊛)"
+	},
+	"jahia": {
+		"superType": "",
+		"config": {
+			"xk_componentCategory": [
+				"getPathFromResource"
+			],
+			"PathFromResourcePropertiesList": [
+				"imageURL",
+				"mainCallToActionURL",
+				"secondaryCallToActionURL"
+			]
+		},
+		"properties": {
+			"title": {
+				"title": "Title",
+				"type": "string"
+			},
+			"description": {
+				"title": "Description",
+				"type": "string",
+				"selector": "richtext"
+			},
+			"imageURL": {
+				"title": "Image Path",
+				"type": "weakreference",
+				"selector": "picker",
+				"selector-options": [
+					"type='image'"
+				]
+			},
+			"imageAlt": {
+				"title": "Image Alt Text",
+				"type": "string"
+			},
+			"heading": {
+				"title": "Heading",
+				"type": "string"
+			},
+			"mainCallToActionURL": {
+				"title": "Main CTA URL",
+				"type": "weakreference",
+				"selector": "picker",
+				"selector-options": [
+					"type='page'"
+				]
+			},
+			"mainCallToActionText": {
+				"title": "Main CTA Text",
+				"type": "string"
+			},
+			"mainCallToActionTarget": {
+				"title": "Main CTA Target",
+				"type": "string",
+				"selector": "choicelist",
+				"selector-options": ["resourceBundle"],
+				"default-values": ["_self"],
+				"constraints": ["_blank", "_self"]
+            },
+            "secondaryCallToActionURL": {
+				"title": "Secondary CTA URL",
+				"type": "weakreference",
+				"selector": "picker",
+				"selector-options": [
+					"type='page'"
+				]
+			},
+			"secondaryCallToActionText": {
+				"title": "Secondary CTA Text",
+				"type": "string"
+			},
+			"secondaryCallToActionTarget": {
+				"title": "Secondary CTA Target",
+				"type": "string",
+				"selector": "choicelist",
+				"selector-options": ["resourceBundle"],
+				"default-values": ["_self"],
+				"constraints": ["_blank", "_self"]
+            },
+            "mainCallToActionHasIcon": {
+				"title": "Title",
+				"type": "boolean"
+			}
+		}
+	}
+}
