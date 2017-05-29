@@ -10,9 +10,9 @@
          	"baseTemplate":{  
                "artifacts":{  
                   "jahia":{  
-                     "uses":"xumak:xumakcom2017:components:page:baseTemplate;1.0.0",
+                     "uses":"xk:xumakcom2017:components:page:baseTemplate;1.0.0",
                      "with":{  
-                        "coordinates":"xumak:xumakcom2017:components:page:baseTemplate;1.0.0"
+                        "coordinates":"xk:xumakcom2017:components:page:baseTemplate;1.0.0"
                      }
                   },
                   "fe":{  
@@ -23,13 +23,31 @@
             "contentTemplate":{  
                "artifacts":{  
                   "jahia":{  
-                     "uses":"xumak:xumakcom2017:components:page:contentTemplate;1.0.0",
+                     "uses":"xk:xumakcom2017:components:page:contentTemplate;1.0.0",
                      "with":{  
-                        "coordinates":"xumak:xumakcom2017:components:page:contentTemplate"
+                        "coordinates":"xk:xumakcom2017:components:page:contentTemplate"
                      }
                   },
                   "fe":{  
                      "uses":"xumak:xumakcom2017:vue:page:content-template;1.0.0"
+                  }
+               }
+            }
+         },
+         "section": {
+            "simpleBanner": {
+               "artifacts": {
+                  "jahia": {
+                     "uses": "xk:xumakcom2017:components:section:simpleBanner;1.0.0",
+                     "with": {
+                        "coordinates": "xk:xumakcom2017:components:section:simpleBanner;1.0.0",
+                        "jahia": {
+                           "componentGroup": "XCOM2017"
+                         }
+                     }
+                  },
+                  "fe": {
+                     "uses": "xumak:xumakcom2017:vue:section:staticBanner;1.0.0"
                   }
                }
             }
