@@ -7,6 +7,7 @@ import layerx.api.ExecutionContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.jahia.services.content.JCRNodeWrapper;
 import org.jahia.services.render.Resource;
 import org.mockito.Mockito;
 
@@ -55,6 +56,7 @@ public class BaseTest {
     public HttpServletResponse response;
     public Resource resource;
     public Node node;
+    public JCRNodeWrapper jcrNodeWrapper;
 
     public Map<String, Object> config;
     public Map<String, Object> content;
@@ -77,6 +79,7 @@ public class BaseTest {
         response = Mockito.mock(HttpServletResponse.class);
         resource = Mockito.mock(Resource.class);
         node = Mockito.mock(Node.class);
+        jcrNodeWrapper = Mockito.mock(JCRNodeWrapper.class);
 
         contentModel = new MockTemplateContentModel(request, response);
         config = new HashMap<>();
@@ -87,6 +90,7 @@ public class BaseTest {
 
         //resource
         when(executionContext.get(JAHIA_RESOURCE)).thenReturn(resource);
+        when(resource.getNode()).thenReturn(jcrNodeWrapper);
 
         //contentModel
         when(request.getAttribute(TEMPLATE_CONTENT_MODEL_ATTR_NAME)).thenReturn(contentModel);
