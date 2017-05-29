@@ -14,6 +14,8 @@ $external-menuWidth: 200px;
     // The text values are customized with the project´s color settings
     &-container {
         position: relative;
+        padding-top: calc(26px * 2);
+        padding-bottom: calc(26px * 2);
     }
 
     // Field for "text" value
@@ -24,7 +26,6 @@ $external-menuWidth: 200px;
         margin: 0;
 
         margin-bottom: calc(56px - 25px);
-        padding-top: calc(26px * 2);
     }
 
     // Field for "authorName" value
@@ -43,7 +44,6 @@ $external-menuWidth: 200px;
         line-height: 22px;
 
         margin: 0;        
-        padding-bottom: calc(26px * 2);
     }
     
     // Class to specify which icon to display and how to modify it
@@ -78,11 +78,15 @@ $external-menuWidth: 200px;
     /* For tablets: */    
 
     .Quote {
+
+        &-container {
+            padding-top: calc(40px * 2);
+            padding-bottom: calc(40px * 2);
+        }
         
         &-text { 
             @include rem(font-size, 32px); 
             line-height: 40px;
-            padding-top: calc(40px * 2);
         }
 
         &-authorName { 
@@ -93,7 +97,6 @@ $external-menuWidth: 200px;
         &-authorTitle { 
             @include rem(font-size, 16px); 
             line-height: 22px;
-            padding-bottom: calc(40px * 2);
         }  
 
         &-text,
@@ -122,12 +125,16 @@ $external-menuWidth: 200px;
     
     .Quote {
         padding-left: $external-menuWidth; 
+
+        &-container {
+            padding-top: calc(56px * 2);
+            padding-bottom: calc(56px * 2);
+        }
         
         &-text { 
             @include rem(font-size, 48px); 
             line-height: 56px;
             margin-bottom: calc(64px - 37px);
-            padding-top: calc(56px * 2);
         }
 
         &-authorName { 
@@ -138,7 +145,6 @@ $external-menuWidth: 200px;
         &-authorTitle { 
             @include rem(font-size, 16px); 
             line-height: 22px;
-            padding-bottom: calc(56px * 2);
         } 
 
         &-text, 
