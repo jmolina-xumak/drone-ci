@@ -9,16 +9,10 @@ $external-menuWidth: 200px;
 
 .Quote{ 
     width: 100%;
-    //display: table;
-    //margin-top: 16px; 
 
     // Holds the text, authorName, authorTitle fields within a fluid container.
     // The text values are customized with the project´s color settings
     &-container {
-        // width: 100%;
-        // display: table-cell;
-        // vertical-align: middle;
-        // height: 352px;
         position: relative;
     }
 
