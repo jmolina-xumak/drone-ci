@@ -1,6 +1,6 @@
 {
   "id": "main",
-  "priority": 5,
+  "priority": 55,
   "assets": [
     "/fonts/HurmeGeometricSans3/HurmeGeometricSans3-Bold.otf",
     "/fonts/HurmeGeometricSans3/HurmeGeometricSans3-Bold.ttf",

@@ -3,7 +3,6 @@
   "description": "Base page meant to be extended.",
   "address": "xk:xumakcom2017:vue:page:base",
   "tags": [
-    "BedrocK",
     "base",
     "page",
     "core"
