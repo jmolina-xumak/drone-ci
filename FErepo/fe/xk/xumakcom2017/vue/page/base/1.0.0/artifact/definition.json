@@ -1,8 +1,8 @@
 {
   "title": "Xumak WebSite 2017 Base Rendering Component",
   "description": "Base page meant to be extended.",
-  "name": "_base",
-  "address": "xk:xumakcom2017:vue:page:_base",
+  "name": "base",
+  "address": "xk:xumakcom2017:vue:page:base",
   "version": "1.0.0",
   "extends": "blank",
   "containerClasses": [],

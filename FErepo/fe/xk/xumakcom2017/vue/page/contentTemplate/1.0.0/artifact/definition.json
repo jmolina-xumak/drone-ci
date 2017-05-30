@@ -1,8 +1,8 @@
 {
   "title": "Content Template",
   "description": "Template used for general one column full width content",
-  "name": "content-template",
-  "address": "xk:xumakcom2017:vue:page:content-template",
+  "name": "contentTemplate",
+  "address": "xk:xumakcom2017:vue:page:contentTemplate",
   "version": "1.0.0",
   "extends": "bedrock:core:common:page:base;1.0.0",
   "containerClasses": [

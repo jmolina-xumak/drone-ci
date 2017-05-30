@@ -6,7 +6,7 @@
     "contentTemplate",
     "xumakcom2017"
   ],
-  "address": "xk:xumakcom2017:vue:page:content-template",
+  "address": "xk:xumakcom2017:vue:page:contentTemplate",
   "excludes": [
     "libs/libs.json",
     "libs/scripts/component.js",
