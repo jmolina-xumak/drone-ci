@@ -8,7 +8,6 @@
   ],
   "address": "xk:xumakcom2017:vue:page:contentTemplate",
   "excludes": [
-    "libs/libs.json",
     "libs/scripts/component.js",
     "libs/styles/page/elements.scss",
     "libs/styles/page/generic.scss",

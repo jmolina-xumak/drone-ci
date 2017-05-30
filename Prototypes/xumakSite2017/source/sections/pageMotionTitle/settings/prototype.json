@@ -10,7 +10,10 @@
   "excludes": [
     "libs/authoring/libs.json",
     "libs/authoring/styles/placeholder.scss",
-    "libs/styles/trumps.scss"
+    "libs/styles/trumps.scss",
+    "data/content2.json",
+    "data/content.json",
+    "data/config.json"
   ],
   "containerClasses": "PageMotionTitle",
   "extends": "bedrock:core:common:section:base;1.0.0",

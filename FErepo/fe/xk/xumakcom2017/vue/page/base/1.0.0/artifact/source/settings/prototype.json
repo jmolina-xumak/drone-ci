@@ -3,27 +3,15 @@
   "description": "Base page meant to be extended.",
   "address": "xk:xumakcom2017:vue:page:base",
   "tags": [
-    "BedrocK",
     "base",
     "page",
     "core"
   ],
   "excludes": [
-    "markup/body.html",
-    "markup/bottom.html",
-    "markup/content.html",
-    "markup/footer.html",
-    "markup/bottom.html",
-    "markup/extrascripts.html",
-    "markup/extrastyles.html",
-    "markup/head.html",
-    "markup/header.html",
-    "markup/layout.html",
-    "markup/metas.html",
-    "markup/scripts.html",
-    "markup/styles.html",
-    "settings/prototype.json",
-    "data/pages.json"
+    "data/global.json",
+    "tests/tests.txt",
+    "data/pages.json",
+    "data/config.json"
   ],
   "dependencies": {
     "build": [],

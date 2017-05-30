@@ -10,6 +10,10 @@
     "vue/vue2.6.bblign.js",
     "jquery/jquery-2.2.4.js",
     "foundation/js/foundation.js",
-    "foundation/js/app.js"
+    "foundation/js/app.js",
+    "gsap/TweenMax.min.js",
+    "magicscroll/ScrollMagic.min.js",
+    "magicscroll/debug.addIndicators.min.js",
+    "gsap/animation.gsap.min.js"
   ]
 }
