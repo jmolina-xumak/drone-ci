@@ -1,0 +1,169 @@
+
+// Define the component structure here
+// Use Bliss.
+// Don't specify colors properties.
+
+
+// $debug: false;
+$external-menuWidth: 200px;
+
+.Quote{ 
+    width: 100%;
+
+    // Holds the text, authorName, authorTitle fields within a fluid container.
+    // The text values are customized with the project´s color settings
+    &-container {
+        position: relative;
+        padding-top: calc(26px * 2);
+        padding-bottom: calc(26px * 2);
+    }
+
+    // Field for "text" value
+    &-text {         
+        font-family: $font-hurme-geometric-sans-bold;
+        @include rem(font-size, 26px); 
+        line-height: 32px;
+        margin: 0;
+
+        margin-bottom: calc(56px - 25px);
+    }
+
+    // Field for "authorName" value
+    &-authorName { 
+        font-family: $font-hurme-geometric-sans-bold;
+        @include rem(font-size, 16px); 
+        line-height: 22px;
+
+        margin: 0;
+    }
+
+    // Field for "authorTitle" value
+    &-authorTitle { 
+        font-family: $font-source-sans-pro-semibold;
+        @include rem(font-size, 16px); 
+        line-height: 22px;
+
+        margin: 0;        
+    }
+    
+    // Class to specify which icon to display and how to modify it
+    &-icon {
+        height: 40px;
+        width: 55px;
+        margin: -16px 0 0 5px;   
+        position: absolute;     
+
+        // align horizontal left
+        &--left {
+            top: 0;
+            left: 0;    
+        }      
+
+        // align horizontal right
+        &--right {
+            bottom: 0;
+            right: 0;
+        }
+
+        // show flipped version of icon
+        &--reverse {
+            transform: rotate(180deg);
+            margin: 0 5px -16px 0;
+        }
+    }
+
+}
+
+@media only screen and (min-width: $breakpoint-tablet) {
+    /* For tablets: */    
+
+    .Quote {
+
+        &-container {
+            padding-top: calc(40px * 2);
+            padding-bottom: calc(40px * 2);
+        }
+        
+        &-text { 
+            @include rem(font-size, 32px); 
+            line-height: 40px;
+        }
+
+        &-authorName { 
+            @include rem(font-size, 22px); 
+            line-height: 26px;
+        }
+
+        &-authorTitle { 
+            @include rem(font-size, 16px); 
+            line-height: 22px;
+        }  
+
+        &-text,
+        &-authorName, 
+        &-authorTitle { 
+            margin-left: 8.33333%; //medium-offset-1 
+            width: 83.33333%;  //medium-10
+        }  
+                
+        &-icon {
+            height: 48px;
+            width: 64px;
+            margin: -16px 0 0 12px;
+
+            &--reverse {
+                margin: 0 12px -16px 0;
+            }
+        }
+
+    }
+
+}
+
+@media only screen and (min-width: $breakpoint-desktop) {
+    /* For desktop: */
+    
+    .Quote {
+        padding-left: $external-menuWidth; 
+
+        &-container {
+            padding-top: calc(56px * 2);
+            padding-bottom: calc(56px * 2);
+        }
+        
+        &-text { 
+            @include rem(font-size, 48px); 
+            line-height: 56px;
+            margin-bottom: calc(64px - 37px);
+        }
+
+        &-authorName { 
+            @include rem(font-size, 24px); 
+            line-height: 32px;
+        }
+
+        &-authorTitle { 
+            @include rem(font-size, 16px); 
+            line-height: 22px;
+        } 
+
+        &-text, 
+        &-authorName, 
+        &-authorTitle { 
+            margin-left: 8.33333%; //large-offset-1             
+            width: 75%;  //large-9
+        } 
+        
+        &-icon {
+            height: 64px;
+            width: 98px;
+            margin: -24px 0 0 0;
+
+            &--reverse {
+                margin: 0 0 -24px 0;
+                right: 8.33333%; //large-pull-1
+            }
+        }
+    }
+
+}

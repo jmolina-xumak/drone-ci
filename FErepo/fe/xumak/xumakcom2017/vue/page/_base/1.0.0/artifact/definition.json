@@ -1,0 +1,52 @@
+{
+  "title": "Xumak WebSite 2017 Base Rendering Component",
+  "description": "Base page meant to be extended.",
+  "name": "_base",
+  "address": "xk:xumakcom2017:vue:page:_base",
+  "version": "1.0.0",
+  "extends": "blank",
+  "containerClasses": [],
+  "tags": [
+    "BedrocK",
+    "base",
+    "page",
+    "core"
+  ],
+  "aem": {
+    "clientLibraries": [
+      {
+        "id": "main",
+        "priority": 5,
+        "assets": [
+          "main/fonts/HurmeGeometricSans3/HurmeGeometricSans3-Bold.otf",
+          "main/fonts/HurmeGeometricSans3/HurmeGeometricSans3-Bold.ttf",
+          "main/fonts/SourceSansPro/SourceSansPro-Regular.otf",
+          "main/fonts/SourceSansPro/SourceSansPro-Regular.ttf",
+          "main/fonts/SourceSansPro/SourceSansPro-Semibold.otf",
+          "main/fonts/SourceSansPro/SourceSansPro-Semibold.ttf"
+        ],
+        "styles": [
+          "main/styles/component.css"
+        ],
+        "scripts": [
+          "main/scripts/component.js"
+        ]
+      },
+      {
+        "id": "vendor",
+        "priority": 55,
+        "assets": [],
+        "styles": [
+          "vendor/foundation/css/foundation.css"
+        ],
+        "scripts": [
+          "vendor/vue/vue2.6.bblign.js",
+          "vendor/jquery/jquery-2.2.4.js",
+          "vendor/foundation/js/foundation.js",
+          "vendor/foundation/js/app.js"
+        ]
+      }
+    ]
+  },
+  "blueprint": {}
+}

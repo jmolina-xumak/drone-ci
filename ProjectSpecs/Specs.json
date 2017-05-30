@@ -1,9 +1,9 @@
 {  
-   "id":"28c6f6f0-ffaa-11e6-8592-051fdfd413242",
-   "title":"XumaK COM 2017",
-   "name":"xumakcom2017-template",
-   "label":"xumakcom2017-template",
-   "namespace":"xumak",
+   "id":"28c6f6f0-ffaa-11e6-8292-051fdfd413242",
+   "title":"XumaKCOM 2017",
+   "name":"xumakcom-template",
+   "label":"xumakcom-template",
+   "namespace":"xk",
    "definitions":{  
       "components":{  
          "page":{
@@ -12,20 +12,24 @@
                   "jahia":{  
                      "uses":"xk:xumakcom2017:components:page:baseTemplate;1.0.0",
                      "with":{  
-                        "coordinates":"xk:xumakcom2017:components:page:baseTemplate;1.0.0"
+                        "coordinates":"xk:xumakcom2017:components:page:baseTemplate"
                      }
                   },
                   "fe":{  
-                     "uses":"bedrock:core:common:page:rendering-base;1.0.0"
+                     "uses":"xk:xumakcom2017:vue:page:_base;1.0.0"
                   }
                }
             },
-            "contentTemplate":{  
+            "contentTemplate":{
                "artifacts":{  
-                  "jahia":{  
-                     "uses":"xk:xumakcom2017:components:page:contentTemplate;1.0.0",
-                     "with":{  
-                        "coordinates":"xk:xumakcom2017:components:page:contentTemplate"
+                  "jahia":{
+                     "uses": "bedrock:core:components:page:base;1.0.0",
+                     "with":{
+                        "title": "Content Template",
+                        "coordinates":"xk:xumakcom2017:components:page:contentTemplate",
+                        "jahia": {
+                           "superType": "xk:xumakcom2017:components:page:baseTemplate"
+                        }
                      }
                   },
                   "fe":{  
@@ -40,14 +44,30 @@
                   "jahia": {
                      "uses": "xk:xumakcom2017:components:section:simpleBanner;1.0.0",
                      "with": {
-                        "coordinates": "xk:xumakcom2017:components:section:simpleBanner;1.0.0",
+                        "title": "Simple Banner",
                         "jahia": {
                            "componentGroup": "XCOM2017"
                          }
                      }
                   },
                   "fe": {
-                     "uses": "xumak:xumakcom2017:vue:section:staticBanner;1.0.0"
+                     "uses": "xumak:xumakcom2017:vue:section:textAndImageWithLink;1.0.0"
+                  }
+               }
+            },
+            "quote": {
+               "artifacts": {
+                  "jahia": {
+                     "uses": "xk:xumakcom2017:components:section:quote;1.0.0",
+                     "with": {
+                        "title": "Quote",
+                        "jahia": {
+                           "componentGroup": "XCOM2017"
+                        }
+                     }
+                  },
+                  "fe": {
+                     "uses": "xumak:xumakcom2017:Javascript:section:quote;1.0.0"
                   }
                }
             }
