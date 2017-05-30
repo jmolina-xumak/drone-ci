@@ -5,7 +5,7 @@
   "tags": [
     "scenarios (new tag)"
   ],
-  "address": "xk:Xumak2017:foundation:page:scenarios",
+  "address": "XK:Xumak2017:foundation:page:scenarios",
   "excludes": [
     "data/config.json",
     "data/pages.json",

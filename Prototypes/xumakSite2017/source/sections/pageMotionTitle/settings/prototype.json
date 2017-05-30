@@ -1,0 +1,21 @@
+{
+  "parent": "",
+  "title": "Page Motion Title",
+  "description": "Big transparent blue text showing a keyword of the topic of the current page",
+  "tags": [
+    "xumakcom2017",
+    "page title"
+  ],
+  "address": "xumak:Xumakcom2017:vue:section:pageMotionTitle",
+  "excludes": [
+    "libs/authoring/libs.json",
+    "libs/authoring/styles/placeholder.scss",
+    "libs/styles/trumps.scss"
+  ],
+  "containerClasses": "PageMotionTitle",
+  "extends": "bedrock:core:common:section:base;1.0.0",
+  "dependencies": {
+    "build": [],
+    "runtime": []
+  }
+}
