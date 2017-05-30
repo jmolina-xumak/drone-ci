@@ -1,0 +1,220 @@
+
+// Define the component structure here
+// Use Bliss.
+// Don't specify colors properties.
+.MainNavigation {
+
+    &-component {
+        height: 100%;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 9999;
+        right: -100%;
+        transition: all .5s ease;
+    }
+
+    &-logoBox {
+        padding-left: 20px;
+    }
+
+    &-list,
+    &-subList {
+        margin: 0;
+        padding: 0;
+    }
+    &-item,
+    &-subItem {
+        list-style: none;
+    }
+    &-link,
+    &-subLink {
+        width: 100%;
+        display: block;
+        font-family: $font-hurme-geometric-sans-bold;
+        @include rem(font-size, 14px);
+        line-height: 40px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    &-subList {
+        max-height: 0;
+        overflow: hidden;
+        overflow-y: auto;
+        transition: all .3s ease;
+    }
+    &-link {
+        padding: 0 20px;
+        transition: all .5s ease;
+    }
+    &-subLink {
+        padding: 0 40px;
+    }
+    &-description {
+        display: none;
+        font-family: $font-source-sans-pro-regular;
+        @include rem(font-size, 14px);
+        line-height: 24px;
+        margin: 0;
+        text-transform: none;
+    }
+    &-arrow {
+        transform: rotate(270deg);
+        transition: transform .5s ease;
+        width: 13px; 
+        height: 16px;
+        margin-top: 11px;
+        float: right;
+    }
+    &-closeBox {
+        padding: 0 20px;
+        margin-top: 10px;
+    }
+    &-closeButton,
+    &-iconClose {
+        height: 25px;
+    }
+    &-closeButton {
+        float: right;
+        width: 15px;
+    }
+    &-iconClose {
+        width: 22px;
+    }
+    &-iconMenu {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+    }
+
+    &-menuButton {
+        position: fixed;
+        right: 15px;
+        top: 35px;
+        opacity: 1;
+        transition: opacity .5s ease;
+    }
+
+    &-overlay {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9998;
+        position: fixed;
+        top: 0;
+    }
+
+    @keyframes in {
+        from { max-height: 0}
+        to {max-height: 200px}
+    }
+
+    @keyframes out {
+        from { max-height: 200px}
+        to {max-height: 0}
+    }
+    /* --- Tablet --- */
+    @media(min-width:$breakpoint-tablet) {
+        &-component {
+            width: 335px;
+        }
+    }
+
+    /* --- Desktop --- */
+    @media(min-width:$breakpoint-desktop){
+        @keyframes in {
+            from {width: 0}
+            to {width: 240px}
+        }
+
+        @keyframes out {
+            from {width: 240px }
+            to {width: 0 }
+        }
+
+        &-component {
+            width: 240px;
+            right: auto;
+            left: 0;
+            transition: all .25s ease;  
+            background-size: 200% 100%;
+        }
+
+        &-logoBox {
+            display: none;
+        }
+        &-list {
+            padding-top: 21px;
+        }
+        &-link {
+            padding-left:  30px;
+            padding-right: 27px
+        }
+        &-subLink {
+            padding: 0 30px;
+        }
+        &-subList {
+            position: fixed;
+            left: 240px;
+            top: 0;
+            bottom: 0;
+            width: 0;
+            min-height: 100%;
+            transition: all .5s ease;
+            padding-top: 54px;
+        }
+        &-subItem {
+            width: 240px;
+        }
+
+        &-closeButton,
+        &-menuButton {
+            display: none;
+        } 
+        &-description {
+            display: block;
+            margin-bottom: 8px
+        }
+        &-arrow {
+            transform: rotate(180deg);
+        }
+    }
+
+    /*--- States ---*/
+    &-component.isSlidedIn {
+        background-position: 0 0;
+    }
+    &-component.isSlidedOut{
+        background-position: 100% 0;
+    }
+
+    &-component.isVisible {
+        right: 0;
+    }
+    &-menuButton.isVisible {
+        opacity: 0;
+    } 
+    &-overlay.isVisible {
+        opacity: 0.7;
+        display: block;
+    }
+    &-arrow.isActive {
+        transform: rotate(90deg);
+    }
+
+    &-menuButton:focus {
+        outline: 2px solid; 
+    }
+    /* --- States Breakpoints --- */
+    @media(min-width: $breakpoint-desktop) {
+        &-component.isVisible {
+            right: auto;
+        } 
+
+        &-arrow.isActive {
+            transform: rotate(180deg);
+        } 
+    }
+
+}
