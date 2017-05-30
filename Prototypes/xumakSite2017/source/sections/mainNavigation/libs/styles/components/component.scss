@@ -1,0 +1,52 @@
+
+// Define the component colors and themes here
+// Use Bliss.
+.MainNavigation {
+    &-component{
+        background-color: $main-background;
+    }
+        
+    &-link path,
+    &-iconClose,
+    &-iconMenu {
+        fill: $background;
+    }
+    &-link,
+    &-description {
+        color: $text-color;
+    }
+    &-subLink {
+        color: $title-color;
+    }
+    &-subList {
+        background-color: $secondary-background; 
+    }
+    &-overlay {
+        background-color: $overlay-color;
+    }
+    /* --- States ---*/
+    &-menuButton:focus {
+        outline-color: $outline-color;
+    }
+    @media(min-width: $breakpoint-desktop){
+        
+        &-component {
+            background-color: transparent;
+        }
+
+        /* ---  States --- */
+
+        &-component.isSlidedIn,
+        &-component.isSlidedOut {
+            background-image: linear-gradient(to left, transparent, transparent 50%, $main-background 50%, $main-background);
+        }
+        
+/*        &-link:hover {
+            background-color: $secondary-background;
+        }*/
+        &-link.isActive {
+            background-color: $secondary-background;
+        }
+    }
+
+}
