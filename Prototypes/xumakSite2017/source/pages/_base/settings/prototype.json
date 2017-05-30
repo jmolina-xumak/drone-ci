@@ -1,9 +1,8 @@
 {
   "title": "Xumak WebSite 2017 Base Rendering Component",
   "description": "Base page meant to be extended.",
-  "address": "bedrock:core:common:page:rendering-base",
+  "address": "xk:xumakcom2017:vue:page:base",
   "tags": [
-    "BedrocK",
     "base",
     "page",
     "core"

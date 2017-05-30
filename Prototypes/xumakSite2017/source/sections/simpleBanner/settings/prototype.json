@@ -7,7 +7,7 @@
     "banner",
     "simplebanner"
   ],
-  "address": "xumak:Xumak2017:vue:section:simpleBanner",
+  "address": "xk:Xumak2017:vue:section:simpleBanner",
   "excludes": [
     "data/config.json",
     "data/content.json",

@@ -1,0 +1,102 @@
+/* color palette for xumak.co 2017  */
+.extraRow {
+  position: relative;
+  max-width: 1700px;
+  margin: 0 auto; }
+
+.no-col-gutter {
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
+
+@media screen and (min-width: 64em) {
+  .no-col-gutter-large {
+    padding-left: 0 !important;
+    padding-right: 0 !important; } }
+
+.SimpleTopBanner {
+  position: relative; }
+  .SimpleTopBanner-background {
+    width: 100%;
+    min-height: 384px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; }
+  .SimpleTopBanner-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5; }
+  .SimpleTopBanner-btnBox {
+    margin-top: 40px; }
+  .SimpleTopBanner-title {
+    font-family: "HurmeGeometricSansBold", Arial;
+    font-size: 30px;
+    font-size: 1.875rem;
+    line-height: 32px; }
+  .SimpleTopBanner-textBox {
+    margin-top: 6px; }
+  .SimpleTopBanner-text {
+    font-family: "SourceSansProRegular", Arial;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 24px;
+    font-weight: 600; }
+  @media (min-width: 768px) {
+    .SimpleTopBanner-background {
+      min-height: 442px; }
+    .SimpleTopBanner-title {
+      font-size: 38px;
+      font-size: 2.375rem;
+      line-height: 40px; }
+    .SimpleTopBanner-textBox {
+      margin-top: 10px;
+      margin-bottom: 51px; }
+    .SimpleTopBanner-text {
+      font-size: 18px;
+      font-size: 1.125rem; } }
+  @media (min-width: 1224px) {
+    .SimpleTopBanner-background {
+      max-height: 760px; }
+    .SimpleTopBanner-titleBox {
+      margin-bottom: 35px; }
+    .SimpleTopBanner-title {
+      font-size: 70px;
+      font-size: 4.375rem;
+      line-height: 80px; }
+    .SimpleTopBanner-text {
+      font-size: 20px;
+      font-size: 1.25rem; }
+    .SimpleTopBanner-btnBox {
+      margin-top: 35px; } }
+
+.SimpleTopBanner--filter .SimpleTopBanner-background {
+  min-height: 328px; }
+
+.SimpleTopBanner--filter .SimpleTopBanner-titleBox {
+  margin-bottom: 0; }
+
+.SimpleTopBanner--filter .SimpleTopBanner-filter {
+  width: 100%;
+  min-height: 328px;
+  position: absolute;
+  top: 0;
+  opacity: 0.3; }
+
+@media (min-width: 768px) {
+  .SimpleTopBanner--filter .SimpleTopBanner-background {
+    min-height: 344px; }
+  .SimpleTopBanner--filter .SimpleTopBanner-filter {
+    display: none; } }
+
+@media (min-width: 1224px) {
+  .SimpleTopBanner--filter .SimpleTopBanner-background {
+    max-height: 536px; } }
+
+.SimpleTopBanner-title {
+  color: #ffffff; }
+
+.SimpleTopBanner-text {
+  color: #ffffff; }
+
+.SimpleTopBanner--filter .SimpleTopBanner-filter {
+  background-color: #199fbc; }
