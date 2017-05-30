@@ -1,0 +1,53 @@
+{
+    "title": "Base Container With Call To Action",
+    "description": "Base Container with call to action to extended",
+    "name": "baseContainerWithCallToAction",
+    "address": "xk:xumakcom2017:components:section:baseContainerWithCallToAction",
+    "version": "1.0.0",
+    "extends": "bedrock:core:components:section:contentListBase;1.0.0",
+    "tags": [
+        "xumakcom2017",
+        "base",
+        "container"
+    ],
+    "blueprint": {
+        "content.title": "∫(⊛)",
+        "content.description": "∫(⊛)",
+        "content.link": "∫(⊛)",
+        "content.linkText": "∫(⊛)",
+        "content.linkTarget": "∫(⊛)"
+    },
+    "jahia": {
+        "superType": "",
+        "properties": {
+          "title": {
+              "title": "Title",
+              "type": "string"
+          },
+          "description": {
+              "title": "Description",
+              "type": "string",
+              "selector": "textarea"
+          },
+          "link": {
+              "title": "Link",
+              "type": "weakreference",
+              "selector": "picker",
+              "selector-options": [
+                "type='page'"
+              ]
+          },
+          "linkText": {
+              "title": "Link Label",
+              "type": "string"
+          },
+          "linkTarget": {
+              "title": "Link Target",
+              "type": "string",
+              "selector": "choicelist",
+              "default-values": ["_self"],
+              "constraints": ["_self", "_blank"]
+          }
+        }
+    }
+}
