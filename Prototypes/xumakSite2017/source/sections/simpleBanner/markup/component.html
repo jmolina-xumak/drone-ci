@@ -2,12 +2,12 @@
 
   <div class="SimpleBanner-container">
 
-    <div class="SimpleBanner-image">
+    <div class="SimpleBanner-imageBox">
       <img src="{% content.imageURL %}" alt="{% content.imageAlt %}">
     </div>
 
     <div class="SimpleBanner-contentColumns">
-      <div class="small-12 medium-6 large-8 columns">
+      <div class="small-12 medium-8 large-8 columns">
         <div class="SimpleBanner-wrapper">
           <div class="SimpleBanner-content">
             <span class="SimpleBanner-title">{% content.title %}</span>
@@ -15,8 +15,19 @@
             {%# if content.description %}
               <p class="SimpleBanner-description">{% content.description %}</p>
             {%/ if %}
-            {% embed "button" with '{ "text": "content.mainCallToActionText","hasIcon": "mainCallToActionHasIcon","href": "content.mainCallToActionURL"}' %}
-            {% embed "text-link" with '{ "text": "{% content.secondaryCallToActionText %}","class": "SimpleBanner-secondaryButton","href": "{% content.secondaryCallToActionURL %}"}' %}
+            {% embed "button" with '{
+                "text": "mainCallToActionText",
+                "hasIcon": "mainCallToActionHasIcon",
+                "target": "mainCallToActionTarget",
+                "href": "mainCallToActionURL"
+            }' local_context=content %}
+
+            {% embed "text-link" with '{
+                "text": "secondaryCallToActionText",
+                "target": "secondaryCallToActionTarget",
+                "href": "secondaryCallToActionURL",
+                "class": "SimpleBanner-secondaryButton"
+            }' local_context=content %}
           </div>
         </div>
       </div>
