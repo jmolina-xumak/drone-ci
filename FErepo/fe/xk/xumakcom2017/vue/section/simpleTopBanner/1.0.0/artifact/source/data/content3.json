@@ -1,0 +1,14 @@
+{
+  "content": {
+    "backgroundColor": "#199fbc",
+    "mainTitle": "Headline about XumaK core values",
+    "description": "Lorem ipsum dolor sit amet, est ea inani vocibus scriptorem. Mei ea suas assum. Tale dicta copiosae vis ei.",
+    "buttonLabel": "",
+    "buttonUrl": " http://xumak.com",
+    "buttonTarget": "_blank",
+    "buttonHasIcon": true,
+    "mediaURL": "",
+    "mediaAlt": "Imagen Dummy",
+    "disableFilter": true
+  }
+}

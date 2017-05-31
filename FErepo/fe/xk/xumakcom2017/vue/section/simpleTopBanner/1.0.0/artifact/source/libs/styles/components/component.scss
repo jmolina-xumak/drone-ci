@@ -1,0 +1,16 @@
+.SimpleTopBanner {
+    &-title {
+        color: $color-primary;
+    }
+    &-text {
+         color: $color-primary;
+    }
+}
+
+.SimpleTopBanner--filter {
+    .SimpleTopBanner {
+        &-filter {
+            background-color: $color-filter;
+        }
+    }
+}

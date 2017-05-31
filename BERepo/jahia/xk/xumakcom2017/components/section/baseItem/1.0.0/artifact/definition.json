@@ -1,0 +1,52 @@
+{
+	"title": "Base Item",
+	"description": "Base Artifact with image, title, description and link",
+	"name": "baseItem",
+	"address": "xk:xumakcom2017:components:section:baseItem",
+	"version": "1.0.0",
+	"extends": "bedrock:core:components:section:base;1.0.0",
+	"tags": [
+		"xumakcom2017",
+		"Text and Image"
+	],
+	"blueprint": {
+		"content.imagePath": "∫(⊛)",
+		"content.imageAltText": "∫(⊛)",
+		"content.title": "∫(⊛)",
+		"content.description": "∫(⊛)"
+	},
+	"jahia": {
+		"superType": "",
+		"config": {
+            "xk_componentCategory": [
+                "getPathFromResource"
+            ],
+            "PathFromResourcePropertiesList": [
+                "imagePath"
+            ]
+        },
+		"properties": {
+			"title": {
+				"title": "Title",
+				"type": "string",
+				"selector": "richtext"
+			},
+			"description": {
+				"title": "Description",
+				"type": "textarea"
+			},
+			"imagePath": {
+				"title": "Image",
+				"type": "weakreference",
+				"selector": "picker",
+				"selector-options": [
+					"type='image'"
+				]
+			},
+			"imageAltText": {
+				"title": "Image Alt Text",
+				"type": "string"
+			}
+		}
+	}
+}
