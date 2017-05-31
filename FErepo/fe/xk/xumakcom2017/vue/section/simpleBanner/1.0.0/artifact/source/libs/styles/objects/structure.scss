@@ -1,0 +1,99 @@
+
+// Define the component structure here
+// Use Bliss.
+// Don't specify colors properties.
+
+.SimpleBanner {
+
+	&-container {
+		position: relative;
+	}
+
+	&-image {
+		min-height: 200px;
+		position: relative;
+    width: 100%;
+		z-index: -5;
+	}
+
+	&-contentColumns {
+		float: left;
+	}
+
+  &-content {
+    margin-top: 20px;
+  }
+
+  &-secondaryButton {
+    display: block;
+    text-align: center;
+  }
+
+  &-title {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &-heading {
+    margin-bottom: 20px;
+  }
+
+	@media (min-width: $breakpoint-tablet) {
+    &-image {
+      min-height: 416px;
+      position: absolute;
+      text-align: right;
+      right: 0;
+      width: 80%;
+    }
+
+    &-container {
+      overflow: hidden;
+    }
+
+    &-wrapper {
+      display: table;
+      height: 416px;
+    }
+
+    &-content {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    &-title {
+      max-width: 80px;
+    }
+
+    &-secondaryButton {
+      display: inline;
+      text-align: left;
+      margin-left: 14px;
+    }
+
+	}
+
+  @media (min-width: $breakpoint-desktop) {
+    &-image {
+      img {
+        min-height: 728px;
+      }
+    }
+
+    &-container {
+      height: 728px;
+    }
+
+    &-wrapper {
+      height: 728px;
+    }
+
+    &-secondaryButton {
+      margin-left: 20px;
+    }
+
+    &-title {}
+
+  }
+
+}

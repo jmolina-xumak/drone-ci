@@ -1,0 +1,88 @@
+/* color palette for xumak.co 2017  */
+.extraRow {
+  position: relative;
+  max-width: 1700px;
+  margin: 0 auto; }
+
+.no-col-gutter {
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
+
+@media screen and (min-width: 64em) {
+  .no-col-gutter-large {
+    padding-left: 0 !important;
+    padding-right: 0 !important; } }
+
+.SimpleBanner-container {
+  position: relative; }
+
+.SimpleBanner-image {
+  min-height: 200px;
+  position: relative;
+  width: 100%;
+  z-index: -5; }
+
+.SimpleBanner-contentColumns {
+  float: left; }
+
+.SimpleBanner-content {
+  margin-top: 20px; }
+
+.SimpleBanner-secondaryButton {
+  display: block;
+  text-align: center; }
+
+.SimpleBanner-title {
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.SimpleBanner-heading {
+  margin-bottom: 20px; }
+
+@media (min-width: 768px) {
+  .SimpleBanner-image {
+    min-height: 416px;
+    position: absolute;
+    text-align: right;
+    right: 0;
+    width: 80%; }
+  .SimpleBanner-container {
+    overflow: hidden; }
+  .SimpleBanner-wrapper {
+    display: table;
+    height: 416px; }
+  .SimpleBanner-content {
+    display: table-cell;
+    vertical-align: middle; }
+  .SimpleBanner-title {
+    max-width: 80px; }
+  .SimpleBanner-secondaryButton {
+    display: inline;
+    text-align: left;
+    margin-left: 14px; } }
+
+@media (min-width: 1224px) {
+  .SimpleBanner-image img {
+    min-height: 728px; }
+  .SimpleBanner-container {
+    height: 728px; }
+  .SimpleBanner-wrapper {
+    height: 728px; }
+  .SimpleBanner-secondaryButton {
+    margin-left: 20px; } }
+
+.SimpleBanner-title {
+  font-size: 16px;
+  font-size: 1rem;
+  color: #023047;
+  font-family: "HurmeGeometricSansBold", Arial; }
+
+@media (min-width: 768px) {
+  .SimpleBanner-title {
+    font-size: 20px;
+    font-size: 1.25rem; } }
+
+@media (min-width: 1224px) {
+  .SimpleBanner-title {
+    font-size: 24px;
+    font-size: 1.5rem; } }

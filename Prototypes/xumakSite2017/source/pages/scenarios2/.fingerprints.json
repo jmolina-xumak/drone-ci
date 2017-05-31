@@ -1,0 +1,15 @@
+{
+  "data/config.json": "78240cc98b0bb02815d600c45330d310",
+  "data/pages.json": "09afe4ed30d8a869b0dedeaf99f65a14",
+  "libs/libs.json": "17b16886151da532579a650e787c2ed0",
+  "libs/scripts/component.js": "f5d0cfead9db748f0f24cb659e445b70",
+  "libs/styles/component.scss": "b99fce6f81eeb59fc01d912852177c55",
+  "libs/styles/components/component.scss": "88bb1d6c4723c5ae783accebbc1e76e8",
+  "libs/styles/objects/structure.scss": "cdd9ff8103f4f5d82f66e3408d4c10f3",
+  "libs/styles/page/elements.scss": "72575125113cc9efdc8d286445c99a11",
+  "libs/styles/page/generic.scss": "41cb7b9868d3c8f30b92be5c02b4d867",
+  "libs/styles/page/settings.scss": "46f20310503f52cc58d9a8aaa49961cd",
+  "libs/styles/page/tools.scss": "8391839530c3c623bddeaa4e512a44b8",
+  "libs/styles/trumps.scss": "08afbf417a75ed50d0f75a537521eb33",
+  "markup/content.html": "d41d8cd98f00b204e9800998ecf8427e"
+}

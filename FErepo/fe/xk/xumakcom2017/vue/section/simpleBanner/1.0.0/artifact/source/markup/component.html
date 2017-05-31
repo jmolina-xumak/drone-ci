@@ -1,0 +1,26 @@
+<div class="row">
+
+  <div class="SimpleBanner-container">
+
+    <div class="SimpleBanner-image">
+      <img src="{% content.imageURL %}" alt="{% content.imageAlt %}">
+    </div>
+
+    <div class="SimpleBanner-contentColumns">
+      <div class="small-12 medium-6 large-8 columns">
+        <div class="SimpleBanner-wrapper">
+          <div class="SimpleBanner-content">
+            <span class="SimpleBanner-title">{% content.title %}</span>
+            {% embed "heading" with '{ "text": "{% content.heading %}","type": "2","class": "SimpleBanner-heading"}' %}
+            {%# if content.description %}
+              <p class="SimpleBanner-description">{% content.description %}</p>
+            {%/ if %}
+            {% embed "button" with '{ "text": "content.mainCallToActionText","hasIcon": "mainCallToActionHasIcon","href": "content.mainCallToActionURL"}' %}
+            {% embed "text-link" with '{ "text": "{% content.secondaryCallToActionText %}","class": "SimpleBanner-secondaryButton","href": "{% content.secondaryCallToActionURL %}"}' %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
