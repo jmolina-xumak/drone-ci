@@ -10,15 +10,9 @@
   "excludes": [
     "data/content.json",
     "libs/authoring/libs.json",
-    "libs/authoring/styles/placeholder.scss",
     "libs/libs.json",
     "libs/scripts/component.js",
-    "libs/styles/component.scss",
-    "libs/styles/components/component.scss",
-    "libs/styles/objects/structure.scss",
-    "libs/styles/settings/colors.scss",
-    "libs/styles/trumps.scss",
-    "markup/component.html"
+    "libs/styles/trumps.scss"
   ],
   "containerClasses": "Quote",
   "extends": "bedrock:core:common:section:base;1.0.0",
