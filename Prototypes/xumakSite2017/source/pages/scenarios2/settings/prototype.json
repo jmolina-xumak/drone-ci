@@ -1,0 +1,30 @@
+{
+  "parent": "_base",
+  "title": "Scenarios",
+  "description": "Page intended to include different scenarios",
+  "tags": [
+    "scenarios (new tag)"
+  ],
+  "address": "XK:Xumak2017:foundation:page:scenarios",
+  "excludes": [
+    "data/config.json",
+    "data/pages.json",
+    "libs/libs.json",
+    "libs/scripts/component.js",
+    "libs/styles/component.scss",
+    "libs/styles/components/component.scss",
+    "libs/styles/objects/structure.scss",
+    "libs/styles/page/elements.scss",
+    "libs/styles/page/generic.scss",
+    "libs/styles/page/settings.scss",
+    "libs/styles/page/tools.scss",
+    "libs/styles/trumps.scss",
+    "markup/content.html"
+  ],
+  "containerClasses": "Scenarios",
+  "extends": "bedrock:core:common:page:base;1.0.0",
+  "dependencies": {
+    "build": [],
+    "runtime": []
+  }
+}

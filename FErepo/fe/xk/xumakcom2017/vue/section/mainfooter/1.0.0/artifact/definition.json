@@ -1,0 +1,48 @@
+{
+  "title": "Mainfooter",
+  "description": "blank",
+  "name": "mainfooter",
+  "address": "xk:xumakcom2017:vue:section:mainfooter",
+  "version": "1.0.0",
+  "extends": "bedrock:core:common:section:base;1.0.0",
+  "containerClasses": [
+    "Mainfooter"
+  ],
+  "tags": [
+    "xumakcom2017",
+    "footer"
+  ],
+  "aem": {
+    "clientLibraries": [
+      {
+        "id": "cq.wcm.edit",
+        "styles": [
+          "authoring/styles/placeholder.css"
+        ],
+        "priority": 50
+      },
+      {
+        "id": "main",
+        "scripts": [
+          "scripts/component.js"
+        ],
+        "styles": [
+          "styles/component.css"
+        ],
+        "assets": [],
+        "priority": 50
+      }
+    ]
+  },
+  "blueprint": {
+    "content.mainList": "[⦻..?]:◌",
+    "content.mainList[].target": "◌",
+    "content.mainList[].link": "◌",
+    "content.mainList[].title": "◌",
+    "content.copyrightText": "◌",
+    "content.secondaryList": "[⦻..?]:◌",
+    "content.secondaryList[].link": "◌",
+    "content.secondaryList[].target": "◌",
+    "content.secondaryList[].title": "◌"
+  }
+}

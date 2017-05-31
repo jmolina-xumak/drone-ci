@@ -1,0 +1,90 @@
+/* color palette for xumak.co 2017  */
+.extraRow {
+  position: relative;
+  max-width: 1700px;
+  margin: 0 auto; }
+
+.no-col-gutter {
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
+
+@media screen and (min-width: 64em) {
+  .no-col-gutter-large {
+    padding-left: 0 !important;
+    padding-right: 0 !important; } }
+
+.Mainfooter {
+  padding-bottom: 35px; }
+  .Mainfooter-mainList, .Mainfooter-secondaryList {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  .Mainfooter-mainItem {
+    display: block; }
+  .Mainfooter-mainLink {
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "HurmeGeometricSansBold", Arial;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 40px; }
+  .Mainfooter-mainLink:focus, .Mainfooter-secondaryLink:focus {
+    outline: 2px solid; }
+  .Mainfooter-copyText, .Mainfooter-secondaryLink {
+    font-family: "SourceSansProRegular", Arial;
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 24px; }
+  .Mainfooter-copyText {
+    margin-top: 23px;
+    display: block; }
+  .Mainfooter-secondaryList {
+    display: table;
+    width: 100%;
+    margin-top: 5px; }
+  .Mainfooter-secondaryItem {
+    display: table-cell;
+    margin-right: 30px; }
+  .Mainfooter-secondaryLink {
+    text-decoration: underline; }
+  @media screen and (min-width: 768px) {
+    .Mainfooter {
+      padding-bottom: 55px; }
+      .Mainfooter-mainList {
+        margin-bottom: 26px; }
+      .Mainfooter-mainItem {
+        display: inline-block;
+        margin-right: 43px; }
+      .Mainfooter-copyText, .Mainfooter-secondaryLink {
+        font-size: 13px;
+        font-size: 0.8125rem; }
+      .Mainfooter-copyText {
+        margin-top: 0; }
+      .Mainfooter-secondaryList {
+        display: block;
+        width: 100%;
+        margin-top: 0; }
+      .Mainfooter-secondaryItem {
+        margin-right: 11px;
+        display: inline-block; } }
+  @media screen and (min-width: 1224px) {
+    .Mainfooter-mainItem {
+      margin-right: 28px; }
+    .Mainfooter-copyText {
+      text-align: center;
+      margin-top: 10px;
+      margin-right: -21px; }
+    .Mainfooter-secondaryList {
+      text-align: right;
+      margin-top: 8px; }
+    .Mainfooter-secondaryItem {
+      margin-right: 10px; } }
+
+.Mainfooter-mainLink {
+  color: #023047; }
+
+.Mainfooter-mainLink:focus, .Mainfooter-secondaryLink:focus {
+  outline-color: #41A4D6; }
+
+.Mainfooter-copyText, .Mainfooter-secondaryLink {
+  color: #939393; }

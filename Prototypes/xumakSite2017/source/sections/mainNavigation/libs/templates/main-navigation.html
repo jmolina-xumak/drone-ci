@@ -1,0 +1,78 @@
+<div class="MainNavigation-component " 
+    v-bind:class="{isVisible: menu.isVisible ,isActive : menu.isVisible, isSlidedIn: menu.isSlided, isSlidedOut: !menu.isSlided}">
+    <svg style="width: 15px; height: 15px; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <symbol id="icon-close" viewBox="0 0 24 24">
+                <title>close</title>
+                <path d="M18.984 6.422l-5.578 5.578 5.578 5.578-1.406 1.406-5.578-5.578-5.578 5.578-1.406-1.406 5.578-5.578-5.578-5.578 1.406-1.406 5.578 5.578 5.578-5.578z"></path>
+            </symbol>
+        </defs>
+    </svg>
+    <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <symbol id="icon-menu" viewBox="0 0 15 15">
+                <title>menu</title>
+                <path d="M1.875 3.125h11.25q0.259 0 0.442 0.183t0.183 0.442-0.183 0.442-0.442 0.183h-11.25q-0.259 0-0.442-0.183t-0.183-0.442 0.183-0.442 0.442-0.183zM1.875 10.625h11.25q0.259 0 0.442 0.183t0.183 0.442-0.183 0.442-0.442 0.183h-11.25q-0.259 0-0.442-0.183t-0.183-0.442 0.183-0.442 0.442-0.183zM1.875 6.875h11.25q0.259 0 0.442 0.183t0.183 0.442-0.183 0.442-0.442 0.183h-11.25q-0.259 0-0.442-0.183t-0.183-0.442 0.183-0.442 0.442-0.183z"></path>
+            </symbol>
+        </defs>
+    </svg>
+    <div class="MainNavigation-closeBox">
+        <button v-on:click="toggleMenu" class=" MainNavigation-closeButton">
+            <svg  class="icon icon-close MainNavigation-iconClose"><use xlink:href="#icon-close"></use></svg>
+        </button>
+        <button class=" MainNavigation-menuButton"
+                v-on:click="toggleMenu"
+                v-bind:class="{isVisible: menu.isVisible}">
+            <svg class="icon icon-menu MainNavigation-iconMenu"><use xlink:href="#icon-menu"></use></svg>
+        </button>
+    </div>
+
+    <div class="MainNavigation-logoBox">
+        <a v-bind:href="dataRootPath">
+            <img v-bind:src="dataImagePath" v-bind:alt="dataImageAltText">
+        </a>
+    </div>
+    <ul class="MainNavigation-list">
+        <li class="MainNavigation-item" v-for="item in menu.pages">
+            <a class="MainNavigation-link" 
+               v-bind:href="item.hasChildren ? '#' : item.link" 
+               v-on:click="mouseEnter(item, $event)" 
+               v-bind:class="{isActive : item.isExpanded}"
+               v-bind:aria-expanded="[item.isExpanded]">
+                {{item.title}}
+                <svg class="MainNavigation-arrow"
+                     v-bind:class="{isActive : item.isExpanded}"
+                     v-show="item.hasChildren" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 250.738 250.738" style="enable-background:new 0 0 250.738 250.738;" xml:space="preserve">
+                    <g id="Rounded_Rectangle_33_copy_4_1_">
+                        <path style="fill-rule:evenodd;clip-rule:evenodd;" d="M96.633,125.369l95.053-94.533c7.101-7.055,7.101-18.492,0-25.546   c-7.1-7.054-18.613-7.054-25.714,0L58.989,111.689c-3.784,3.759-5.487,8.759-5.238,13.68c-0.249,4.922,1.454,9.921,5.238,13.681   l106.983,106.398c7.101,7.055,18.613,7.055,25.714,0c7.101-7.054,7.101-18.491,0-25.544L96.633,125.369z"/>
+                    </g>
+                </svg>
+            </a>
+            <ul class="MainNavigation-subList"
+                v-bind:class="{isExpanded : item.isExpanded}"
+                v-if="item.hasChildren" 
+                v-bind:aria-hidden="[!item.isExpanded]">
+
+                <li class="MainNavigation-subItem" 
+                    v-if="item.subtitle">
+                    <a class="MainNavigation-subLink" 
+                    v-bind:href="item.hasChildren ? item.link : '#'">
+                        {{item.subtitle}}
+                    </a>
+                </li>
+
+                <li class="MainNavigation-subItem"
+                    v-for="subitem in item.pages">
+                    <a class="MainNavigation-subLink"
+                    v-bind:href="subitem.link" >
+                        {{ subitem.title }}
+                        <p class="MainNavigation-description">
+                            {{subitem.description}}
+                        </p>
+                    </a>
+                </li>
+
+            </ul>            
+        </li>
+    </ul>
+</div>

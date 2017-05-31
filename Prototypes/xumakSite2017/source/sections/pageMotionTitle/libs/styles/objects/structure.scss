@@ -1,0 +1,52 @@
+
+// Define the component structure here
+// Use Bliss.
+// Don't specify colors properties.
+.pagaMotionTitle{
+
+    &-component {
+        font-family: $font-hurme-geometric-sans-bold;
+        @include rem(font-size, 150px);
+        @include rem(line-height, 155px);
+        font-weight: bolder;
+        left: 0px;
+        top: 216px;
+        position: absolute;
+        margin: 0;
+        z-index: -5;
+
+    }
+
+    &-component--bigText {
+        position: fixed;
+        @include rem(font-size, 400px);
+        @include rem(line-height, 155px);
+    }
+
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        &-component {
+            top: 95px;
+            @include rem(font-size, 280px);
+            @include rem(line-height, 300px);
+        }
+
+        &-component--bigText {
+            @include rem(font-size, 480px);
+            @include rem(line-height, 520px);
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        &-component {
+            top: 38px;
+            @include rem(font-size, 300px);
+            @include rem(line-height, 330px);
+        }
+
+        &-component--bigText {
+            @include rem(font-size, 1000px);
+            @include rem(line-height, 1100px);
+        }
+    }
+}
