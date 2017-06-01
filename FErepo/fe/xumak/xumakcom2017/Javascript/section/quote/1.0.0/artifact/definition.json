@@ -1,0 +1,42 @@
+{
+  "title": "Quote",
+  "description": "This section component will show a quote using the color scheme and fonts defined on the style guide.",
+  "name": "quote",
+  "address": "xumak:xumakcom2017:Javascript:section:quote",
+  "version": "1.0.0",
+  "extends": "bedrock:core:common:section:base;1.0.0",
+  "containerClasses": [
+    "Quote"
+  ],
+  "tags": [
+    "xumakcom2017 (new tag)",
+    "Quote"
+  ],
+  "aem": {
+    "clientLibraries": [
+      {
+        "id": "cq.wcm.edit",
+        "styles": [
+          "authoring/styles/placeholder.css"
+        ],
+        "priority": 50
+      },
+      {
+        "id": "main",
+        "scripts": [
+          "scripts/component.js"
+        ],
+        "styles": [
+          "styles/component.css"
+        ],
+        "assets": [],
+        "priority": 50
+      }
+    ]
+  },
+  "blueprint": {
+    "content.text": "◌",
+    "content.authorName": "◌",
+    "content.authorTitle": "◌"
+  }
+}

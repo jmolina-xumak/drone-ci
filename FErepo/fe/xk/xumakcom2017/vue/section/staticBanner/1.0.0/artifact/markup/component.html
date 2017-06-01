@@ -10,7 +10,7 @@
                             
                     <h2 class="Heading Heading--2 " >{% content.title %}</h2>
 
-                    <p class="StaticBanner-description">{% content.description %}</p>
+                    <div class="StaticBanner-description">{% content.description %}</div>
                     
                     <a href="{%# if href %}{% href %}{% else %}#{%/ if %}" {%#if  content.mainCallToActionTarget  %}target="{%  content.mainCallToActionTarget  %}"{%/if%} {%# if isButton %}role="button"{%/ if %} class="Button {%# if disabled %}Button--disabled {%/ if %} {%# if request %}Button--request {%/ if %}">
     <span class="Button-text">

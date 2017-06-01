@@ -15,19 +15,19 @@
                 </div>
                 {%# if content.description %}
                     <div class="SimpleTopBanner-textBox">
-                        <p class="SimpleTopBanner-text">
+                        <div class="SimpleTopBanner-text">
                             {% content.description %}
-                        </p>
+                        </div>
                     </div>
                 {%/ if %}
                 {%# if content.buttonLabel %}
                     <div class="SimpleTopBanner-btnBox">
                         {% embed "button" with '{
-                            "text": "buttonLabel",
-                            "hasIcon": "buttonHasIcon",
-                            "target": "buttonTarget",
-                            "href": "buttonUrl"
-                        }' local_context=content %}
+                            "text": "content.buttonLabel",
+                            "hasIcon": "content.buttonHasIcon",
+                            "target": "content.buttonTarget",
+                            "href": "content.buttonUrl"
+                        }' %}
                     </div>
                 {%/ if %}
             </div>
