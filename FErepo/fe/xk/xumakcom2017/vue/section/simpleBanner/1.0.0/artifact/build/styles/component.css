@@ -22,9 +22,6 @@
   width: 100%;
   z-index: -5; }
 
-.SimpleBanner-contentColumns {
-  float: left; }
-
 .SimpleBanner-content {
   margin-top: 20px; }
 
@@ -32,20 +29,30 @@
   display: block;
   text-align: center; }
 
+.SimpleBanner-description {
+  margin-bottom: 24px; }
+
 .SimpleBanner-title {
+  font-family: "HurmeGeometricSansBold", Arial;
+  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-bottom: 2px; }
 
 .SimpleBanner-heading {
   margin-bottom: 20px; }
 
 @media (min-width: 768px) {
+  .SimpleBanner-contentColumns {
+    float: left; }
   .SimpleBanner-image {
     min-height: 416px;
     position: absolute;
     text-align: right;
     right: 0;
-    width: 80%; }
+    width: auto;
+    height: 100%; }
   .SimpleBanner-container {
     overflow: hidden; }
   .SimpleBanner-wrapper {
@@ -55,6 +62,9 @@
     display: table-cell;
     vertical-align: middle; }
   .SimpleBanner-title {
+    display: block;
+    font-size: 20px;
+    font-size: 1.25rem;
     max-width: 80px; }
   .SimpleBanner-secondaryButton {
     display: inline;
@@ -62,27 +72,17 @@
     margin-left: 14px; } }
 
 @media (min-width: 1224px) {
-  .SimpleBanner-image img {
+  .SimpleBanner-image {
     min-height: 728px; }
   .SimpleBanner-container {
     height: 728px; }
   .SimpleBanner-wrapper {
     height: 728px; }
   .SimpleBanner-secondaryButton {
-    margin-left: 20px; } }
-
-.SimpleBanner-title {
-  font-size: 16px;
-  font-size: 1rem;
-  color: #023047;
-  font-family: "HurmeGeometricSansBold", Arial; }
-
-@media (min-width: 768px) {
-  .SimpleBanner-title {
-    font-size: 20px;
-    font-size: 1.25rem; } }
-
-@media (min-width: 1224px) {
+    margin-left: 20px; }
   .SimpleBanner-title {
     font-size: 24px;
     font-size: 1.5rem; } }
+
+.SimpleBanner-title {
+  color: #023047; }
