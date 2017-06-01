@@ -9,16 +9,14 @@
 		position: relative;
 	}
 
-	&-imageBox {
+	&-image {
 		min-height: 200px;
 		position: relative;
     width: 100%;
 		z-index: -5;
 	}
 
-	&-contentColumns {
-		float: left;
-	}
+
 
   &-content {
     margin-top: 20px;
@@ -29,11 +27,16 @@
     text-align: center;
   }
 
+	&-description{
+		margin-bottom: 24px;
+	}
+
   &-title {
 		font-family: $font-hurme-geometric-sans-bold;
 		@include rem(font-size, 16px);
     font-weight: bold;
     text-transform: uppercase;
+		margin-bottom: 2px;
   }
 
   &-heading {
@@ -41,12 +44,16 @@
   }
 
 	@media (min-width: $breakpoint-tablet) {
-    &-imageBox {
+		&-contentColumns {
+			float: left;
+		}
+    &-image {
       min-height: 416px;
       position: absolute;
       text-align: right;
-      right: 0;
-      width: 80%;
+			right: 0;
+	    width: auto;
+			height: 100%;
     }
 
     &-container {
