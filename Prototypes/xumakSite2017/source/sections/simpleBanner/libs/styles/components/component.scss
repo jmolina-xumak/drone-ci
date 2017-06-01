@@ -15,15 +15,13 @@
   &-secondaryButton {}
 
   &-title {
-    @include rem(font-size, 16px);
     color: $color-title;
-    font-family: $font-hurme-geometric-sans-bold;
   }
 
   &-heading {}
 
 	@media (min-width: $breakpoint-tablet) {
-    &-image {}
+    &-imageBox {}
 
     &-container {}
 
@@ -31,18 +29,16 @@
 
     &-content {}
 
-    &-title {
-      @include rem(font-size, 20px);
-    }
+    &-title {}
 
     &-secondaryButton {}
 
 	}
 
   @media (min-width: $breakpoint-desktop) {
-    &-image {
-      img {}
-    }
+    &-imageBox {}
+
+		&-image {}
 
     &-container {}
 
@@ -50,9 +46,7 @@
 
     &-secondaryButton {}
 
-    &-title {
-      @include rem(font-size, 24px);
-    }
+    &-title {}
 
   }
 
