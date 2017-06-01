@@ -1,0 +1,123 @@
+/* color palette for xumak.co 2017  */
+.extraRow {
+  position: relative;
+  max-width: 1700px;
+  margin: 0 auto; }
+
+.no-col-gutter {
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
+
+@media screen and (min-width: 64em) {
+  .no-col-gutter-large {
+    padding-left: 0 !important;
+    padding-right: 0 !important; } }
+
+.Quote {
+  width: 100%; }
+  .Quote-container {
+    position: relative;
+    padding-top: 52px;
+    padding-bottom: 52px; }
+  .Quote-text {
+    font-family: "HurmeGeometricSansBold", Arial;
+    font-size: 26px;
+    font-size: 1.625rem;
+    line-height: 32px;
+    margin: 0;
+    margin-bottom: 31px; }
+  .Quote-authorName {
+    font-family: "HurmeGeometricSansBold", Arial;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 22px;
+    margin: 0; }
+  .Quote-authorTitle {
+    font-family: "SourceSansProSemibold", Arial;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 22px;
+    margin: 0; }
+  .Quote-icon {
+    height: 40px;
+    width: 55px;
+    margin: -16px 0 0 5px;
+    position: absolute; }
+    .Quote-icon--left {
+      top: 0;
+      left: 0; }
+    .Quote-icon--right {
+      bottom: 0;
+      right: 0; }
+    .Quote-icon--reverse {
+      transform: rotate(180deg);
+      margin: 0 5px -16px 0; }
+
+@media only screen and (min-width: 768px) {
+  /* For tablets: */
+  .Quote-container {
+    padding-top: 80px;
+    padding-bottom: 80px; }
+  .Quote-text {
+    font-size: 32px;
+    font-size: 2rem;
+    line-height: 40px; }
+  .Quote-authorName {
+    font-size: 22px;
+    font-size: 1.375rem;
+    line-height: 26px; }
+  .Quote-authorTitle {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 22px; }
+  .Quote-text, .Quote-authorName, .Quote-authorTitle {
+    margin-left: 8.33333%;
+    width: 83.33333%; }
+  .Quote-icon {
+    height: 48px;
+    width: 64px;
+    margin: -16px 0 0 12px; }
+    .Quote-icon--reverse {
+      margin: 0 12px -16px 0; } }
+
+@media only screen and (min-width: 1224px) {
+  /* For desktop: */
+  .Quote {
+    padding-left: 200px; }
+    .Quote-container {
+      padding-top: 112px;
+      padding-bottom: 112px; }
+    .Quote-text {
+      font-size: 48px;
+      font-size: 3rem;
+      line-height: 56px;
+      margin-bottom: 27px; }
+    .Quote-authorName {
+      font-size: 24px;
+      font-size: 1.5rem;
+      line-height: 32px; }
+    .Quote-authorTitle {
+      font-size: 16px;
+      font-size: 1rem;
+      line-height: 22px; }
+    .Quote-text, .Quote-authorName, .Quote-authorTitle {
+      margin-left: 8.33333%;
+      width: 75%; }
+    .Quote-icon {
+      height: 64px;
+      width: 98px;
+      margin: -24px 0 0 0; }
+      .Quote-icon--reverse {
+        margin: 0 0 -24px 0;
+        right: 8.33333%; } }
+
+.Quote {
+  background-color: #199fbc; }
+  .Quote-text {
+    color: #ffffff; }
+  .Quote-authorName {
+    color: #fff02a; }
+  .Quote-authorTitle {
+    color: #fff02a; }
+  .Quote-icon {
+    fill: #0d426a; }
