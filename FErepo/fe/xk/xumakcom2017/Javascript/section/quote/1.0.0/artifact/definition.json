@@ -2,7 +2,7 @@
   "title": "Quote",
   "description": "This section component will show a quote using the color scheme and fonts defined on the style guide.",
   "name": "quote",
-  "address": "xumak:xumakcom2017:Javascript:section:quote",
+  "address": "xk:xumakcom2017:Javascript:section:quote",
   "version": "1.0.0",
   "extends": "bedrock:core:common:section:base;1.0.0",
   "containerClasses": [

@@ -6,11 +6,10 @@
     "xumakcom2017 (new tag)",
     "Quote"
   ],
-  "address": "xumak:xumakcom2017:Javascript:section:quote",
+  "address": "xk:xumakcom2017:Javascript:section:quote",
   "excludes": [
     "data/content.json",
     "libs/authoring/libs.json",
-    "libs/libs.json",
     "libs/scripts/component.js",
     "libs/styles/trumps.scss"
   ],
