@@ -1,0 +1,15 @@
+{
+  "data/content.json": "fc0e3e767b70a45d145d1b1190b6247f",
+  "libs/authoring/libs.json": "a4dcc1077191e492d5b92e9f9626120a",
+  "libs/authoring/styles/placeholder.scss": "535c96ab6f61551cf3cc79a5cfb1f2cc",
+  "libs/libs.json": "17b16886151da532579a650e787c2ed0",
+  "libs/scripts/component.js": "f5d0cfead9db748f0f24cb659e445b70",
+  "libs/styles/component.scss": "bad996df1eb2106876ec2709e00cd904",
+  "libs/styles/components/component.scss": "88bb1d6c4723c5ae783accebbc1e76e8",
+  "libs/styles/objects/structure.scss": "cdd9ff8103f4f5d82f66e3408d4c10f3",
+  "libs/styles/settings/colors.scss": "46f20310503f52cc58d9a8aaa49961cd",
+  "libs/styles/trumps.scss": "08afbf417a75ed50d0f75a537521eb33",
+  "markup/component.html": "178f96116ef35f000e707ca367e85359",
+  "markup/list.html": "f85a4527836341cdd0b6a9729a39fd98",
+  "wireframes/wireframe.html": "2421da6ea53e66c051f4f2232b9d04be"
+}

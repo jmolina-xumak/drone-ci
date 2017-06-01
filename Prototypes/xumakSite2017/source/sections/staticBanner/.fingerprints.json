@@ -1,0 +1,14 @@
+{
+  "data/config.json": "99914b932bd37a50b983c5e7c90ae93b",
+  "data/content.json": "5c165b5b82eb4daff5bd92ecd63bd269",
+  "libs/authoring/libs.json": "a4dcc1077191e492d5b92e9f9626120a",
+  "libs/authoring/styles/placeholder.scss": "cce7a5196bf5aedc4e4eb2e935f1daf5",
+  "libs/libs.json": "17b16886151da532579a650e787c2ed0",
+  "libs/scripts/component.js": "f5d0cfead9db748f0f24cb659e445b70",
+  "libs/styles/component.scss": "bad996df1eb2106876ec2709e00cd904",
+  "libs/styles/components/component.scss": "88bb1d6c4723c5ae783accebbc1e76e8",
+  "libs/styles/objects/structure.scss": "cdd9ff8103f4f5d82f66e3408d4c10f3",
+  "libs/styles/settings/colors.scss": "46f20310503f52cc58d9a8aaa49961cd",
+  "libs/styles/trumps.scss": "08afbf417a75ed50d0f75a537521eb33",
+  "markup/component.html": "94e850fe30569ccd357b5fb3b94f2552"
+}

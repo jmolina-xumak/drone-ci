@@ -1,0 +1,98 @@
+.SimpleTopBanner {
+    position: relative;
+    &-background {
+        width: 100%;
+        min-height: 384px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    &-content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 5;
+    }
+    &-btnBox {
+        margin-top: 40px;
+    }
+    &-title {
+        font-family: $font-hurme-geometric-sans-bold;
+        @include rem(font-size, 30px);
+        line-height: 32px;
+    }
+    &-textBox {
+        margin-top: 6px;
+    }
+    &-text {
+         font-family: $font-source-sans-pro-regular;
+         @include rem(font-size, 16px);
+         line-height: 24px;
+         font-weight: 600;
+    }
+    @media (min-width: $breakpoint-tablet) {
+        &-background {
+            min-height: 442px;
+        }
+        &-title {
+            @include rem(font-size, 38px);
+            line-height: 40px;
+        }
+        &-textBox {
+            margin-top: 10px;
+            margin-bottom: 51px;
+        }
+        &-text {
+            @include rem(font-size, 18px);
+        }
+    }
+    @media (min-width: $breakpoint-desktop) {
+        &-background {
+            max-height: 760px;
+        }
+        &-titleBox {
+            margin-bottom: 35px;
+        }
+        &-title {
+            @include rem(font-size, 70px);
+            line-height: 80px;
+        }
+         &-text {
+            @include rem(font-size, 20px);
+        }
+        &-btnBox {
+            margin-top: 35px;
+        }
+    }
+}
+
+.SimpleTopBanner--filter {
+    .SimpleTopBanner {
+        &-background {
+            min-height: 328px;
+        }
+         &-titleBox {
+            margin-bottom: 0;
+        }
+        &-filter {
+            width: 100%;
+            min-height: 328px;
+            position: absolute;
+            top: 0;
+            opacity: 0.3;
+        }
+        @media (min-width: $breakpoint-tablet) {
+            &-background {
+                min-height: 344px;
+            }
+            &-filter {
+                display: none;
+            }
+        }
+        @media (min-width: $breakpoint-desktop) {
+            &-background {
+                max-height: 536px;
+            }
+        }
+    }
+}
