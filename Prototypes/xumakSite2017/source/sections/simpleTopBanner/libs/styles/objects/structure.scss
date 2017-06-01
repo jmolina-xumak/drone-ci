@@ -14,7 +14,7 @@
         z-index: 5;
     }
     &-btnBox {
-        margin-top: 40px;
+        margin-top: 33px;
     }
     &-title {
         font-family: $font-hurme-geometric-sans-bold;
@@ -23,6 +23,7 @@
     }
     &-textBox {
         margin-top: 6px;
+        margin-bottom: -6px;
     }
     &-text {
          font-family: $font-source-sans-pro-regular;
