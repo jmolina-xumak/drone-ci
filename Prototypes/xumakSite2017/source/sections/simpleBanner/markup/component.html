@@ -12,19 +12,9 @@
             {%# if content.description %}
               <p class="SimpleBanner-description">{%{ content.description }%}</p>
             {%/ if %}
-            {% embed "button" with '{
-                "text": "mainCallToActionText",
-                "hasIcon": "mainCallToActionHasIcon",
-                "target": "mainCallToActionTarget",
-                "href": "mainCallToActionURL"
-            }' local_context=content %}
 
-            {% embed "text-link" with '{
-                "text": "secondaryCallToActionText",
-                "target": "secondaryCallToActionTarget",
-                "href": "secondaryCallToActionURL",
-                "class": "SimpleBanner-secondaryButton"
-            }' local_context=content %}
+            {% embed "button" with '{ "text": "content.mainCallToActionText","hasIcon": "content.mainCallToActionHasIcon","href": "content.mainCallToActionURL"}' %}
+            {% embed "text-link" with '{ "text": " content.secondaryCallToActionText ","class": "SimpleBanner-secondaryButton","href": " content.secondaryCallToActionURL "}' %}
           </div>
         </div>
       </div>
