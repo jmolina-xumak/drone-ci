@@ -10,7 +10,7 @@
             <span class="SimpleBanner-title">{% content.title %}</span>
             {% embed "heading" with '{ "text": "{% content.heading %}","type": "2","class": "SimpleBanner-heading"}' %}
             {%# if content.description %}
-              <p class="SimpleBanner-description">{% content.description %}</p>
+              <p class="SimpleBanner-description">{%{ content.description }%}</p>
             {%/ if %}
             {% embed "button" with '{
                 "text": "mainCallToActionText",
