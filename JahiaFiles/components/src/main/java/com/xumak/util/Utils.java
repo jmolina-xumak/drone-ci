@@ -5,8 +5,6 @@ import layerx.api.ContentModel;
 import org.apache.commons.lang3.StringUtils;
 import org.jahia.services.content.JCRNodeWrapper;
 import org.jahia.services.content.JCRSessionWrapper;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import javax.jcr.RepositoryException;
 import java.util.List;
@@ -26,7 +24,6 @@ import java.util.Map;
  */
 
 public final class Utils {
-    private static final Logger LOGGER = LoggerFactory.getLogger(Utils.class);
 
     /**
      * This constructor is used to avoid create an object from this class and to compliant with checkstyle.
@@ -41,13 +38,17 @@ public final class Utils {
      * @param resourceKey     The resource key that will retrieve in the content model.
      * @author mcali
      * @return the resource found as a map object.
+     * @throws Exception if there is an issue to get the map object.
      */
-    private static Map<String, Object> getResourceAsMap(final ContentModel contentModel, final String resourceKey) {
+    private static Map<String, Object> getResourceAsMap(final ContentModel contentModel, final String resourceKey)
+            throws Exception {
         Map<String, Object> contentMap = null;
         if (null != contentModel && StringUtils.isNotBlank(resourceKey) && contentModel.has(resourceKey)) {
             final Object contentObject = contentModel.get(resourceKey);
             if (contentObject instanceof  Map) {
                 contentMap = (Map<String, Object>) contentObject;
+            } else {
+                throw new Exception("The object that you trying to get is not a map");
             }
         }
         return contentMap;
@@ -58,8 +59,9 @@ public final class Utils {
      * @param contentModel    The object that contains the whole content in the content model.
      * @author mcali
      * @return contentMap the resource found as a map object.
+     * @throws Exception if there is an issue.
      */
-    public static Map<String, Object> getContent(final ContentModel contentModel) {
+    public static Map<String, Object> getContent(final ContentModel contentModel) throws Exception {
         return getResourceAsMap(contentModel, Constants.CONTENT);
     }
 
@@ -68,8 +70,9 @@ public final class Utils {
      * @param contentModel    The object that contains the whole content in the content model.
      * @author mcali
      * @return configMap the resource found as a map object.
+     * @throws Exception if there is an issue.
      */
-    public static Map<String, Object> getConfig(final ContentModel contentModel) {
+    public static Map<String, Object> getConfig(final ContentModel contentModel) throws Exception {
         return getResourceAsMap(contentModel, Constants.CONFIG_PROPERTIES_KEY);
     }
 
@@ -100,7 +103,7 @@ public final class Utils {
      * @return a string object
      */
     public static String getConfigPropertyAsString(final Map configMap, final String propertyName) {
-        String property = "";
+        String property = StringUtils.EMPTY;
         if (null != configMap && StringUtils.isNotBlank(propertyName) && configMap.containsKey(propertyName)) {
             property = configMap.get(propertyName).toString();
         }
@@ -109,23 +112,23 @@ public final class Utils {
 
     /**
      * This method is used to return the path of the resource using JCRNodeWrapper to get the path of the resource
-     * according to the different workspace tha Jahia has.
+     * according to the different workspace that Jahia has.
      * @param session             The object to get the node from its UUID.
      * @param resourceNodeUUID    The UUID of the resource.
      * @author mcali
      * @return string object.
+     * @throws RepositoryException if there is an issue to get the node from its UUID.
      */
-    public static String getResourceNodePath(final JCRSessionWrapper session, final String resourceNodeUUID) {
+    public static String getResourceNodePath(final JCRSessionWrapper session, final String resourceNodeUUID)
+            throws RepositoryException {
         String resourcePath = StringUtils.EMPTY;
-        try {
-            if (null != session && StringUtils.isNotBlank(resourceNodeUUID)) {
-                final JCRNodeWrapper resourceNode = session.getNodeByIdentifier(resourceNodeUUID);
-                if (null != resourceNode) {
-                    resourcePath = resourceNode.getUrl();
-                }
+        if (null != session && StringUtils.isNotBlank(resourceNodeUUID)) {
+            final JCRNodeWrapper resourceNode = session.getNodeByIdentifier(resourceNodeUUID);
+            if (null != resourceNode) {
+                resourcePath = resourceNode.getUrl();
+            } else {
+                throw new RepositoryException("An error occurred to get the node in the repository");
             }
-        } catch (RepositoryException re) {
-            LOGGER.error("An error occurred in the repository ", re);
         }
         return resourcePath;
     }

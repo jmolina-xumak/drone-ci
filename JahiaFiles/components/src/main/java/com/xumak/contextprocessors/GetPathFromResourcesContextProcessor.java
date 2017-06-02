@@ -73,12 +73,11 @@ public class GetPathFromResourcesContextProcessor extends
     @Override
     public void process(
             final ExecutionContext executionContext, final ContentModel contentModel) throws ProcessException {
-
-        final Map<String, Object> contentMap = Utils.getContent(contentModel);
-        final Map<String, Object> configMap = Utils.getConfig(contentModel);
         final Resource resource = (Resource) executionContext.get(JAHIA_RESOURCE);
-        if (null != resource && null != contentMap && null != configMap) {
+        if (null != resource) {
             try {
+                final Map<String, Object> contentMap = Utils.getContent(contentModel);
+                final Map<String, Object> configMap = Utils.getConfig(contentModel);
                 final JCRNodeWrapper componentNode = resource.getNode();
                 final List<String> propertiesList =
                         Utils.getConfigPropertyAsList(configMap, PATH_FROM_RESOURCE_PROPERTIES_LIST);
@@ -97,8 +96,10 @@ public class GetPathFromResourcesContextProcessor extends
                         }
                     }
                 }
-            } catch (RepositoryException e) {
-                LOGGER.error("GetPathFromResourcesContextProcessor --> An error occurred: ", e);
+            } catch (RepositoryException re) {
+                LOGGER.error("GetPathFromResourcesContextProcessor --> An error occurred in the repository: ", re);
+            } catch (Exception e) {
+                LOGGER.error("GetPathFromResourcesContextProcessor --> An error occurred in: ", e);
             }
         }
     }

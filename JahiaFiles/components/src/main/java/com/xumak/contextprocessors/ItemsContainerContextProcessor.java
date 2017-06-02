@@ -84,12 +84,12 @@ public class ItemsContainerContextProcessor extends
     @Override
     public void process(
             final ExecutionContext executionContext, final ContentModel contentModel) throws ProcessException {
-
-        final Map<String, Object> contentMap = Utils.getContent(contentModel);
-        final Map<String, Object> configMap = Utils.getConfig(contentModel);
         final Resource resource = (Resource) executionContext.get(JAHIA_RESOURCE);
         if (null != resource) {
             try {
+                final Map<String, Object> contentMap = Utils.getContent(contentModel);
+                final Map<String, Object> configMap = Utils.getConfig(contentModel);
+
                 //Getting xk configurations for the current component
                 final String containerName = Utils.getConfigPropertyAsString(configMap, COMPONENT_CONTAINER_NAME);
                 final List<String> nodeItemProperties = Utils.getConfigPropertyAsList(configMap, NODE_ITEM_PROPERTIES);
@@ -128,8 +128,10 @@ public class ItemsContainerContextProcessor extends
                     }
                     contentMap.put(NODE_ITEM_PROPERTIES, listMaps);
                 }
-            } catch (RepositoryException e) {
-                LOGGER.error("ItemsContainerContextProcessor --> Repository Exception: ", e);
+            } catch (RepositoryException re) {
+                LOGGER.error("ItemsContainerContextProcessor --> An error occurred in the repository: ", re);
+            } catch (Exception e) {
+                LOGGER.error("ItemsContainerContextProcessor --> An error occurred in: ", e);
             }
         }
     }
