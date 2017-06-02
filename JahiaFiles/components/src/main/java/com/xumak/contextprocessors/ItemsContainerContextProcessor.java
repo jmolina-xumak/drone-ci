@@ -1,6 +1,7 @@
 package com.xumak.contextprocessors;
 
 import com.xumak.util.Utils;
+import com.xumak.util.ResourceUtils;
 import com.google.common.collect.Sets;
 import layerx.api.ExecutionContext;
 import layerx.api.ContentModel;
@@ -87,8 +88,8 @@ public class ItemsContainerContextProcessor extends
         final Resource resource = (Resource) executionContext.get(JAHIA_RESOURCE);
         if (null != resource) {
             try {
-                final Map<String, Object> contentMap = Utils.getContent(contentModel);
-                final Map<String, Object> configMap = Utils.getConfig(contentModel);
+                final Map<String, Object> contentMap = ResourceUtils.getContentResource(contentModel);
+                final Map<String, Object> configMap = ResourceUtils.getConfigResource(contentModel);
 
                 //Getting xk configurations for the current component
                 final String containerName = Utils.getConfigPropertyAsString(configMap, COMPONENT_CONTAINER_NAME);

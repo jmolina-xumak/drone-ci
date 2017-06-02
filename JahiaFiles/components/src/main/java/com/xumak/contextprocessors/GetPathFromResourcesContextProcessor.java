@@ -1,6 +1,7 @@
 package com.xumak.contextprocessors;
 
 import com.xumak.util.Utils;
+import com.xumak.util.ResourceUtils;
 import com.google.common.collect.Sets;
 import layerx.Constants;
 import layerx.api.ContentModel;
@@ -76,8 +77,8 @@ public class GetPathFromResourcesContextProcessor extends
         final Resource resource = (Resource) executionContext.get(JAHIA_RESOURCE);
         if (null != resource) {
             try {
-                final Map<String, Object> contentMap = Utils.getContent(contentModel);
-                final Map<String, Object> configMap = Utils.getConfig(contentModel);
+                final Map<String, Object> contentMap = ResourceUtils.getContentResource(contentModel);
+                final Map<String, Object> configMap = ResourceUtils.getConfigResource(contentModel);
                 final JCRNodeWrapper componentNode = resource.getNode();
                 final List<String> propertiesList =
                         Utils.getConfigPropertyAsList(configMap, PATH_FROM_RESOURCE_PROPERTIES_LIST);
