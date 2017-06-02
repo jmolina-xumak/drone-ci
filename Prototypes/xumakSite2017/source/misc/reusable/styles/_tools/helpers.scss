@@ -1,0 +1,14 @@
+// Helper Class
+
+//Hack to solve foundation columns paddings
+.no-col-gutter {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.no-col-gutter-large {
+    @media screen and (min-width: 64em){
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    } 
+}

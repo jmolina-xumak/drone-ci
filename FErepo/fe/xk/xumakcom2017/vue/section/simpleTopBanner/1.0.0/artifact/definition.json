@@ -1,0 +1,49 @@
+{
+  "title": "Simple Top Banner",
+  "description": "Top Banner contains headline and a big text to describe very briefly what is the purpose of the page",
+  "name": "simpleTopBanner",
+  "address": "xk:xumakcom2017:vue:section:simpleTopBanner",
+  "version": "1.0.0",
+  "extends": "bedrock:core:common:section:base;1.0.0",
+  "containerClasses": [
+    "SimpleTopBanner"
+  ],
+  "tags": [
+    "xumakcom2017",
+    "Simple Top Banner",
+    "vue",
+    "foundation"
+  ],
+  "aem": {
+    "clientLibraries": [
+      {
+        "id": "cq.wcm.edit",
+        "styles": [
+          "authoring/styles/placeholder.css"
+        ],
+        "priority": 50
+      },
+      {
+        "id": "main",
+        "scripts": [
+          "scripts/component.js"
+        ],
+        "styles": [
+          "styles/component.css"
+        ],
+        "assets": [],
+        "priority": 50
+      }
+    ]
+  },
+  "blueprint": {
+    "content.disableFilter": "◌",
+    "content.backgroundColor": "◌",
+    "content.mediaURL": "◌",
+    "content.mediaAlt": "◌",
+    "content.mainTitle": "◌",
+    "content.description": "◌",
+    "content.buttonLabel": "◌",
+    "embed": "◌"
+  }
+}

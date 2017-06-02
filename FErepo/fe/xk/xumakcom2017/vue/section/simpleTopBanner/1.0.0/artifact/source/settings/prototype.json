@@ -1,0 +1,28 @@
+{
+  "parent": "",
+  "title": "Simple Top Banner",
+  "description": "Top Banner contains headline and a big text to describe very briefly what is the purpose of the page",
+  "tags": [
+    "xumakcom2017",
+    "Simple Top Banner",
+    "vue",
+    "foundation"
+  ],
+  "address": "xk:xumakcom2017:vue:section:simpleTopBanner",
+  "excludes": [
+    "libs/authoring/libs.json",
+    "libs/authoring/styles/placeholder.scss",
+    "data/content4.json",
+    "data/content2.json",
+    "data/content3.json",
+    "data/content.json",
+    "data/config.json",
+    "libs/styles/trumps.scss"
+  ],
+  "containerClasses": "SimpleTopBanner",
+  "extends": "bedrock:core:common:section:base;1.0.0",
+  "dependencies": {
+    "build": [],
+    "runtime": []
+  }
+}

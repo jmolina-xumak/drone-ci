@@ -1,0 +1,37 @@
+<div class="extraRow">
+    <div class="row">
+        <div class="StaticBanner">
+            <img class="StaticBanner-img"src="{% content.imageURL %}" alt="{% content.imageAlt %}">
+            <div class="StaticBanner-columns small-12 medium-6 large-7 columns">
+                <div class="  StaticBanner-contentBox">
+                    <div class="StaticBanner-headingBox">
+                        <span class="StaticBanner-heading">{% content.heading %}</span>
+                    </div>
+                            
+                    {% embed "heading" with '{
+                        "text": "{% content.title %}",
+                        "type": "2",
+                        "class": ""
+                    }' %}
+
+                    <div class="StaticBanner-description">{% content.description %}</div>
+                    
+                    {% embed "button" with '{
+                        "text": " content.mainCallToActionText ",
+                        "hasIcon": " content.mainCallToActionHasIcon ",
+                        "target": " content.mainCallToActionTarget ",
+                        "href": " content.mainCallToActionURL "
+                    }' %}
+                    <div class="StaticBanner-linkBox">
+                          {% embed "text-link" with '{ 
+                          "text": " content.secondaryCallToActionText ",
+                          "class": "StaticBanner-link",
+                          "target": " content.secondaryCallToActionTarget ",
+                          "href": " content.secondaryCallToActionURL "}' %}
+      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

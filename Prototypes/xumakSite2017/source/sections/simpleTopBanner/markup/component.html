@@ -1,0 +1,39 @@
+
+<div class="SimpleTopBanner {%# if content.disableFilter %}SimpleTopBanner--filter{%/ if %}">
+    {%# unless content.disableFilter %}
+        <div class="SimpleTopBanner-filter"></div>
+    {%/ unless %}
+    <div class="SimpleTopBanner-background" style="background-color: {% content.backgroundColor %}; background-image: url({% content.mediaURL %});" role="image" aria-label="{% content.mediaAlt %}">
+    </div>
+    <div class="row">
+        <div class="SimpleTopBanner-content">
+            <div class="SimpleTopBanner-columns small-12 medium-10 large-8 columns">
+                <div class="SimpleTopBanner-titleBox">
+                    <span class="SimpleTopBanner-title">
+                        {% content.mainTitle %}
+                    </span>
+                </div>
+                {%# if content.description %}
+                    <div class="SimpleTopBanner-textBox">
+                        <div class="SimpleTopBanner-text">
+                            {% content.description %}
+                        </div>
+                    </div>
+                {%/ if %}
+                {%# if content.buttonLabel %}
+                    <div class="SimpleTopBanner-btnBox">
+                        {% embed "button" with '{
+                            "text": "content.buttonLabel",
+                            "hasIcon": "content.buttonHasIcon",
+                            "target": "content.buttonTarget",
+                            "href": "content.buttonUrl"
+                        }' %}
+                    </div>
+                {%/ if %}
+            </div>
+        </div>
+    </div>
+    {%# if content.disableFilter %}
+        <div class="SimpleTopBanner-filter"></div>
+    {%/ if %}
+</div>

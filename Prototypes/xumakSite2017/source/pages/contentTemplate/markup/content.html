@@ -1,0 +1,29 @@
+<div class="ContentTemplate">
+
+  <!-- Page motion title -->
+  <div class="ContentTemplate-PageMotionTitle">
+    {%! include "PageMotionTitle" %}
+  </div>
+
+  <!-- MainNavigation -->
+  <div class="ContentTemplate-MainNavigation">
+    {%! include "MainNavigation" %}
+  </div>
+
+  <div class="ContentTemplate-Container">
+    <!-- Top Banner -->
+    <div class="ContentTemplate-TopBanner">
+      {%! include "TopBanner" %}
+    </div>
+
+    <!-- Single Full With Parsys -->
+    <div class="ContentTemplate-Components">
+      {% includes "Parsys" %}
+    </div>
+  </div>
+  
+  <!--Footer-->
+  <div class="ContentTemplate-Footer">
+    {%! include "Footer" %}
+  </div>
+</div>

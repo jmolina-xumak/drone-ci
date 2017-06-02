@@ -1,0 +1,13 @@
+{
+  "data/content.json": "ae69809ce638a2a14e170c7610e1bc70",
+  "libs/authoring/libs.json": "a4dcc1077191e492d5b92e9f9626120a",
+  "libs/authoring/styles/placeholder.scss": "696918a1b289e86e0286640d27a9e79d",
+  "libs/libs.json": "17b16886151da532579a650e787c2ed0",
+  "libs/scripts/component.js": "f5d0cfead9db748f0f24cb659e445b70",
+  "libs/styles/component.scss": "bad996df1eb2106876ec2709e00cd904",
+  "libs/styles/components/component.scss": "88bb1d6c4723c5ae783accebbc1e76e8",
+  "libs/styles/objects/structure.scss": "cdd9ff8103f4f5d82f66e3408d4c10f3",
+  "libs/styles/settings/colors.scss": "46f20310503f52cc58d9a8aaa49961cd",
+  "libs/styles/trumps.scss": "08afbf417a75ed50d0f75a537521eb33",
+  "markup/component.html": "d41d8cd98f00b204e9800998ecf8427e"
+}

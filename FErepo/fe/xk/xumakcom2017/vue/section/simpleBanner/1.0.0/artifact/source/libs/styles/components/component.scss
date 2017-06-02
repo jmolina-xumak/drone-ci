@@ -1,0 +1,53 @@
+
+// Define the component colors and themes here
+// Use Bliss.
+
+.SimpleBanner {
+
+	&-container {}
+
+	&-image {}
+
+	&-contentColumns {}
+
+  &-content {}
+
+  &-secondaryButton {}
+
+  &-title {
+    color: $color-title;
+  }
+
+  &-heading {}
+
+	@media (min-width: $breakpoint-tablet) {
+    &-imageBox {}
+
+    &-container {}
+
+    &-wrapper {}
+
+    &-content {}
+
+    &-title {}
+
+    &-secondaryButton {}
+
+	}
+
+  @media (min-width: $breakpoint-desktop) {
+    &-imageBox {}
+
+		&-image {}
+
+    &-container {}
+
+    &-wrapper {}
+
+    &-secondaryButton {}
+
+    &-title {}
+
+  }
+
+}
