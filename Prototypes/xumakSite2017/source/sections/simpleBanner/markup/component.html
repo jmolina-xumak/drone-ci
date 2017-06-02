@@ -13,8 +13,8 @@
               <div class="SimpleBanner-description">{%{ content.description }%}</div>
             {%/ if %}
 
-            {% embed "button" with '{ "text": "content.mainCallToActionText","hasIcon": "content.mainCallToActionHasIcon","href": "content.mainCallToActionURL"}' %}
-            {% embed "text-link" with '{ "text": " content.secondaryCallToActionText ","class": "SimpleBanner-secondaryButton","href": " content.secondaryCallToActionURL "}' %}
+            {% embed "button" with '{ "text": "content.mainCallToActionText","hasIcon": "content.mainCallToActionHasIcon","href": "content.mainCallToActionURL","target":"content.mainCallToActionTarget", "isButton": true }' %}
+            {% embed "text-link" with '{ "text": " content.secondaryCallToActionText ","class": "SimpleBanner-secondaryButton","href": "content.secondaryCallToActionURL","target":"content.secondaryCallToActionTarget"}' %}
           </div>
         </div>
       </div>

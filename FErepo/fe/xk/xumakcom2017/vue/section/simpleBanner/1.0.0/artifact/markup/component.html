@@ -13,7 +13,8 @@
               <div class="SimpleBanner-description">{%{ content.description }%}</div>
             {%/ if %}
 
-            <a href="{%# if href %}{% href %}{% else %}#{%/ if %}"  {%# if isButton %}role="button"{%/ if %} class="Button {%# if disabled %}Button--disabled {%/ if %} {%# if request %}Button--request {%/ if %}">
+            <a href="{% content.mainCallToActionURL %}" {%#if content.mainCallToActionTarget %}target="{% content.mainCallToActionTarget %}"{%/if%} role="button" 
+class="Button  ">
     <span class="Button-text">
        {% content.mainCallToActionText %}
     </span>
@@ -27,8 +28,8 @@
 </a>
 
             <a
-  href="{%  content.secondaryCallToActionURL  %}"
-  
+  href="{% content.secondaryCallToActionURL %}"
+  {%#if content.secondaryCallToActionTarget %}target="{% content.secondaryCallToActionTarget %}"{%/if%}
   class="text-link SimpleBanner-secondaryButton"
 >{%  content.secondaryCallToActionText  %}</a>
 
