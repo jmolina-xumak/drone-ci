@@ -101,7 +101,7 @@
 				"constraints": ["_blank", "_self"]
             },
             "mainCallToActionHasIcon": {
-				"title": "Title",
+				"title": "Main Call to Action Has Icon",
 				"type": "boolean"
 			}
 		}

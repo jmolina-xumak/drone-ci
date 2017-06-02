@@ -12,38 +12,27 @@
     "blueprint": {
         "content.text": "∫(⊛)",
         "content.authorName": "∫(⊛)",
-        "content.rootPath": "∫(⊛)"
+        "content.authorTitle": "∫(⊛)"
     },
     "jahia": {
         "superType": "",
         "config": {
             "xk_containerClasses": [
                 "quote"
-            ],
-            "xk_componentCategory": [
-                "getPathFromResource"
-            ],
-            "PathFromResourcePropertiesList": [
-                "rootPath"
             ]
         },
         "properties": {
             "text": {
                 "title": "Text",
-                "type": "string",
-                "selector": "richtext"
+                "type": "string"
             },
             "authorName": {
                 "title": "Author Name",
                 "type": "string"
             },
-            "rootPath": {
-                "title": "Root Path",
-                "type": "weakreference",
-                "selector": "picker",
-                "selector-options": [
-                    "type='page'"
-                ]
+            "authorTitle": {
+                "title": "Author Title",
+                "type": "string"
             }
         }
     }
