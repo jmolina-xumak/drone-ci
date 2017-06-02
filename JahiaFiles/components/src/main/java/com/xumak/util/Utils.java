@@ -1,7 +1,7 @@
 package com.xumak.util;
 
 import layerx.Constants;
-import layerx.jahia.templating.TemplateContentModel;
+import layerx.api.ContentModel;
 import org.apache.commons.lang3.StringUtils;
 import org.jahia.services.content.JCRNodeWrapper;
 import org.jahia.services.content.JCRSessionWrapper;
@@ -42,8 +42,7 @@ public final class Utils {
      * @author mcali
      * @return the resource found as a map object.
      */
-    private static Map<String, Object> getResourceAsMap(
-            final TemplateContentModel contentModel, final String resourceKey) {
+    private static Map<String, Object> getResourceAsMap(final ContentModel contentModel, final String resourceKey) {
         Map<String, Object> contentMap = null;
         if (null != contentModel && StringUtils.isNotBlank(resourceKey) && contentModel.has(resourceKey)) {
             final Object contentObject = contentModel.get(resourceKey);
@@ -60,7 +59,7 @@ public final class Utils {
      * @author mcali
      * @return contentMap the resource found as a map object.
      */
-    public static Map<String, Object> getContent(final TemplateContentModel contentModel) {
+    public static Map<String, Object> getContent(final ContentModel contentModel) {
         return getResourceAsMap(contentModel, Constants.CONTENT);
     }
 
@@ -70,7 +69,7 @@ public final class Utils {
      * @author mcali
      * @return configMap the resource found as a map object.
      */
-    public static Map<String, Object> getConfig(final TemplateContentModel contentModel) {
+    public static Map<String, Object> getConfig(final ContentModel contentModel) {
         return getResourceAsMap(contentModel, Constants.CONFIG_PROPERTIES_KEY);
     }
 

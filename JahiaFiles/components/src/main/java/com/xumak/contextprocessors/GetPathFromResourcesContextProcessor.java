@@ -3,10 +3,10 @@ package com.xumak.contextprocessors;
 import com.xumak.util.Utils;
 import com.google.common.collect.Sets;
 import layerx.Constants;
+import layerx.api.ContentModel;
 import layerx.api.ExecutionContext;
 import layerx.api.exceptions.ProcessException;
 import layerx.core.contextprocessors.AbstractCheckComponentCategoryContextProcessor;
-import layerx.jahia.templating.TemplateContentModel;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Service;
@@ -56,7 +56,7 @@ import static layerx.jahia.Constants.JAHIA_RESOURCE;
 @Component
 @Service
 public class GetPathFromResourcesContextProcessor extends
-        AbstractCheckComponentCategoryContextProcessor<TemplateContentModel> {
+        AbstractCheckComponentCategoryContextProcessor<ContentModel> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(GetPathFromResourcesContextProcessor.class);
 
@@ -72,7 +72,7 @@ public class GetPathFromResourcesContextProcessor extends
 
     @Override
     public void process(
-            final ExecutionContext executionContext, final TemplateContentModel contentModel) throws ProcessException {
+            final ExecutionContext executionContext, final ContentModel contentModel) throws ProcessException {
 
         final Map<String, Object> contentMap = Utils.getContent(contentModel);
         final Map<String, Object> configMap = Utils.getConfig(contentModel);

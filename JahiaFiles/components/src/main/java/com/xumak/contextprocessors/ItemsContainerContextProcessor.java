@@ -3,9 +3,9 @@ package com.xumak.contextprocessors;
 import com.xumak.util.Utils;
 import com.google.common.collect.Sets;
 import layerx.api.ExecutionContext;
+import layerx.api.ContentModel;
 import layerx.api.exceptions.ProcessException;
 import layerx.core.contextprocessors.AbstractCheckComponentCategoryContextProcessor;
-import layerx.jahia.templating.TemplateContentModel;
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Service;
 import org.jahia.services.content.JCRNodeIteratorWrapper;
@@ -67,7 +67,7 @@ import static com.xumak.Constants.NODE_ITEM_PROPERTIES;
 @Component
 @Service
 public class ItemsContainerContextProcessor extends
-        AbstractCheckComponentCategoryContextProcessor<TemplateContentModel> {
+        AbstractCheckComponentCategoryContextProcessor<ContentModel> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ItemsContainerContextProcessor.class);
 
@@ -83,7 +83,7 @@ public class ItemsContainerContextProcessor extends
 
     @Override
     public void process(
-            final ExecutionContext executionContext, final TemplateContentModel contentModel) throws ProcessException {
+            final ExecutionContext executionContext, final ContentModel contentModel) throws ProcessException {
 
         final Map<String, Object> contentMap = Utils.getContent(contentModel);
         final Map<String, Object> configMap = Utils.getConfig(contentModel);
