@@ -1,0 +1,78 @@
+{
+	"title": "Base Text and Image With Call To Action",
+	"description": "Base Item with image, title, description and link inside a container component",
+	"name": "baseTextImageWithCallToAction",
+	"address": "xk:xumakcom2017:components:section:baseTextImageWithCallToAction",
+	"version": "1.0.0",
+	"extends": "bedrock:core:components:section:base;1.0.0",
+	"tags": [
+		"xumakcom2017",
+		"Base text and image With call to action",
+		"Base",
+		"Text and Image"
+	],
+	"blueprint": {
+		"content.imagePath": "∫(⊛)",
+		"content.imageAltText": "∫(⊛)",
+		"content.title": "∫(⊛)",
+		"content.description": "∫(⊛)",
+		"content.link": "∫(⊛)",
+		"content.linkText": "∫(⊛)",
+		"content.linkTarget": "∫(⊛)"
+	},
+	"jahia": {
+		"superType": "",
+		"config": {
+			"xk_componentCategory": [
+				"getPathFromResource"
+			],
+			"PathFromResourcePropertiesList": [
+				"imagePath",
+				"link"
+			]
+		},
+		"properties": {
+			"title": {
+				"title": "Title",
+				"type": "string"
+			},
+			"description": {
+				"title": "Description",
+				"type": "string",
+				"selector": "richtext"
+			},
+			"imagePath": {
+				"title": "Image",
+				"type": "weakreference",
+				"selector": "picker",
+				"selector-options": [
+					"type='image'"
+				]
+			},
+			"imageAltText": {
+				"title": "Image Alt Text",
+				"type": "string"
+			},
+			"link": {
+				"title": "Link",
+				"type": "weakreference",
+				"selector": "picker",
+				"selector-options": [
+					"type='page'"
+				]
+			},
+			"linkText": {
+				"title": "Link Label",
+				"type": "string"
+			},
+			"linkTarget": {
+				"title": "Link Target",
+				"type": "string",
+				"selector": "choicelist",
+				"selector-options": ["resourceBundle"],
+				"default-values": ["_self"],
+				"constraints": ["_blank", "_self"]
+            }
+		}
+	}
+}

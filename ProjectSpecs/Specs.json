@@ -1,35 +1,39 @@
-{  
+{
    "id":"28c6f6f0-ffaa-11e6-8592-051fdfd413242",
    "title":"XumaK COM 2017",
    "name":"xumakcom2017-template",
    "label":"xumakcom2017-template",
-   "namespace":"xumak",
-   "definitions":{  
-      "components":{  
+   "namespace":"xk",
+   "definitions":{
+      "components":{
          "page":{
-         	"baseTemplate":{  
-               "artifacts":{  
-                  "jahia":{  
+            "baseTemplate":{
+               "artifacts":{
+                  "jahia":{
                      "uses":"xk:xumakcom2017:components:page:baseTemplate;1.0.0",
-                     "with":{  
-                        "coordinates":"xk:xumakcom2017:components:page:baseTemplate;1.0.0"
+                     "with":{
+                        "coordinates":"xk:xumakcom2017:components:page:baseTemplate"
                      }
                   },
-                  "fe":{  
-                     "uses":"bedrock:core:common:page:rendering-base;1.0.0"
+                  "fe":{
+                     "uses":"xk:xumakcom2017:vue:page:base;1.0.0"
                   }
                }
             },
-            "contentTemplate":{  
-               "artifacts":{  
-                  "jahia":{  
-                     "uses":"xk:xumakcom2017:components:page:contentTemplate;1.0.0",
-                     "with":{  
-                        "coordinates":"xk:xumakcom2017:components:page:contentTemplate"
+            "contentTemplate":{
+               "artifacts":{
+                  "jahia":{
+                     "uses": "bedrock:core:components:page:base;1.0.0",
+                     "with":{
+                        "title": "Content Template",
+                        "coordinates":"xk:xumakcom2017:components:page:contentTemplate",
+                        "jahia": {
+                           "superType": "xk:xumakcom2017:components:page:baseTemplate"
+                        }
                      }
                   },
-                  "fe":{  
-                     "uses":"xumak:xumakcom2017:vue:page:content-template;1.0.0"
+                  "fe":{
+                     "uses":"xk:xumakcom2017:vue:page:contentTemplate;1.0.0"
                   }
                }
             }
@@ -40,36 +44,52 @@
                   "jahia": {
                      "uses": "xk:xumakcom2017:components:section:simpleBanner;1.0.0",
                      "with": {
-                        "coordinates": "xk:xumakcom2017:components:section:simpleBanner;1.0.0",
+                        "title": "Simple Banner",
                         "jahia": {
                            "componentGroup": "XCOM2017"
-                         }
+                        }
                      }
                   },
                   "fe": {
-                     "uses": "xumak:xumakcom2017:vue:section:staticBanner;1.0.0"
+                     "uses": "xk:xumakcom2017:vue:section:simpleBanner;1.0.0"
+                  }
+               }
+            },
+            "quote": {
+               "artifacts": {
+                  "jahia": {
+                     "uses": "xk:xumakcom2017:components:section:quote;1.0.0",
+                     "with": {
+                        "title": "Quote",
+                        "jahia": {
+                           "componentGroup": "XCOM2017"
+                        }
+                     }
+                  },
+                  "fe": {
+                     "uses": "xk:xumakcom2017:Javascript:section:quote;1.0.0"
                   }
                }
             }
          }
       },
-      "config":{  
+      "config":{
 
       }
    },
-   "settings":{  
-      "artifactSources":{  
-         "fe":{  
+   "settings":{
+      "artifactSources":{
+         "fe":{
             "spec":false,
             "host":"fe.artifacts.xumak.io:8081",
-            "repositories":[  
+            "repositories":[
 
             ]
          },
-         "aem":{  
+         "aem":{
             "spec":false,
             "host":"aem.artifacts.xumak.io:9091",
-            "repositories":[  
+            "repositories":[
 
             ]
          }
