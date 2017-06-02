@@ -1,5 +1,6 @@
 package com.xumak.util;
 
+import layerx.Constants;
 import layerx.jahia.templating.TemplateContentModel;
 import org.apache.commons.lang3.StringUtils;
 import org.jahia.services.content.JCRNodeWrapper;
@@ -41,7 +42,7 @@ public final class Utils {
      * @author mcali
      * @return the resource found as a map object.
      */
-    public static Map<String, Object> getResourceAsMap(
+    private static Map<String, Object> getResourceAsMap(
             final TemplateContentModel contentModel, final String resourceKey) {
         Map<String, Object> contentMap = null;
         if (null != contentModel && StringUtils.isNotBlank(resourceKey) && contentModel.has(resourceKey)) {
@@ -54,6 +55,26 @@ public final class Utils {
     }
 
     /**
+     * This method is used to retrieve content from the content model.
+     * @param contentModel    The object that contains the whole content in the content model.
+     * @author mcali
+     * @return contentMap the resource found as a map object.
+     */
+    public static Map<String, Object> getContent(final TemplateContentModel contentModel) {
+        return getResourceAsMap(contentModel, Constants.CONTENT);
+    }
+
+    /**
+     * This method is used to retrieve config object from the content model.
+     * @param contentModel    The object that contains the whole content in the content model.
+     * @author mcali
+     * @return configMap the resource found as a map object.
+     */
+    public static Map<String, Object> getConfig(final TemplateContentModel contentModel) {
+        return getResourceAsMap(contentModel, Constants.CONFIG_PROPERTIES_KEY);
+    }
+
+    /**
      * This method is used to look for a key in the xk-config.json and return it as a list of strings.
      * @param configMap    The object that contains the whole configuration set in the xk-config.json file.
      * @param propArray    The resource key that will retrieve in the configMap and that resource key would be set
@@ -63,15 +84,11 @@ public final class Utils {
      */
     public static List<String> getConfigPropertyAsList(final Map configMap, final String propArray) {
         List<String> listProperties = null;
-        try {
-            if (null != configMap && StringUtils.isNotBlank(propArray) && configMap.containsKey(propArray)) {
-                final Object obj = configMap.get(propArray);
-                if (obj instanceof List) {
-                    listProperties = (List<String>) configMap.get(propArray);
-                }
+        if (null != configMap && StringUtils.isNotBlank(propArray) && configMap.containsKey(propArray)) {
+            final Object obj = configMap.get(propArray);
+            if (obj instanceof List) {
+                listProperties = (List<String>) configMap.get(propArray);
             }
-        } catch (ClassCastException e) {
-            LOGGER.error("Error accessing the configuration object: " + e);
         }
         return listProperties;
     }
@@ -108,8 +125,8 @@ public final class Utils {
                     resourcePath = resourceNode.getUrl();
                 }
             }
-        } catch (RepositoryException repException) {
-            LOGGER.error("An error occurred in the repository " + repException.toString());
+        } catch (RepositoryException re) {
+            LOGGER.error("An error occurred in the repository ", re);
         }
         return resourcePath;
     }

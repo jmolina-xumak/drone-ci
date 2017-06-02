@@ -85,8 +85,8 @@ public class ItemsContainerContextProcessor extends
     public void process(
             final ExecutionContext executionContext, final TemplateContentModel contentModel) throws ProcessException {
 
-        final Map<String, Object> contentMap = Utils.getResourceAsMap(contentModel, Constants.CONTENT);
-        final Map<String, Object> configMap = Utils.getResourceAsMap(contentModel, Constants.CONFIG_PROPERTIES_KEY);
+        final Map<String, Object> contentMap = Utils.getContent(contentModel);
+        final Map<String, Object> configMap = Utils.getConfig(contentModel);
         final Resource resource = (Resource) executionContext.get(JAHIA_RESOURCE);
         if (null != resource) {
             try {
@@ -129,7 +129,7 @@ public class ItemsContainerContextProcessor extends
                     contentMap.put(NODE_ITEM_PROPERTIES, listMaps);
                 }
             } catch (RepositoryException e) {
-                LOGGER.error("Repository Exception found: ", e);
+                LOGGER.error("ItemsContainerContextProcessor --> Repository Exception: ", e);
             }
         }
     }

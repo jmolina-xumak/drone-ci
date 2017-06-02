@@ -74,17 +74,17 @@ public class GetPathFromResourcesContextProcessor extends
     public void process(
             final ExecutionContext executionContext, final TemplateContentModel contentModel) throws ProcessException {
 
-        final Map<String, Object> contentMap = Utils.getResourceAsMap(contentModel, Constants.CONTENT);
-        final Map<String, Object> configMap = Utils.getResourceAsMap(contentModel, Constants.CONFIG_PROPERTIES_KEY);
+        final Map<String, Object> contentMap = Utils.getContent(contentModel);
+        final Map<String, Object> configMap = Utils.getConfig(contentModel);
         final Resource resource = (Resource) executionContext.get(JAHIA_RESOURCE);
         if (null != resource && null != contentMap && null != configMap) {
             try {
                 final JCRNodeWrapper componentNode = resource.getNode();
                 final List<String> propertiesList =
                         Utils.getConfigPropertyAsList(configMap, PATH_FROM_RESOURCE_PROPERTIES_LIST);
-                if (null != propertiesList) {
+                if (null != componentNode && null != propertiesList) {
                     for (final String prop : propertiesList) {
-                        if (null != componentNode && componentNode.hasProperty(prop)) {
+                        if (componentNode.hasProperty(prop)) {
                             //Validate type of property in the node.
                             if (componentNode.getProperty(prop).getType() == PropertyType.WEAKREFERENCE) {
                                 final String resourceNodeUUID = componentNode.getProperty(prop).getValue().getString();
