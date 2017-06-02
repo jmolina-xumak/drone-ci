@@ -48,7 +48,7 @@ public final class Utils {
             if (contentObject instanceof  Map) {
                 contentMap = (Map<String, Object>) contentObject;
             } else {
-                throw new Exception("The object that you trying to get is not a map");
+                throw new Exception("The object that you are trying to get is not a map");
             }
         }
         return contentMap;
@@ -83,13 +83,16 @@ public final class Utils {
      *                     as a list of strings in the xk-config.json file.
      * @author mcali
      * @return a list of strings
+     * @throws Exception if there is an issue to get the List in the map.
      */
-    public static List<String> getConfigPropertyAsList(final Map configMap, final String propArray) {
+    public static List<String> getConfigPropertyAsList(final Map configMap, final String propArray) throws Exception {
         List<String> listProperties = null;
         if (null != configMap && StringUtils.isNotBlank(propArray) && configMap.containsKey(propArray)) {
             final Object obj = configMap.get(propArray);
             if (obj instanceof List) {
                 listProperties = (List<String>) configMap.get(propArray);
+            } else {
+                throw new Exception("The object that you are trying to get is not a list");
             }
         }
         return listProperties;
@@ -127,7 +130,7 @@ public final class Utils {
             if (null != resourceNode) {
                 resourcePath = resourceNode.getUrl();
             } else {
-                throw new RepositoryException("An error occurred to get the node in the repository");
+                throw new RepositoryException("An error has occurred getting the node from the repository");
             }
         }
         return resourcePath;
