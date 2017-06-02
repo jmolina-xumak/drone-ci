@@ -1,0 +1,16 @@
+{
+  "content": {
+    "imageURL": "https://dummyimage.com/400x200/ddd/ddd.png",
+    "imageAlt": "Image dummy",
+    "heading": "Succes story",
+    "title": "Learn how training increased Digicel's success",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "mainCallToActionText": "read full story",
+    "mainCallToActionURL": "#",
+    "mainCallToActionTarget": "_blank",
+    "mainCallToActionHasIcon": true,
+    "secondaryCallToActionText": "SEE ALL SUCCESS STORIES",
+    "secondaryCallToActionURL": "#",
+    "secondaryCallToActionTarget": "_blank"
+  }
+}

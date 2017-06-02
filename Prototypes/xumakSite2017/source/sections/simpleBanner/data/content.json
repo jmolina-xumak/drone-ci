@@ -6,11 +6,11 @@
     "title": "Success Story",
     "description": "",
     "mainCallToActionText": "See full story",
-    "mainCallToActionURL": "#",
+    "mainCallToActionURL": "google.com",
     "mainCallToActionTarget": "_blank",
     "mainCallToActionHasIcon": true,
     "secondaryCallToActionText": "See all success stories",
-    "secondaryCallToActionURL": "#",
+    "secondaryCallToActionURL": "xumak.co",
     "secondaryCallToActionTarget": "_blank"
   }
 }

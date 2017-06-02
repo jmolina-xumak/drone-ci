@@ -1,0 +1,6 @@
+{
+  "id": "cq.wcm.edit",
+  "styles" : [
+    "styles/placeholder.scss"
+  ]
+}
