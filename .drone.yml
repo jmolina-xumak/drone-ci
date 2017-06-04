@@ -1,0 +1,18 @@
+pipeline:
+  build-febe:
+   image: jahia-febe-builder
+   commands:
+    - fe-artifact-server --port 8081 --repo ./FErepo/fe/ &
+    - jahia-artifact-server --port 9092 --repo ./BERepo/jahia &
+    - sleep 5
+    - curl localhost:8081/artifacts
+    - curl localhost:9092/artifacts
+    - cd ProjectSpecs
+    - jahia-project-generator set-config deploy-command "mvn clean install jahia:deploy -P jahia-server -s /root/.m2/settings.xml"
+    - jahia-project-generator --logLevel=debug
+   volumes:
+    - /home/jahia/.m2:/root/.m2
+    - /home/jahia/DXM-7.2.0.1:/home/jahia/DXM-7.2.0.1/
+   when:
+    event: push
+
