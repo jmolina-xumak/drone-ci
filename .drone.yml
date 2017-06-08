@@ -16,4 +16,4 @@ pipeline:
     - /home/jahia/DXM-7.2.0.1:/home/jahia/DXM-7.2.0.1/
    when:
     event: push
-
+    branch: integration
