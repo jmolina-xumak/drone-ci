@@ -1,3 +1,4 @@
+#commment
 pipeline:
   build-febe:
    image: jahia-febe-builder
